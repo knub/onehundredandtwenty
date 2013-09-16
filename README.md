@@ -1,6 +1,7 @@
-# onehundredandeighty
+# onehundredandtwenty
 
-Organize your courses in HPI with onehundredandeighty.
+Organize your master courses in HPI with onehundredandtwenty.
+Forked from onehundredandeighty.
 
 ### Your course is missing?
 1. Fork me.
