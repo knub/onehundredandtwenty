@@ -365,7 +365,7 @@ var frontend = {
 	addSemester: function(number) {
 		if (number === undefined) number = 1;
 		for (var i = 0; i < number; i+= 1) {
-			if (semesterManager.numberDisplayed === 12)
+			if (semesterManager.numberDisplayed === 8)
 				return;
 
 			var num = (semesterManager.numberDisplayed + 1);
@@ -385,7 +385,7 @@ var frontend = {
 	removeSemester: function(number) {
 		if (number === undefined) number = 1;
 		for (var i = 0; i < number; i += 1) {
-			if (semesterManager.numberDisplayed === 6)
+			if (semesterManager.numberDisplayed === 4)
 				return;
 			var num = semesterManager.numberDisplayed;
 			$("#semester" + num).find("li").each(function() {
