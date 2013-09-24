@@ -446,12 +446,20 @@ h1 span {
 	line-height: 2.7em;
 }
 .courses li.double-time {
-	height: 6.2em;
-	line-height: 6.2em;
+	height: 6.35em;
+	line-height: 6.35em;
 }
 .courses li.triple-time {
-	height: 9.75em;
-	line-height: 9.75em;
+	height: 10em;
+	line-height: 10em;
+}
+.courses li.quadruple-time {
+	height: 13.65em;
+	line-height: 13.65em;
+}
+.courses li.quintuple-time {
+	height: 17.3em;
+	line-height: 17.3em;
 }
 
 .courses li button {
