@@ -4,6 +4,12 @@
  * This file must only be edited manually!
  * Remember to update 'Klubsprecher' and 'Studium Plus'!
  */
+ 
+ /* 
+ *	NOTES to Conversion from Bachelor to Master
+ *   Pflicht is always false, leave out
+ *   vertiefung is always empty, logic uses kennung
+ */
 
 /*
  * Data structure for a course:
