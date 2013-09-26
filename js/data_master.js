@@ -36,7 +36,7 @@
 
 var data = {
     bringYourOwnProject: {
-		kurz: ["BYOP"],
+		kurz: "BYOP",
         kennung: ["SSK-KO","SSK-SK","SSK-MA"], 
         lehrform: ["Seminar"], 
         modul: ["Vertiefungsgebiete"], 
@@ -51,7 +51,7 @@ var data = {
         nameLV: "Bring your own project: IT-Projekte erfolgreich planen und managen"
     }, 
     interactiveData: {
-		kurz: ["Interactive Data"],
+		kurz: "Interactive Data",
         kennung: ["ITSE","VT SAMT","VT HCT"], 
         lehrform: ["Seminar"], 
         modul: ["IT-Systems Engineering","Vertiefungsgebiete"], 
@@ -66,7 +66,7 @@ var data = {
         nameLV: "Interactive Representations of Data Structures and Algorithms"
     }, 
     informationssicherheit: {
-		kurz: ["Information Security"],
+		kurz: "Information Security",
         kennung: ["ITSE","VT IST","VT OSIS"], 
         lehrform: ["Vorlesung"," \u00dcbung"], 
         modul: ["IT-Systems Engineering","Vertiefungsgebiete"], 
@@ -81,7 +81,7 @@ var data = {
         nameLV: "Informationssicherheit"
     }, 
     advancedRecommendationTechniques: {
-		kurz: ["Advanced Recommandation"],
+		kurz: "Advanced<br />Recommandation",
         kennung: ["VT BPET","VT OSIS"], 
         lehrform: ["Seminar"," Projekt"], 
         modul: ["Vertiefungsgebiete"], 
@@ -96,7 +96,7 @@ var data = {
         nameLV: "Advanced Recommendation Techniques"
     }, 
     inMemoryDatabases: {
-		kurz: ["In Memory Databases"],
+		kurz: "In Memory Databases",
         kennung: ["ITSE","VT BPET","VT OSIS","VT SAMT"], 
         lehrform: ["Seminar"], 
         modul: ["IT-Systems Engineering","Vertiefungsgebiete"], 
@@ -111,7 +111,7 @@ var data = {
         nameLV: "In-Memory Databases: Algorithms and Data Structures on Modern Hardware"
     }, 
     dataProfilingAndCleansing: {
-		kurz: ["Data Profiling and Cleansing"],
+		kurz: "Data Profiling and Cleansing",
         kennung: ["ITSE","VT BPET","VT OSIS"], 
         lehrform: ["Vorlesung"," \u00dcbung"], 
         modul: ["Vertiefungsgebiete"], 
@@ -126,7 +126,7 @@ var data = {
         nameLV: "Data Profiling and Data Cleansing"
     }, 
     dublicationDetection: {
-		kurz: ["Dublication Detection"],
+		kurz: "Dublication Detection",
         kennung: ["VT BPET","VT OSIS"], 
         lehrform: ["Seminar"], 
         modul: ["Vertiefungsgebiete"], 
@@ -141,7 +141,7 @@ var data = {
         nameLV: "Large Scale Duplicate Detection"
     }, 
     ITEntrepreneurshipII: {
-		kurz: ["EntrepreneurshipII"],
+		kurz: "Entrepreneurship II",
         kennung: ["SSK-MA","SSK-KO","SSK-RE"], 
         lehrform: ["Seminar"], 
         modul: ["Softskills"], 
@@ -156,7 +156,7 @@ var data = {
         nameLV: "IT Entrepreneurship II"
     }, 
     penTesting: {
-		kurz: ["Penetration Testing"],
+		kurz: "Penetration Testing",
         kennung: ["ITSE","VT IST","VT OSIS"], 
         lehrform: ["Seminar"," Projekt"], 
         modul: ["IT-Systems Engineering","Vertiefungsgebiete"], 
@@ -171,7 +171,7 @@ var data = {
         nameLV: "Penetration Testing and Securing IPv6 Networks"
     }, 
     hciProjectSeminar: {
-		kurz: ["HCI Cameras and Haptics"],
+		kurz: "HCI Cameras<br /> and Haptics",
         kennung: ["ITSE","VT HCT","VT SAMT"], 
         lehrform: ["Projekt"," Seminar"], 
         modul: ["IT-Systems Engineering","Vertiefungsgebiete"], 
@@ -186,7 +186,7 @@ var data = {
         nameLV: "HCI Project Seminar on Cameras, Haptics & Interactive Fabrication"
     }, 
     personalLeadership: {
-		kurz: ["Personal Leadership"],
+		kurz: "Personal Leadership",
         kennung: ["SSK-MA"], 
         lehrform: ["Seminar"], 
         modul: ["Softskills"], 
@@ -201,7 +201,7 @@ var data = {
         nameLV: "Personal Leadership Skills"
     }, 
     Geovisualisierung: {
-		kurz: ["Geovisualisierung"],
+		kurz: "Geovisualisierung",
         kennung: ["ITSE","VT HCT","VT IST"], 
         lehrform: ["Vorlesung"], 
         modul: ["Vertiefungsgebiete"," IT-Systems Engineering"], 
@@ -216,7 +216,7 @@ var data = {
         nameLV: "Geovisualisierung"
     }, 
     regelungSteuerung: {
-		kurz: ["Regelung & Steuerung"],
+		kurz: "Regelung & Steuerung",
         kennung: ["ITSE","VT OSIS","VT SAMT"], 
         lehrform: ["Vorlesung"], 
         modul: ["Vertiefungsgebiete"," IT-Systems Engineering"], 
@@ -228,10 +228,10 @@ var data = {
         cp: 6, 
         vorher: [], 
         dozent: ["Dr.-Ing. Ralf Wollowski"], 
-        nameLV: "Systemtechnische Grundlagen der Regelungs- und Steuerungstechnik"
+        nameLV: "Systemtechnische Grundlagen der Regelungs-<br />und Steuerungstechnik"
     }, 
     IntroductionOfDesignThinking: {
-		kurz: ["Introduction Design Thinking"],
+		kurz: "Introduction Design Thinking",
         kennung: ["SSK-DT"], 
         lehrform: ["Seminar"," Projekt"], 
         modul: ["Softskills"], 
@@ -246,7 +246,7 @@ var data = {
         nameLV: "Introduction of Design Thinking (Einf\u00fchrung in das Design Thinking)"
     }, 
     SemanticMultimedia: {
-		kurz: ["Semantic Multimedia"],
+		kurz: "Semantic Multimedia",
         kennung: ["VT IST","VT OSIS","VT HCT"], 
         lehrform: ["Seminar"], 
         modul: ["Vertiefungsgebiete"], 
@@ -261,7 +261,7 @@ var data = {
         nameLV: "Semantic Multimedia"
     }, 
     AdvancedMDE: {
-		kurz: ["Advanced MDE"],
+		kurz: "Advanced MDE",
         kennung: ["ITSE","VT SAMT"], 
         lehrform: ["Seminar"," Projekt"], 
         modul: ["IT-Systems Engineering","Vertiefungsgebiete"], 
@@ -276,7 +276,7 @@ var data = {
         nameLV: "Advanced MDE: Model Management"
     }, 
     KonfliktUndKommunikationsmanagement: {
-		kurz: ["Kommunikations- management"],
+		kurz: "Kommunikations-<br />management",
         kennung: ["SSK-KO","SSK-MA"], 
         lehrform: ["Seminar"], 
         modul: ["Softskills"], 
@@ -288,10 +288,10 @@ var data = {
         cp: 3, 
         vorher: [], 
         dozent: ["Dr. Michaela Schumacher"], 
-        nameLV: "Konflikt- und Kommunikationsmanagement"
+        nameLV: "Konflikt-<br />und Kommunikationsmanagement"
     }, 
     TrendsInIT: {
-		kurz: ["Trends in IT"],
+		kurz: "Trends in IT",
         kennung: ["ITSE","VT BPET","VT OSIS","VT SAMT"], 
         lehrform: ["Vorlesung"], 
         modul: ["IT-Systems Engineering","Vertiefungsgebiete"], 
@@ -306,7 +306,7 @@ var data = {
         nameLV: "Trends and Concepts in the Software Industry I: Inner Mechanics of In-Memory Databases"
     }, 
     eventProcessingTechnologies: {
-		kurz: ["Event Processing"],
+		kurz: "Event Processing",
         kennung: ["VT BPET","VT OSIS"], 
         lehrform: ["Seminar"], 
         modul: ["Vertiefungsgebiete"], 
@@ -321,7 +321,7 @@ var data = {
         nameLV: "Event Processing Technologies"
     }, 
     algorithmenGeovisualisierung: {
-		kurz: ["Algorithmen der Geovisualisierung"],
+		kurz: "Algorithmen der<br />Geovisualisierung",
         kennung: ["ITSE","VT HCT","VT IST"], 
         lehrform: ["Seminar"," Projekt"], 
         modul: ["Vertiefungsgebiete"," IT-Systems Engineering"], 
@@ -336,7 +336,7 @@ var data = {
         nameLV: "Algorithmen und Techniken der Geovisualisierung (ehem.: Geovisualisierungsverfahren)"
     }, 
     Softwarevisualisierung: {
-		kurz: ["Software- visualisierung"],
+		kurz: "Software-<br />visualisierung",
         kennung: ["VT HCT","VT OSIS","VT SAMT"], 
         lehrform: ["Seminar"], 
         modul: ["Vertiefungsgebiete"], 
@@ -351,7 +351,7 @@ var data = {
         nameLV: "Softwarevisualisierungsverfahren"
     }, 
     automatedAnalysisOfFormalModels: {
-		kurz: ["auto. Analysis of Formal Models"],
+		kurz: "auto. Analysis of<br />Formal Models",
         kennung: ["ITSE","VT SAMT"], 
         lehrform: ["Seminar"], 
         modul: ["IT-Systems Engineering","Vertiefungsgebiete"], 
@@ -366,7 +366,7 @@ var data = {
         nameLV: "Automated Analysis of Formal Models"
     }, 
     dependableSystems: {
-		kurz: ["dependableSystems"],
+		kurz: "Dependable Systems",
         kennung: ["ITSE","VT OSIS"], 
         lehrform: ["Vorlesung"], 
         modul: ["IT-Systems Engineering","Vertiefungsgebiete"], 
@@ -381,7 +381,7 @@ var data = {
         nameLV: "Dependable Systems"
     }, 
     productInnovationAndEngineering: {
-		kurz: ["Product Innovation"],
+		kurz: "Product Innovation",
         kennung: ["ITSE","VT BPET","VT HCT"], 
         lehrform: ["Projekt"," Seminar"], 
         modul: ["Vertiefungsgebiete"," IT-Systems Engineering"], 
@@ -393,10 +393,10 @@ var data = {
         cp: 6, 
         vorher: [], 
         dozent: ["Dr. J\u00fcrgen M\u00fcller","Thomas Kowark","Dipl.-Kfm. Jens Kr\u00fcger"], 
-        nameLV: "Global Team-Based Product Innovation & Engineering II - ME 310"
+        nameLV: "Global Team-Based Product Innovation & Engineering II -<br />ME 310"
     }, 
     Fuehrungskompetenz: {
-		kurz: ["F\u00fchrungs- kompetenz"],
+		kurz: "F\u00fchrungs-<br />kompetenz",
         kennung: ["SSK-MA"], 
         lehrform: ["Seminar"], 
         modul: ["Softskills"], 
@@ -404,14 +404,14 @@ var data = {
         benotet: true, 
         pflicht: false, 
         empfohlen: "", 
-        vertiefung: ["Softskills"], 
+        vertiefung: [""], 
         cp: 6, 
         vorher: [], 
         dozent: ["Michael Karl Heidemann M.A.","Eugen Unger"], 
         nameLV: "F\u00fchrungskompetenz"
     }, 
     softwareAdaption: {
-		kurz: ["Software Adaption"],
+		kurz: "Software Adaption",
         kennung: ["ITSE","VT SAMT"], 
         lehrform: ["Vorlesung"," Projekt"], 
         modul: ["IT-Systems Engineering","Vertiefungsgebiete"], 
@@ -426,7 +426,7 @@ var data = {
         nameLV: "Software Adaption"
     }, 
     ueberzeugendPraesentieren: {
-		kurz: ["\u00dcberzeugend pr\u00e4sentieren"],
+		kurz: "\u00dcberzeugend<br />pr\u00e4sentieren",
         kennung: ["SSK-KO"], 
         lehrform: ["Seminar"], 
         modul: ["Softskills"], 
@@ -438,10 +438,10 @@ var data = {
         cp: 3, 
         vorher: [], 
         dozent: ["Dr. Werner Dieball"], 
-        nameLV: "\u00dcberzeugend pr\u00e4sentieren - Noch besser auftreten! (Fortgeschrittene)"
+        nameLV: "\u00dcberzeugend pr\u00e4sentieren -<br />Noch besser auftreten! (Fortgeschrittene)"
     }, 
     hciResearch: {
-		kurz: ["HCI Research"],
+		kurz: "HCI Research",
         kennung: ["ITSE","VT HCT","VT SAMT"], 
         lehrform: ["Vorlesung"], 
         modul: ["IT-Systems Engineering","Vertiefungsgebiete"], 
@@ -456,7 +456,7 @@ var data = {
         nameLV: "Human Computer Interaction Research"
     }, 
     managementEssentials: {
-		kurz: ["Management Essentials"],
+		kurz: "Management Essentials",
         kennung: ["SSK-MA"], 
         lehrform: ["Vorlesung"], 
         modul: ["Softskills"], 
@@ -471,7 +471,7 @@ var data = {
         nameLV: "Management Essentials"
     }, 
     advancedDesignThinking: {
-		kurz: ["D-School Advanced Track"],
+		kurz: "D-School<br />Advanced Track",
         kennung: ["SSK-DT"], 
         lehrform: ["Seminar"," Projekt"], 
         modul: ["Softskills"], 
@@ -486,7 +486,7 @@ var data = {
         nameLV: "Advanced Design Thinking (D-School Advanced Track)"
     }, 
     Englisch3: {
-		kurz: ["Englisch 3"],
+		kurz: "Fachenglisch<br />Level 3",
         kennung: ["SSK-SK","SSK-KO"], 
         lehrform: ["Seminar"], 
         modul: ["Softskills"], 
@@ -501,7 +501,7 @@ var data = {
         nameLV: "Fachspezifisches Englisch (Level 3)"
     }, 
     Unternehmensgruendung: {
-		kurz: ["Unternehmens- gr\u00fcndung"],
+		kurz: "Unternehmens-<br />gr\u00fcndung",
         kennung: ["SSK-KO","SSK-MA","SSK-RE"], 
         lehrform: ["Vorlesung"], 
         modul: ["Softskills"], 
@@ -516,7 +516,7 @@ var data = {
         nameLV: "Unternehmensgr\u00fcndung im IT-Sektor"
     }, 
     softwareProfiling: {
-		kurz: ["Software Profiling"],
+		kurz: "Software Profiling",
         kennung: ["ITSE","VT OSIS"], 
         lehrform: ["Seminar"], 
         modul: ["IT-Systems Engineering","Vertiefungsgebiete"], 
@@ -531,7 +531,7 @@ var data = {
         nameLV: "Software Profiling"
     }, 
     schnittstellenGeoinformationGeokommunikation: {
-		kurz: ["Geo Schnittstellen"],
+		kurz: "Geo-Schnittstellen",
         kennung: ["VT HCT","VT IST"], 
         lehrform: ["Vorlesung"], 
         modul: ["Vertiefungsgebiete"], 
@@ -546,7 +546,7 @@ var data = {
         nameLV: "Schnittstellen der Geoinformation und Geokommunikation"
     }, 
     softwareAsAService: {
-		kurz: ["Software as a Service"],
+		kurz: "Software as a Service",
         kennung: ["ITSE","VT IST","VT SAMT"], 
         lehrform: ["Seminar"], 
         modul: ["IT-Systems Engineering","Vertiefungsgebiete"], 
@@ -561,7 +561,7 @@ var data = {
         nameLV: "Software-as-a-Service and Multi-tenancy"
     }, 
     BusinessEtikette: {
-		kurz: ["Business Etikette"],
+		kurz: "Business Etikette",
         kennung: ["SSK-SK","SSK-KO"], 
         lehrform: ["Seminar"], 
         modul: ["Softskills"], 
@@ -573,10 +573,10 @@ var data = {
         cp: 3, 
         vorher: [], 
         dozent: ["Dr. Timm Krohn","Imme Vogelsang"], 
-        nameLV: "Business Etikette - HPI Charm School"
+        nameLV: "Business Etikette -<br />HPI Charm School"
     }, 
     designThinkingBasics: {
-		kurz: ["D-School Basic Track"],
+		kurz: "D-School<br />Basic Track",
         kennung: ["SSK-DT"], 
         lehrform: ["Seminar"," Projekt"], 
         modul: ["Softskills"], 
@@ -591,7 +591,7 @@ var data = {
         nameLV: "Design Thinking Basics (D-School Basic Track)"
     }, 
     CloudUndVirtualisierung: {
-		kurz: ["Cloud & Virtualisierung"],
+		kurz: "Cloud & Virtualisierung",
         kennung: ["ITSE","VT IST","VT OSIS"], 
         lehrform: ["Seminar"], 
         modul: ["IT-Systems Engineering","Vertiefungsgebiete"], 
@@ -606,7 +606,7 @@ var data = {
         nameLV: "Cloud und Virtualisierung"
     }, 
     DesigningProgrammingInMemoryDatabases: {
-		kurz: ["Designing In-Mem DB"],
+		kurz: "Designing In-Mem DB",
         kennung: ["ITSE","VT BPET","VT OSIS","VT SAMT"], 
         lehrform: ["Projekt"," Seminar"], 
         modul: ["IT-Systems Engineering","Vertiefungsgebiete"], 
@@ -621,7 +621,7 @@ var data = {
         nameLV: "Designing and Programming Applications for In-Memory Databases"
     }, 
     StudiumPlus: {
-		kurz: ["Studium Plus"],
+		kurz: "Studium Plus",
         kennung: ["SSK-SK","SSK2"], 
         lehrform: [""], 
         modul: ["Softskills"], 
@@ -636,7 +636,7 @@ var data = {
         nameLV: "StudiumPlus"
     }, 
     seminarDesForschungskollegs: {
-		kurz: ["Seminar des Forschungskoll."],
+		kurz: "Seminar des<br />Forschungskollegs",
         kennung: ["VT BPET","VT HCT","VT IST","VT OSIS","VT SAMT"], 
         lehrform: ["Seminar"], 
         modul: ["Vertiefungsgebiete"], 
@@ -651,7 +651,7 @@ var data = {
         nameLV: "Seminar des Forschungskollegs"
     }, 
     cloudSicherheit: {
-		kurz: ["Cloud  Sicherheit"],
+		kurz: "Cloud Sicherheit",
         kennung: ["VT IST","VT OSIS","VT SAMT"], 
         lehrform: ["Seminar"], 
         modul: ["Vertiefungsgebiete"], 
@@ -666,7 +666,7 @@ var data = {
         nameLV: "Algorithmen und Analysemethoden f\u00fcr Sicherheit in Cloud-Infrastrukturen"
     }, 
     PersoenlichkeitUndSelbstmanagement: {
-		kurz: ["Pers\u00f6nlichkeit& Selbstmanagement"],
+		kurz: "Pers\u00f6nlichkeit &<br />Selbstmanagement",
         kennung: ["SSK-KO","SSK-MA"], 
         lehrform: ["Seminar"], 
         modul: ["Vertiefungsgebiete"], 

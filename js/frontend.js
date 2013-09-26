@@ -770,9 +770,9 @@ $(function() {
 		f.allMessagesVisible = localStorage.allMessagesVisible === "true";
 
 		semesterManager.shownSemesters = JSON.parse(localStorage.semesters);
-		// if there are more than six semester, we need a special row
-		if (semesterManager.shownSemesters.length > 6) {
-			f.addSemester(semesterManager.shownSemesters.length - 6);
+		// if there are more than four semester, we need a special row
+		if (semesterManager.shownSemesters.length > 4) {
+			f.addSemester(semesterManager.shownSemesters.length - 4);
 		}
 
 		f.filterManager = $.extend(f.filterManager, JSON.parse(localStorage.filterManager));
