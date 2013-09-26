@@ -8,7 +8,10 @@
  */
 var studyRegulations = {
 	softskills: ["SSK-RE", "SSK-KO", "SSK-DT", "SSK-SK"], // SSK-MA is not included because it is treated specially in the softskillsRule
+	modules: ["ITSE", "VT BPET", "VT HCT", "VT IST", "VT OSIS", "VT SAMT"],
+	// removing these kills frontend functionality - TODO: remove when frontend doesnt need them anymore
 	vertiefungsgebiete: ["BPET", "HCT", "IST", "OSIS", "SAMT"],
+	module: ["Grundlagen IT-Systems Engineering", "Mathematische und theoretische Grundlagen", "Softwaretechnik und Modellierung", "Rechtliche und wirtschaftliche Grundlagen", "Softwarebasissysteme", "Vertiefungsgebiete", "Softskills"],
 };
 var semesterManager = {
 	semesters: ["WS10/11", "SS11", "WS11/12", "SS12", "WS12/13", "SS13", "WS13/14", "SS14", "WS14/15", "SS15", "WS15/16", "SS16"],
@@ -219,22 +222,158 @@ var cloneRule = {
 	cloneId: ""
 };
 
-/* TODO 4. Vertiefungsgebiete-Rule: 4x 6cp in ITSE-courses, 24cp in VT1, 15cp in VT2 */
-var vertiefungsgebieteRule = {
+/* 4. ITSE-Rule: 24 cp in ITSE-courses (included in Modules-Rule, but gives a clearer error message) */
+var itseRule = {
 	/* type */
-	type: "vertiefungsgebieteRule",
+	type: "itseRule",
 	/* constructor */
 	init: function() {
 		return this;
 	},
 	/* check method */
 	check: function(getSemester) {
-		return true;
+		/* Helper */
+		// return all courses which are in ITSE
+		var getCourses = function() {
+			var courses = [];
+			for (var course in data) {				
+				if (!data.hasOwnProperty(course)) continue;
+				if (getSemester(course) == - 1 ) continue;
+				
+				if (data[course].kennung.indexOf("ITSE") !== -1) {
+					courses.push(course);
+				}
+			}
+			return courses;
+		};		
+		var cpSum = function(courses){
+			var sum = 0;
+			courses.forEach(function(element){
+				sum += data[element].cp;
+			});
+			return sum;
+		};
+		
+		/* actual function */
+		var courses = getCourses();
+		
+		var itsecourses = [];
+		courses.forEach(function(element){
+			if ( data[element].kennung.indexOf("ITSE") !== -1 ) {
+				itsecourses.push(element);
+			}
+		});		
+		var itsesum = cpSum(itsecourses);
+		return (itsesum >= 24);
+
 	},
-	message: ''
+	message: 'Es müssen mindestens 24 Leistungspunkte im Modul ITSE erbracht werden.'
 };
 
-/* 5. Softskills-Rule: atleast six credit points in SSK-MA and twelve credit points in other Softskills must be done */
+/* 5. Modules-Rule: 4x 6cp in ITSE-courses, 24cp in VT1, 15cp in VT2 */
+var modulesRule = {
+	/* type */
+	type: "modulesRule",
+	/* constructor */
+	init: function() {
+		return this;
+	},
+	/* check method */
+	check: function(getSemester) {
+		/* Helper */
+		// return all courses which are in any Vertiefungsgebiet
+		var getCourses = function() {		
+			var modules = studyRegulations.modules;
+			var courses = [];
+			for (var course in data) {				
+				if (!data.hasOwnProperty(course)) continue;
+				if (getSemester(course) == - 1 ) continue;
+				// go through kennung and add (once) if any VT-kennung is hit
+				data[course].kennung.every(function(element) {
+					if ( modules.indexOf(element) !== -1 ) {
+						courses.push(course);
+						return false;
+					}
+					return true;
+				});
+			}
+			return courses;
+		};		
+		var cpSum = function(courses){
+			var sum = 0;
+			courses.forEach(function(element){
+				sum += data[element].cp;
+			});
+			return sum;
+		};
+		var cloneCombination = function(obj){
+			var cpy = {};
+			for (var key in obj) {
+				// these are arrays, slice()-copy them
+				cpy[key] = obj[key].slice();
+			}
+			return cpy;
+		}
+		
+		/* actual function */
+		// Several valid combinations are possible
+		// Each combination is a set of ITSE-courses (24cp), a set of VT1-courses (24cp) and a set of VT2-courses (15cp), as well as the names of VT1 and VT2
+		// IMPORTANT: This rule assumes no course is SSK-* as well as ITSE or any VT
+		//
+		
+		var courses = getCourses();
+				// Most ITSE-Courses also fit in some VT, build all valid combinations
+		var combinations = [];
+		//build one empty config
+		var empty = {};
+		studyRegulations.modules.forEach(function(element){
+			empty[element] = [];
+		});
+		combinations.push(empty);
+		
+		// For each course and each combination, create new configurations, with the course added in one of its modules each, and throw away the old ones
+		for (var i = 0; i < courses.length; i += 1) {
+			var newcombinations = [];
+			for (var j = 0; j < combinations.length; j += 1) {
+				data[courses[i]].kennung.forEach(function(element){
+					var newcombination = cloneCombination(combinations[j]);
+					newcombination[element].push(courses[i]);
+					newcombinations.push(newcombination);
+				});
+			}
+			combinations = newcombinations;
+		}
+		
+		// now we have all combinations, copy valid ones 
+		var validcombinations = [];
+		for (var i = 0; i < combinations.length; i += 1) {
+			var sums = {};
+			studyRegulations.modules.forEach(function(element){
+				sums[element] = cpSum(combinations[i][element]);
+			});
+			
+			// Requirement 1: 24 cp in ITSE
+			if(sums["ITSE"] < 24) continue;
+			// Requirement 2: 24 cp in VT1 and 15 cp in VT2
+			var hasVT1 = false;
+			var hasVT2 = false;
+			for (var module in sums) {
+				if (module == "ITSE") continue;
+				if (sums[module] >= 24 && !hasVT1) hasVT1 = true;
+				else if (sums[module] >= 15 && !hasVT2) hasVT2 = true;
+			}
+			if(!hasVT1 || !hasVT2) continue;
+			
+			validcombinations.push(cloneCombination(combinations[i]));
+		}
+		this.combinations = validcombinations;
+		console.log(this.combinations);
+		return (this.combinations.length > 0);
+	},
+	message: 'Es müssen mindestens zwei unterschiedliche Vertiefungsgebiete mit 24 und 15 Leistungspunkten belegt werden.'
+};
+
+/* 6. Softskills-Rule: atleast six credit points in SSK-MA and twelve credit points in other Softskills must be done */
 var softskillsRule = {
 	/* type */
 	type: "softskillsRule",
@@ -292,28 +431,34 @@ var softskillsRule = {
 		var masum = cpSum(macourses);
 		var restsum = cpSum(restcourses);
 		if(masum >= 6 && restsum >= 12) return true; // yay, that was easy
+		if(masum < 6) { // early ending
+			this.message = "Es müssen mindestens 6 Leistungspunkte in SSK: Management erbracht werden."
+			return false;
+		}
+		// otherwise, this is the error message
+		this.message = "Es müssen mindestens 12 Leistungspunkte in den weiteren Softskills-Bereichen erworben werden."
+		
 		// unfortunately, most SSK-* courses are also SSK-MA or something, so macourses will be to big and restcourses too small
 		
 		// Now we have macourses, which probably contains way too many elements and restcourses, which definately are SSK, but not MA
 		// We have to find any valid combination
-		var hasvalid = false;
-		for( var i = 0; i < macourses.length; i += 1) {
-			if( data[macourses[i]].cp >= 6 ) {
+		for (var i = 0; i < macourses.length; i += 1) {
+			if (data[macourses[i]].cp >= 6) {
 				// now that we have chosen a SSK-MA, make sure the rest is 12 cp
 				// create copy without this one from the array and count
 				var restmacourses = macourses.slice().splice(i,1);
 				var restmasum = cpSum(restmacourses);
-				if(restmasum + restsum >= 12){
+				if (restmasum + restsum >= 12){
 					return true;				
 				}
 			} else { // with less than 6 cp (3cp), we need to add a second course
-				for( var j = i+1; j < macourses.length; j += 1) { // only search the ones behind us, the ones in front of us have already been tried (or rather, tried us)
+				for (var j = i+1; j < macourses.length; j += 1) { // only search the ones behind us, the ones in front of us have already been tried (or rather, tried us)
 					// even in worst case 3+3 = 6, so SSK-MA is satisfied
 					// now that we have chosen two SSK-MA, make sure the rest is 12 cp
 					// create copy without these two from the array and count
 					var restmacourses = macourses.slice().splice(j,1).splice(i,1); // order is important here, since j>=i we don't need to worry about i changing
 					var restmasum = cpSum(restmacourses);
-					if(restmasum + restsum >= 12) {
+					if (restmasum + restsum >= 12) {
 						return true;
 					}
 				}
@@ -323,7 +468,7 @@ var softskillsRule = {
 		return false;
 	},
 	/* message */
-	message: 'Es müssen mindestens 6LP in SSK: Management und 12LP in den weiteren Softskills-Bereichen erworben werden.'
+	message: '' //overriden in check
 };
 
 
@@ -340,8 +485,13 @@ for (var course in data) {
 	/* 2: create time-rules for all courses saved in data */
 	ruleManager.rules.push(Object.create(timeRule).init(course));
 }
-/* 5: create softskills-rule, just push it to rules-array */
-ruleManager.rules.push(softskillsRule);
+/* 4: create itse-rule, just push it to rules-array */
+ruleManager.rules.push(itseRule);
 
+/* 5: create modules-rule, just push it to rules-array */
+ruleManager.rules.push(modulesRule);
+
+/* 6: create softskills-rule, just push it to rules-array */
+ruleManager.rules.push(softskillsRule);
 
 /* 3: clone rules are added at runtime when items are cloned */
