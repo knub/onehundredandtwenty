@@ -299,6 +299,17 @@ var modulesRule = {
 			}
 			return courses;
 		};		
+		var getModulesAbove15 = function(courses){
+			var modules = [];
+			studyRegulations.modules.forEach(function(element){
+				if(cpSum4Module(courses,element) >= 15){
+					if(modules.indexOf(element) == -1){
+						modules.push(element);
+					}
+				}
+			});
+			return modules;
+		};
 		var cpSum = function(courses){
 			var sum = 0;
 			courses.forEach(function(element){
@@ -306,6 +317,28 @@ var modulesRule = {
 			});
 			return sum;
 		};
+		var cpSum4Module = function(courses,module){
+			var sum = 0;
+			courses.forEach(function(element){
+				if(data[element].kennung.indexOf(module) !== -1)
+					sum += data[element].cp;
+			});
+			return sum;
+		};		
+		var getVTs = function(courses){
+			var vts = [];
+			for (var course in data) {
+				if (!data.hasOwnProperty(course)) continue;
+				if (getSemester(course) == - 1 ) continue;
+				// go through kennung and add (once) if any VT-kennung is hit
+				data[course].kennung.forEach(function(element) {
+					if (element !== "ITSE" && studyRegulations.modules.indexOf(element) !== -1 && vts.indexOf(element) == -1) {
+						vts.push(element);
+					}
+				});
+			}
+			return vts;
+		}
 		var cloneCombination = function(obj){
 			var cpy = {};
 			for (var key in obj) {
@@ -317,57 +350,83 @@ var modulesRule = {
 		
 		/* actual function */
 		// Several valid combinations are possible
-		// Each combination is a set of ITSE-courses (24cp), a set of VT1-courses (24cp) and a set of VT2-courses (15cp), as well as the names of VT1 and VT2
+		// Each combination is a set of courses ordered in the module it is counted to.
 		// IMPORTANT: This rule assumes no course is SSK-* as well as ITSE or any VT
 		//
+		var combinations = [];
+		
 		
 		var courses = getCourses();
-				// Most ITSE-Courses also fit in some VT, build all valid combinations
-		var combinations = [];
-		//build one empty config
-		var empty = {};
-		studyRegulations.modules.forEach(function(element){
-			empty[element] = [];
-		});
-		combinations.push(empty);
+		var modules = getModulesAbove15(courses);
+		
+		var vts = getVTs(courses); //not including ITSE
+		//build all 2-sized combinations
+		var vtcombos = [];
+		for (var i = 0; i < vts.length; i += 1) {
+			for (var j = i+1; j < vts.length; j += 1) {
+				//if (i==j) continue;
+				var elem = {};
+				elem['ITSE'] = [];
+				elem[vts[i]] = [];
+				elem[vts[j]] = [];
+				combinations.push(elem);
+			}
+		}
+		
 		
 		// For each course and each combination, create new configurations, with the course added in one of its modules each, and throw away the old ones
 		for (var i = 0; i < courses.length; i += 1) {
 			var newcombinations = [];
 			for (var j = 0; j < combinations.length; j += 1) {
 				data[courses[i]].kennung.forEach(function(element){
-					var newcombination = cloneCombination(combinations[j]);
-					newcombination[element].push(courses[i]);
-					newcombinations.push(newcombination);
+					if (element in combinations[j]){
+						if(combinations[j][element].length < 8){ //optimization - with 8 courses you have definately reached 24cp, everything beyond does not matter
+							var newcombination = cloneCombination(combinations[j]);
+							newcombination[element].push(courses[i]);
+							newcombinations.push(newcombination);
+						}
+					}
 				});
 			}
 			combinations = newcombinations;
 		}
 		
-		// now we have all combinations, copy valid ones 
+		console.log(combinations.length);
+		
+		// now we have all interesting combinations, copy valid ones 
+		// note the format is different now: for the frontend, all we need to know is VT1,VT2
+		// in what exact combinations this is reached does not matter (is too much to be printed)
 		var validcombinations = [];
+		var validcombinationsstr = [];
 		for (var i = 0; i < combinations.length; i += 1) {
 			var sums = {};
-			studyRegulations.modules.forEach(function(element){
+			for (var element in combinations[i]){
 				sums[element] = cpSum(combinations[i][element]);
-			});
+			}
 			
 			// Requirement 1: 24 cp in ITSE
 			if(sums["ITSE"] < 24) continue;
 			// Requirement 2: 24 cp in VT1 and 15 cp in VT2
-			var hasVT1 = false;
-			var hasVT2 = false;
+			// Try both ways
 			for (var module in sums) {
 				if (module == "ITSE") continue;
-				if (sums[module] >= 24 && !hasVT1) hasVT1 = true;
-				else if (sums[module] >= 15 && !hasVT2) hasVT2 = true;
+				if (sums[module] >= 24){
+					for (var secondmodule in sums){ // this finds the third key
+						if (secondmodule == "ITSE") continue;
+						if (secondmodule == module) continue;
+						if(sums[secondmodule] >= 15){
+							var str = module + '-' + secondmodule;
+							if (validcombinationsstr.indexOf(str) == -1) {
+								validcombinationsstr.push(str);
+								validcombinations.push([module,secondmodule]);
+							}
+						}
+					}
+				}
 			}
-			if(!hasVT1 || !hasVT2) continue;
-			
-			validcombinations.push(cloneCombination(combinations[i]));
 		}
 		this.combinations = validcombinations;
-		console.log(this.combinations);
+		//console.log(this.combinations);
 		return (this.combinations.length > 0);
 	},
 	message: 'Es müssen mindestens zwei unterschiedliche Vertiefungsgebiete mit 24 und 15 Leistungspunkten belegt werden.'
