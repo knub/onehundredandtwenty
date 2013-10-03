@@ -125,8 +125,8 @@ var data = {
         dozent: ["Prof. Dr. Felix Naumann"], 
         nameLV: "Data Profiling and Data Cleansing"
     }, 
-    dublicationDetection: {
-		kurz: "Dublication Detection",
+    duplicationDetection: {
+		kurz: "Duplication Detection",
         kennung: ["VT BPET","VT OSIS"], 
         lehrform: ["Seminar"], 
         modul: ["Vertiefungsgebiete"], 
@@ -231,7 +231,7 @@ var data = {
         nameLV: "Systemtechnische Grundlagen der Regelungs-<br />und Steuerungstechnik"
     }, 
     IntroductionOfDesignThinking: {
-		kurz: "Introduction Design Thinking",
+		kurz: "Introduction<br />Design Thinking",
         kennung: ["SSK-DT"], 
         lehrform: ["Seminar"," Projekt"], 
         modul: ["Softskills"], 
