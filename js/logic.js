@@ -357,6 +357,7 @@ var modulesRule = {
 		
 		
 		var courses = getCourses();
+		this.vertiefungen = courses;
 		var modules = getModulesAbove15(courses);
 		
 		var vts = getVTs(courses); //not including ITSE
@@ -426,7 +427,7 @@ var modulesRule = {
 			}
 		}
 		this.combinations = validcombinations;
-		//console.log(this.combinations);
+		console.log(this.combinations);
 		return (this.combinations.length > 0);
 	},
 	message: 'Es müssen mindestens zwei unterschiedliche Vertiefungsgebiete mit 24 und 15 Leistungspunkten belegt werden.'

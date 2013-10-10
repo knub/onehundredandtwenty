@@ -178,47 +178,17 @@ var frontend = {
 	makeVertiefungsgebieteTable: function(vertiefungen) {
 		var cp = 0;
 		var table = "<table class='vertiefungen'>";
-		table += "<tr><td>Lehr&shy;veranstaltung</td><td>Leistungs&shy;punkte</td><td>Vertiefungs&shy;gebiet</td><td style='width: 300px'>Dozent</td></tr>";
+		table += "<tr><td>Lehr&shy;veranstaltung</td><td>Leistungs&shy;punkte</td><td>Module</td><td style='width: 300px'>Dozent</td></tr>";
 		for (var i = 0; i < vertiefungen.length; i += 1) {
 			var course = data[vertiefungen[i]];
 			cp += course.cp;
 			table += "<tr><td>" + course.nameLV + "</td>" +
 			         "<td>" + course.cp + "</td>" +
-				 "<td>" + course.vertiefung.join(", ") + "</td>" +
+				 "<td>" + course.kennung.join(", ") + "</td>" +
 				 "<td>" + course.dozent.join(", ") + "</td>" +
 				 "</tr>";
 		}
-		if (vertiefungen.sbsCourses.length === 4) {
-			cp += 6;
-			table += "<tr class='sbs-text'><td colspan='4'>Es wurden vier Softwarebasissysteme gewählt, sodass <strong>eines</strong> davon als Vertiefung gewertet wird (siehe auch <a href='fragen.html#mehrsoftwarebasissysteme'>Was passiert, wenn ich mehr als drei Softwarebasissysteme belege?</a>). Die vier gewählten Softwarebasissysteme sind:</td></tr>";
-			vertiefungen.sbsCourses.forEach(function (key) {
-				var course = data[key];
-				table += "<tr class='sbs-vertiefung'><td>" + course.nameLV + "</td>" +
-					 "<td>" + course.cp + "</td>" +
-					 "<td>" + course.vertiefung.join(", ") + "</td>" +
-					 "<td>" + course.dozent.join(", ") + "</td>" +
-					 "</tr>";
-			});
-		}
 
-		else if (vertiefungen.sbsCourses.length === 5) {
-			cp += 12;
-			table += "<tr class='sbs-text'><td colspan='4'>Es wurden fünf Softwarebasissysteme gewählt, sodass <strong>zwei</strong> davon als Vertiefung gewertet werden (siehe auch <a href='fragen.html#mehrsoftwarebasissysteme'>Was passiert, wenn ich mehr als drei Softwarebasissysteme belege?</a>). Die fünf gewählten Softwarebasissysteme sind:</td></tr>";
-			vertiefungen.sbsCourses.forEach(function (key) {
-				var course = data[key];
-				table += "<tr class='sbs-vertiefung'><td>" + course.nameLV + "</td>" +
-					 "<td>" + course.cp + "</td>" +
-					 "<td>" + course.vertiefung.join(", ") + "</td>" +
-					 "<td>" + course.dozent.join(", ") + "</td>" +
-					 "</tr>";
-			});
-		}
-		// if there are less than 24 creditpoints, show how much creditpoints there are
-		if (cp < 24)
-			table += "<tr><td></td><td class='sum'>" + cp + "</td><td></td><td></td></tr>";
-		// else insert empty row, because last row is visibility:hidden by default (a little bit hacky, i know)
-		else
-			table += "<tr><td></td></tr>";
 		table += "</table>";
 
 		// and now there is a dirty little hack:
@@ -234,54 +204,17 @@ var frontend = {
 	/* used to display information about possible Vertiefungsgebiete */
 	makeCombinationsTable: function(possibilities) {
 		var table = "<table class='combinations'>";
-		table += "<tr><td></td><td>Vertiefungs&shy;gebiete</td><td>Lehr&shy;veranstaltungen</td><td>aktuell belegte<br />Leistungs&shy;punkte</td><td>Vorlesung<br />in diesem Ge&shy;biet</td></tr>";
+		table += "<tr><td></td><td>Vertiefungs&shy;gebiet I</td><td>Vertiefungs&shy;gebiet II</td></tr>";
 		for (var i = 0; i < possibilities.length; i += 1) {
 			var possibility = possibilities[i];
 
-			// at first, do some calculation stuff, so collect all courses, creditpoints and lectures
-			var first = [];
-			var second = [];
-			var firstCP = 0,
-			secondCP = 0;
-			for (var j = 0; j < possibility.length; j += 1) {
-				var course = possibility[j];
-				if (course.vertiefung === possibility.vertiefungPair[0]) {
-					first.push(f.adjustShortCourseName(data[course.key].kurz));
-					firstCP += data[course.key].cp;
-				}
-				else if (course.vertiefung === possibility.vertiefungPair[1]) {
-					second.push(f.adjustShortCourseName(data[course.key].kurz));
-					secondCP += data[course.key].cp;
-				}
-			}
-			var firstLectures = [];
-			var secondLectures = [];
-			for (var j = 0; j < possibility.firstVertiefungLectures.length; j += 1)
-			firstLectures.push(f.adjustShortCourseName(possibility.firstVertiefungLectures[j].kurz));
-			for (var j = 0; j < possibility.secondVertiefungLectures.length; j += 1)
-			secondLectures.push(f.adjustShortCourseName(possibility.secondVertiefungLectures[j].kurz));
-
-			table += "<tr><td rowspan='2'>Variante " + (i + 1).toString() + "</td>";
+			table += "<tr><td class=\"variante\">Variante " + (i + 1).toString() + "</td>";
 
 			// now display first Vertiefungsgebiet
-			table += "<td>" + possibility.vertiefungPair[0] + "</td>";
-			table += "<td><ul>" + first.reduce(function(prev, current) {
-				return prev + "<li>" + current + "</li>";
-			},
-			"") + "</ul></td>";
-			table += "<td>" + firstCP + "</td>";
-			table += "<td>" + firstLectures.join(", ") + "</td>";
-
-			table += "</tr><tr>";
+			table += "<td>" + possibility[0];
 
 			// now display second Vertiefungsgebiet
-			table += "<td>" + possibility.vertiefungPair[1] + "</td>";
-			table += "<td><ul>" + second.reduce(function(prev, current) {
-				return prev + "<li>" + current + "</li>";
-			},
-			"") + "</ul></td>";
-			table += "<td>" + secondCP + "</td>";
-			table += "<td>" + secondLectures.join(", ") + "</td>";
+			table += "<td>" + possibility[1] + "</td>";
 
 			table += "</tr>";
 		}
@@ -308,7 +241,7 @@ var frontend = {
 			// animate to green
 			for (var rule = 0; rule < rules.length; rule += 1) {
 				var extra = '';
-				if (rules[rule].type === 'vertiefungsgebieteRule') {
+				if (rules[rule].type === 'modulesRule') {
 					var possibilities = rules[rule].combinations;
 					extra += '<div class="extra-inf">Folgende Kombinationen von Vertiefungsgebieten sind gültig im Sinne der Studienordnung:';
 					extra += f.makeCombinationsTable(possibilities);
@@ -326,13 +259,7 @@ var frontend = {
 				var extra = '';
 				if (rules[rule].type === 'sbsRule') extra = ' <a href="fragen.html#softwarebasissysteme">Was bedeutet das?</a>';
 				else if (rules[rule].type === 'softskillsRule') extra = ' <a href="fragen.html#softskills">Was bedeutet das?</a>';
-				else if (rules[rule].type === 'vertiefungsgebieteRule' && rules[rule].combinations !== null) {
-					var possibilities = rules[rule].combinations;
-					extra += ' <a href="fragen.html#vertiefungsgebiete">Was bedeutet das?</a><div class="extra-inf">Folgende Kombinationen von Vertiefungsgebieten sind mit genug Leistungspunkten belegt, es fehlt aber noch eine Vorlesung:';
-					extra += f.makeCombinationsTable(possibilities);
-					extra += "</div>";
-				}
-				else if (rules[rule].type === 'vertiefungsgebieteRule' && rules[rule].vertiefungen !== null) {
+				else if (rules[rule].type === 'modulesRule' && rules[rule].vertiefungen !== null) {
 					var vertiefungen = rules[rule].vertiefungen;
 					extra += ' <a href="fragen.html#vertiefungsgebiete">Was bedeutet das?</a><div class="extra-inf">Folgende Vertiefungsgebiete sind bisher gewählt; dies erfüllt aber noch nicht alle Kriterien:';
 					extra += f.makeVertiefungsgebieteTable(vertiefungen);

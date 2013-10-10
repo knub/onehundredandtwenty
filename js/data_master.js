@@ -351,7 +351,7 @@ var data = {
         nameLV: "Softwarevisualisierungsverfahren"
     }, 
     automatedAnalysisOfFormalModels: {
-		kurz: "auto. Analysis of<br />Formal Models",
+		kurz: "Auto. Analysis of<br />Formal Models",
         kennung: ["ITSE","VT SAMT"], 
         lehrform: ["Seminar"], 
         modul: ["IT-Systems Engineering","Vertiefungsgebiete"], 
@@ -374,7 +374,7 @@ var data = {
         benotet: true, 
         pflicht: false, 
         empfohlen: "", 
-        vertiefung: ["Verteiles Rechnen"," Systemsicherheit"," Systems Integration"," Systems Architecture"," Systemarchitektur"," Software Engineering"," Security and Safety Engineering"," Network & Service Computing"," Information Systems"], 
+        vertiefung: [""], 
         cp: 6, 
         vorher: [], 
         dozent: ["Dr. Peter Tr\u00f6ger"], 
@@ -591,7 +591,7 @@ var data = {
         nameLV: "Design Thinking Basics (D-School Basic Track)"
     }, 
     CloudUndVirtualisierung: {
-		kurz: "Cloud & Virtualisierung",
+		kurz: "Cloud &<br /> Virtualisierung",
         kennung: ["ITSE","VT IST","VT OSIS"], 
         lehrform: ["Seminar"], 
         modul: ["IT-Systems Engineering","Vertiefungsgebiete"], 

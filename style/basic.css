@@ -144,9 +144,9 @@ div#message table td {
 	padding: 5px;
 	line-height: 1.35em;
 }
-div#message table.combinations tr:nth-child(even) td {
+/*div#message table.combinations tr:nth-child(even) td {
 	border-top: 2px solid black;
-}
+}*/
 div#message table.vertiefungen tr.sbs-text {
 	background: #CCC;
 }
@@ -157,9 +157,9 @@ div#message table.vertiefungen tr.sbs-text td {
 div#message table.vertiefungen tr.sbs-vertiefung {
 	background: #E4E4E4;
 }
-div#message table.vertiefungen tr:last-child {
+/*div#message table.vertiefungen tr:last-child {
 	visibility: hidden;
-}
+}*/
 div#message tr td.sum {
 	visibility: visible;
 	background: #DDD;
@@ -176,10 +176,9 @@ div#message table tr:first-child td {
 	line-height: 1.2em;
 	padding: 10px 10px;
 }
-div#message table tr td[rowspan] {
+div#message table tr td.variante {
 	background: #CCC;
 	border: 1px solid #444;
-	border-top: 2px solid black;
 }
 div#message table ul {
 	list-style-type: square;
