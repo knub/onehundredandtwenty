@@ -200,6 +200,11 @@ div#message p ~ ul {
 	text-indent: 2em;
 }
 
+div.filter {
+	float: left;
+	width: 300px;
+}
+
 .teaser {
 	font-variant: small-caps;
 	text-align: center;

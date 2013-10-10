@@ -14,12 +14,11 @@ var frontend = {
 		/* saves the semesters, which are currently selected by the filter */
 		selectedSemesters: semesterManager.shownSemesters,
 		/* rest accordingly .. */
-		possibleModule: studyRegulations.module,
-		selectedModule: studyRegulations.module,
-		possibleVertiefungsgebiete: studyRegulations.vertiefungsgebiete,
-		selectedVertiefungsgebiete: studyRegulations.vertiefungsgebiete,
-		possibleWahlpflicht: ["Pflicht", "Wahl"],
-		selectedWahlpflicht: ["Pflicht", "Wahl"],
+		possibleModule: studyRegulations.modules,
+		selectedModule: studyRegulations.modules,
+
+		possibleSoftskills: studyRegulations.softskills,
+		selectedSoftskills: studyRegulations.softskills,
 		/*
 		 * Used to determine, whether a special course should be displayed according to its semester.
 		 * That means, there is at least one course selected the current course is/was offered in.
@@ -47,34 +46,19 @@ var frontend = {
 		checkModule: function(key) {
 			if (key.search("clone") >= 0)
 				key = f.repetitionManager.cloneIdToCourseId(key);
-			return this.selectedModule.haveIntersection(data[key].modul);
+			return this.selectedModule.haveIntersection(data[key].kennung) || this.possibleSoftskills.haveIntersection(data[key].kennung);
 		},
-		/* see checkSemester for documentation, same procedure */
-		checkVertiefungsgebiete: function(key) {
+		checkSoftskills: function(key) {
 			if (key.search("clone") >= 0)
 				key = f.repetitionManager.cloneIdToCourseId(key);
-			if (data[key].vertiefung[0] === "") return true;
-			return this.selectedVertiefungsgebiete.haveIntersection(data[key].vertiefung);
-		},
-		/* see checkSemester for documentation, same procedure */
-		checkWahlpflicht: function(key) {
-			if (key.search("clone") >= 0)
-				key = f.repetitionManager.cloneIdToCourseId(key);
-			// if both 'Wahl' and 'Pflicht' are in the array, its always true
-			if (this.selectedWahlpflicht.indexOf("Wahl") !== - 1 && this.selectedWahlpflicht.indexOf("Pflicht") !== - 1) return true;
-			// if its only 'Pflicht' return true, when the course is 'Pflicht'
-			else if (this.selectedWahlpflicht[0] === "Pflicht") return data[key].pflicht;
-			// if its only 'Wahl' return true, when the course is not 'Pflicht'
-			else if (this.selectedWahlpflicht[0] === "Wahl") return ! data[key].pflicht;
-			// if nothing is selected, return false
-			return false;
+			return this.selectedSoftskills.haveIntersection(data[key].kennung) || this.possibleModule.haveIntersection(data[key].kennung);
 		},
 		filter: function() {
 			f.coursesPoolUl.find("li").each(function() {
 				// .slice(7) to remove foregoing "course-" from id
 				var key = this.id.slice(7);
 
-				var show = f.filterManager.checkSemester(key) && f.filterManager.checkWahlpflicht(key) && f.filterManager.checkModule(key) && f.filterManager.checkVertiefungsgebiete(key);
+				var show = f.filterManager.checkSemester(key) && f.filterManager.checkModule(key) && f.filterManager.checkSoftskills(key);
 				if (show === false) {
 					$(this).addClass("hidden");
 				}
@@ -437,7 +421,7 @@ var frontend = {
 		if (repetition !== undefined)
 			id = repetition;
 		var course = data[key];
-		var courseInfo = "<div class='info'>" + "<h3>" + course['nameLV'] + "</h3>" + "<div>" + "<table>" + f.displayArray(course['modul'], "Modul") + f.displayArray(course['dozent'], "Dozent") + "<tr><td>Leistungspunkte</td><td>" + course['cp'] + " Leistungspunkte</td></tr>" + f.displayArray(course['lehrform'], "Lehrform") + f.displayArray(course['vertiefung'], "Vertiefungsgebiet") + f.displayArray(course['semester'], "Angeboten im") + "</table>" + "</div>" + "</div>";
+		var courseInfo = "<div class='info'>" + "<h3>" + course['nameLV'] + "</h3>" + "<div>" + "<table>" + f.displayArray(course['kennung'], "Modul") + f.displayArray(course['dozent'], "Dozent") + "<tr><td>Leistungspunkte</td><td>" + course['cp'] + " Leistungspunkte</td></tr>" + f.displayArray(course['lehrform'], "Lehrform") + f.displayArray(course['semester'], "Angeboten im") + "</table>" + "</div>" + "</div>";
 
 		// if item contains no newline break, apply specific css class (which sets line-height higher, so text is vertically aligned)
 		var classes = [];
@@ -568,27 +552,17 @@ var frontend = {
 		}
 		moduleList += "</ul>";
 
-		// build vertiefungsgebiete list
-		var vertiefungsgebieteList = "<ul id='vertiefungsgebiete-filter'>";
-		for (var vertiefungsgebiet in f.filterManager.possibleVertiefungsgebiete) {
-			if (!f.filterManager.possibleVertiefungsgebiete.hasOwnProperty(vertiefungsgebiet)) continue;
-			var selected = f.filterManager.selectedVertiefungsgebiete.indexOf(f.filterManager.possibleVertiefungsgebiete[vertiefungsgebiet]) === - 1 ? "": " class='selected'";
-			vertiefungsgebieteList += "<li" + selected + ">" + f.filterManager.possibleVertiefungsgebiete[vertiefungsgebiet] + "</li>";
+		var softskillList = "<ul id='softskill-filter'>";
+		for (var modul in f.filterManager.possibleSoftskills) {
+			if (!f.filterManager.possibleSoftskills.hasOwnProperty(modul)) continue;
+			var selected = f.filterManager.selectedSoftskills.indexOf(f.filterManager.possibleSoftskills[modul]) === - 1 ? "": " class='selected'";
+			softskillList += "<li" + selected + ">" + f.filterManager.possibleSoftskills[modul] + "</li>";
 		}
-		vertiefungsgebieteList += ' <a href="fragen.html#vertiefungsgebiete">Wofür stehen die Abkürzungen?</a></ul>';
-
-		// build wahlpflicht list
-		var wahlpflichtList = "<ul id='wahlpflicht-filter'>";
-		for (var wahlpflicht in f.filterManager.possibleWahlpflicht) {
-			if (!f.filterManager.possibleWahlpflicht.hasOwnProperty(wahlpflicht)) continue;
-			var selected = f.filterManager.selectedWahlpflicht.indexOf(f.filterManager.possibleWahlpflicht[wahlpflicht]) === - 1 ? "": " class='selected'";
-			wahlpflichtList += "<li" + selected + ">" + f.filterManager.possibleWahlpflicht[wahlpflicht] + "</li>";
-		}
-		wahlpflichtList += "</ul>";
+		softskillList += "</ul>";
 
 		// append built uls to correct div
-		$("#semester_wahlpflicht").html(semesterList + wahlpflichtList);
-		$("#module_vertiefungsgebiete").html(moduleList + vertiefungsgebieteList);
+		$("#filter_semester_softskills").html(semesterList + softskillList);
+		$("#filter_module").html(moduleList);
 	},
 	/* selector for droppables */
 	coursesList: ".courses",
@@ -721,12 +695,10 @@ $(function() {
 			// according to the ul, where the selection change happened, update selected
 			if (id === "semester-filter") {
 				f.filterManager.selectedSemesters = selected;
-			} else if (id === "wahlpflicht-filter") {
-				f.filterManager.selectedWahlpflicht = selected;
 			} else if (id === "module-filter") {
 				f.filterManager.selectedModule = selected;
-			} else if (id === "vertiefungsgebiete-filter") {
-				f.filterManager.selectedVertiefungsgebiete = selected;
+			} else if (id === "softskill-filter") {
+				f.filterManager.selectedSoftskills = selected;
 			}
 			f.filterManager.filter();
 			f.saveManager.save();
@@ -759,16 +731,7 @@ $(function() {
 		// else use standard behaviour
 		else {
 			// if it is not recommended for a specific semester ..
-			if (course['empfohlen'] === "") {
-				// .. put it in the courses pool
-				// for now, putting in the first ul is ok, because whole courses-pool will be rearranged afterwards
-				coursesPoolItems += html;
-			}
-			// if it is recommended for a specific semester ..
-			else {
-				// .. just put it there.
-				$("#semester" + course['empfohlen']).append(html);
-			}
+			coursesPoolItems += html;
 		}
 	}
 	$("#extra1").append(coursesPoolItems);

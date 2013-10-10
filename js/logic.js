@@ -9,9 +9,6 @@
 var studyRegulations = {
 	softskills: ["SSK-RE", "SSK-KO", "SSK-DT", "SSK-SK"], // SSK-MA is not included because it is treated specially in the softskillsRule
 	modules: ["ITSE", "VT BPET", "VT HCT", "VT IST", "VT OSIS", "VT SAMT"],
-	// removing these kills frontend functionality - TODO: remove when frontend doesnt need them anymore
-	vertiefungsgebiete: ["BPET", "HCT", "IST", "OSIS", "SAMT"],
-	module: ["Grundlagen IT-Systems Engineering", "Mathematische und theoretische Grundlagen", "Softwaretechnik und Modellierung", "Rechtliche und wirtschaftliche Grundlagen", "Softwarebasissysteme", "Vertiefungsgebiete", "Softskills"],
 };
 var semesterManager = {
 	semesters: ["WS10/11", "SS11", "WS11/12", "SS12", "WS12/13", "SS13", "WS13/14", "SS14", "WS14/15", "SS15", "WS15/16", "SS16"],
