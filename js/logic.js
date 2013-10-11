@@ -7,11 +7,11 @@
  * (variable names in german, because 'Vertiefungsgebiete' is hard to translate and not really nice)
  */
 var studyRegulations = {
-	softskills: ["SSK-RE", "SSK-KO", "SSK-DT", "SSK-SK"], // SSK-MA is not included because it is treated specially in the softskillsRule
+	softskills: ["SSK-MA", "SSK-RE", "SSK-KO", "SSK-DT", "SSK-SK"],
 	modules: ["ITSE", "VT BPET", "VT HCT", "VT IST", "VT OSIS", "VT SAMT"],
 };
 var semesterManager = {
-	semesters: ["WS10/11", "SS11", "WS11/12", "SS12", "WS12/13", "SS13", "WS13/14", "SS14", "WS14/15", "SS15", "WS15/16", "SS16"],
+	semesters: [ "WS13/14", "SS14", "WS14/15", "SS15", "WS15/16", "SS16", "WS16/17", "SS17", "WS17/18", "SS18"],
 	shownSemesters: [
 	/*
 		"SS13"
@@ -450,7 +450,7 @@ var softskillsRule = {
 				if (getSemester(course) == - 1 ) continue;
 				// go through kennung and add (once) if any SSK- kennung is hit
 				data[course].kennung.every(function(element) {
-					if ( element == "SSK-MA" || ssk.indexOf(element) !== -1 ) {
+					if ( ssk.indexOf(element) !== -1 ) {
 						sskCourses.push(course);
 						return false;
 					}
