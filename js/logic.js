@@ -389,7 +389,7 @@ var modulesRule = {
 			combinations = newcombinations;
 		}
 		
-		console.log(combinations.length);
+		//console.log(combinations.length);
 		
 		// now we have all interesting combinations, copy valid ones 
 		// note the format is different now: for the frontend, all we need to know is VT1,VT2
@@ -424,7 +424,7 @@ var modulesRule = {
 			}
 		}
 		this.combinations = validcombinations;
-		console.log(this.combinations);
+		//console.log(this.combinations);
 		return (this.combinations.length > 0);
 	},
 	message: 'Es müssen mindestens zwei unterschiedliche Vertiefungsgebiete mit 24 und 15 Leistungspunkten belegt werden.'
@@ -503,7 +503,8 @@ var softskillsRule = {
 			if (data[macourses[i]].cp >= 6) {
 				// now that we have chosen a SSK-MA, make sure the rest is 12 cp
 				// create copy without this one from the array and count
-				var restmacourses = macourses.slice().splice(i,1);
+				var restmacourses = macourses.slice();
+				restmacourses.splice(i,1);
 				var restmasum = cpSum(restmacourses);
 				if (restmasum + restsum >= 12){
 					return true;				
