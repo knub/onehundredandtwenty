@@ -713,7 +713,7 @@ var data = {
         modul: ["Vertiefungsgebiete"],  
         semester: [ws13_14], 
         benotet: true, 
-        cp: 3, 
+        cp: 6, 
         dozent: ["Prof. Dr. Robert Hirschfeld", "Tobias Pape", "Tim Felgentreff", "Bastian Steinert"], 
         nameLV: "Virtuelle Maschinen und Ausf\u00fchrungsumgebungen"
     },
