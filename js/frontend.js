@@ -150,13 +150,13 @@ var frontend = {
 				}
 			}
 			// SAVE data
-			localStorage.hasData = true;
-			localStorage.courseToSemester = JSON.stringify(courseToSemester);
-			localStorage.repetitionManager = JSON.stringify(f.repetitionManager);
-			localStorage.filterManager = JSON.stringify(f.filterManager);
-			localStorage.semesters = JSON.stringify(semesterManager.shownSemesters);
-			localStorage.checkPermanently = f.checkPermanently;
-			localStorage.allMessagesVisible = f.allMessagesVisible;
+			localStorage.onehundredandtwenty_hasData = true;
+			localStorage.onehundredandtwenty_courseToSemester = JSON.stringify(courseToSemester);
+			localStorage.onehundredandtwenty_repetitionManager = JSON.stringify(f.repetitionManager);
+			localStorage.onehundredandtwenty_filterManager = JSON.stringify(f.filterManager);
+			localStorage.onehundredandtwenty_semesters = JSON.stringify(semesterManager.shownSemesters);
+			localStorage.onehundredandtwenty_checkPermanently = f.checkPermanently;
+			localStorage.onehundredandtwenty_allMessagesVisible = f.allMessagesVisible;
 		}
 	},
 	makeVertiefungsgebieteTable: function(vertiefungen) {
@@ -623,7 +623,7 @@ $(function() {
 		$("#permacheck").find("li").attr("class", "selected");
 		$("#checkbox-div").css("visibility", "visible");
 		$("#button-div").css("visibility", "visible");
-		localStorage.alreadyChecked = true;
+		localStorage.onehundredandtwenty_alreadyChecked = true;
 		f.saveManager.save();
 	});
 
@@ -664,20 +664,20 @@ $(function() {
 		filtering = ! filtering;
 	});
 
-	if (localStorage.hasData === "true") {
-		f.checkPermanently = localStorage.checkPermanently === "true";
-		if (localStorage.checkPermanently === "null")
+	if (localStorage.onehundredandtwenty_hasData === "true") {
+		f.checkPermanently = localStorage.onehundredandtwenty_checkPermanently === "true";
+		if (localStorage.onehundredandtwenty_checkPermanently === "null")
 			f.checkPermanently = null;
-		f.allMessagesVisible = localStorage.allMessagesVisible === "true";
+		f.allMessagesVisible = localStorage.onehundredandtwenty_allMessagesVisible === "true";
 
-		semesterManager.shownSemesters = JSON.parse(localStorage.semesters);
+		semesterManager.shownSemesters = JSON.parse(localStorage.onehundredandtwenty_semesters);
 		// if there are more than four semester, we need a special row
 		if (semesterManager.shownSemesters.length > 4) {
 			f.addSemester(semesterManager.shownSemesters.length - 4);
 		}
 
-		f.filterManager = $.extend(f.filterManager, JSON.parse(localStorage.filterManager));
-		f.repetitionManager = $.extend(f.repetitionManager, JSON.parse(localStorage.repetitionManager));
+		f.filterManager = $.extend(f.filterManager, JSON.parse(localStorage.onehundredandtwenty_filterManager));
+		f.repetitionManager = $.extend(f.repetitionManager, JSON.parse(localStorage.onehundredandtwenty_repetitionManager));
 		if (f.checkPermanently !== false) $("#permacheck").find("li").attr("class", "selected");
 		else $("#button-div").fadeIn(100);
 	}
@@ -723,10 +723,10 @@ $(function() {
 
 		// lookup, if there is localStorage data for this semester
 		// if this is the case, use this information
-		if (localStorage.courseToSemester !== undefined && localStorage.courseToSemester !== null) {
-			var semester = JSON.parse(localStorage.courseToSemester)[key];
+		if (localStorage.onehundredandtwenty_courseToSemester !== undefined && localStorage.onehundredandtwenty_courseToSemester !== null) {
+			var semester = JSON.parse(localStorage.onehundredandtwenty_courseToSemester)[key];
 			if (semester === undefined || semester === - 1) coursesPoolItems += html;
-			else if (semester >= 0) $("#semester" + JSON.parse(localStorage.courseToSemester)[key]).append(html);
+			else if (semester >= 0) $("#semester" + JSON.parse(localStorage.onehundredandtwenty_courseToSemester)[key]).append(html);
 		}
 		// else use standard behaviour
 		else {
@@ -783,7 +783,7 @@ $(function() {
 	/* adjust #semester-view1 height */
 	f.adjustSemesterViewHeight();
 
-	if (localStorage.alreadyChecked === "true") {
+	if (localStorage.onehundredandtwenty_alreadyChecked === "true") {
 		f.checkRules();
 		f.slideMessages();
 		$("#checkbox-div").css("visibility", "visible");
@@ -791,7 +791,7 @@ $(function() {
 	}
 
 	$("#reset").click(function() {
-		localStorage.clear();
+		localStorage.onehundredandtwenty_clear();
 		location.reload();
 	});
 	$("#moresemester").click(function() {
