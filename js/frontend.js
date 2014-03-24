@@ -791,7 +791,14 @@ $(function() {
 	}
 
 	$("#reset").click(function() {
-		localStorage.onehundredandtwenty_clear();
+		/* localStorage.clear() may remove too much data, e.g. 180 data hosted on the same server */
+		localStorage.removeItem("onehundredandtwenty_hasData");
+		localStorage.removeItem("onehundredandtwenty_courseToSemester");
+		localStorage.removeItem("onehundredandtwenty_repetitionManager");
+		localStorage.removeItem("onehundredandtwenty_filterManager");
+		localStorage.removeItem("onehundredandtwenty_semesters");
+		localStorage.removeItem("onehundredandtwenty_checkPermanently");
+		localStorage.removeItem("onehundredandtwenty_allMessagesVisible");
 		location.reload();
 	});
 	$("#moresemester").click(function() {
