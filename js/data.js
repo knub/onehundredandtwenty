@@ -32,9 +32,36 @@
     ss12    = "SS12",
     ws12_13 = "WS12/13",
     ss13    = "SS13",
-    ws13_14 = "WS13/14";
+    ws13_14 = "WS13/14",
+    ss14 = "SS14";
 
 var data = {
+    futureinteractivetechnology:
+    {
+        kurz: "Future Interactive<br>Technology",
+        kennung: ["ITSE", "HCT", "SMAT"],
+        lehrform: ["Vorlesung"],
+        modul: ["IT Systems Engineering", "Vertiefungsgebiete"],
+        semester: ss14,
+        benotet: true,
+        pflicht: false,
+        cp: 6,
+        dozent: ["Prof. Dr. Patrick Baudisch"],
+        nameLV: "Future Interactive Technology"
+    },
+    hciProjectSeminarVRG:
+    {
+        kurz: "HCI Projekt<br<VR Gaming",
+        kennung: ["ITSE", "HCT", "SMAT"],
+        lehrform: ["Seminar", "Projekt"],
+        modul: ["IT Systems Engineering", "Vertiefungsgebiete"],
+        semester: ss14,
+        benotet: true,
+        pflicht: false,
+        cp: 6,
+        dozent: ["Prof. Dr. Patrick Baudisch"],
+        nameLV: "HCI Project Seminar on Virtual Reality Gaming"
+    },
     linkedopendata: {
         kurz: "Linked<br />Open Data",
         kennung: ["ITSE", "BPET", "IST"], 
@@ -202,19 +229,7 @@ var data = {
         cp: 6, 
         dozent: ["Dr. Matthias Uflacker", "Martin Faust", "David Schwalb"], 
         nameLV: "Research Seminar in In-Memory Databases"
-    },
-    securecoding: {
-        kurz: "Secure<br />Coding",
-        kennung: ["ITSE", "OSIS", "IST"], 
-        lehrform: ["Seminar", "Projekt"], 
-        modul: ["IT-Systems Engineering", "Vertiefungsgebiete"], 
-        semester: [ss14], 
-        benotet: true, 
-        pflicht: false, 
-        cp: 6, 
-        dozent: ["Prof. Dr. Christoph Meinel", "Dr. Sebastian Roschke"], 
-        nameLV: "Secure Coding"
-    },  
+    }, 
     servicebasedvisualization: {
         kurz: "Service-based<br />Visualization",
         kennung: ["HCT", "IST"], 
@@ -227,20 +242,8 @@ var data = {
         dozent: ["Prof. Dr. Jürgen Döllner", "Benjamin Hagendorn", "Jan Klimke"], 
         nameLV: "Service-based Visualization"
     },
-    softwaredesign: {
-        kurz: "Software<br />Design",
-        kennung: ["ITSE", "OSIS", "SAMT"], 
-        lehrform: ["Seminar", "Projekt"], 
-        modul: ["IT-Systems Engineering"; "Vertiefungsgebiete"], 
-        semester: [ss14], 
-        benotet: true, 
-        pflicht: false, 
-        cp: 6, 
-        dozent: ["Prof. Dr. Robert Hirschfeld", "Jens Lincke", "Marcel Taeumel"], 
-        nameLV: "Software Design"
-    },
-    selfadaptivesoftware: {
-        kurz: "Self-adaptive<br />Software",
+    selfadaptivesystems: {
+        kurz: "Self-adaptive<br />Systems",
         kennung: ["ITSE", "SAMT"], 
         lehrform: ["Vorlesung", "Projekt"], 
         modul: ["IT-Systems Engineering"; "Vertiefungsgebiete"], 
@@ -249,7 +252,7 @@ var data = {
         pflicht: false, 
         cp: 6, 
         dozent: ["Prof. Dr. Holger Giese", "Thomas Vogel"], 
-        nameLV: "Software Engineering for Self-adaptive Software"
+        nameLV: "Software Engineering for Self-adaptive Systems"
     },
     trendconceptsexercise: {
         kurz: "Trends & Concepts<brf />Exercise",
@@ -292,7 +295,7 @@ var data = {
         kennung: ["SSK-KO","SSK-SK","SSK-MA"], 
         lehrform: ["Seminar"], 
         modul: ["Vertiefungsgebiete"], 
-        semester: [ss13, ws13_14, ss14], 
+        semester: [ss13, ws13_14], 
         benotet: false, 
         pflicht: false, 
         cp: 3, 
@@ -556,7 +559,7 @@ var data = {
         kennung: ["ITSE","VT SAMT"], 
         lehrform: ["Seminar"], 
         modul: ["IT-Systems Engineering","Vertiefungsgebiete"], 
-        semester: [ss13,ws13_14], 
+        semester: [ss13,ws13_14, ss14], 
         benotet: true, 
         pflicht: false, 
         cp: 3, 
