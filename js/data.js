@@ -60,7 +60,7 @@ var data = {
         dozent: ["Dr. Claudia Nicolai","Prof. Ulrich Weinberg"],
         nameLV: "Advanced Design Thinking (D-School Advanced Track)"
     },
-    AdvancedMDE: {
+    advancedMDE: {
         kurz: "Advanced MDE",
         kennung: ["ITSE","VT SAMT"],
         lehrform: ["Seminar"," Projekt"],
@@ -120,7 +120,7 @@ var data = {
         dozent: ["Dr. Karen Dittmann"],
         nameLV: "Bring your own project: IT-Projekte erfolgreich planen und managen"
     },
-    BusinessEtikette: {
+    businessEtikette: {
         kurz: "Business Etikette",
         kennung: ["SSK-SK","SSK-KO"],
         lehrform: ["Seminar"],
@@ -155,7 +155,7 @@ var data = {
         dozent: ["Prof. Dr. Andreas Polze","Christian Neuhaus"],
         nameLV: "Algorithmen und Analysemethoden für Sicherheit in Cloud-Infrastrukturen"
     },
-    CloudUndVirtualisierung: {
+    cloudUndVirtualisierung: {
         kurz: "Cloud &<br /> Virtualisierung",
         kennung: ["ITSE","VT IST","VT OSIS"],
         lehrform: ["Seminar"],
@@ -214,7 +214,7 @@ var data = {
         dozent: ["Dr. Peter Tröger"],
         nameLV: "Dependable Systems"
     },
-    DesigningProgrammingInMemoryDatabases: {
+    designingProgrammingInMemoryDatabases: {
         kurz: "Designing In-Mem DB",
         kennung: ["ITSE","VT BPET","VT OSIS","VT SAMT"],
         lehrform: ["Projekt"," Seminar"],
@@ -261,7 +261,7 @@ var data = {
         dozent: ["Prof. Dr. Andreas Polze", "Frank Feinbube", "Uwe Hentschel"],
         nameLV: "Eingebettete Betriebssysteme"
     },
-    Englisch3: {
+    englisch3: {
         kurz: "Fachenglisch<br />Level 3",
         kennung: ["SSK-SK","SSK-KO"],
         lehrform: ["Seminar"],
@@ -297,7 +297,7 @@ var data = {
         dozent: ["Prof. Dr. Jan Mendling"],
         nameLV: "Event Processing Technologies"
     },
-    Fuehrungskompetenz: {
+    fuehrungskompetenz: {
         kurz: "Führungs-<br />kompetenz",
         kennung: ["SSK-MA"],
         lehrform: ["Seminar"],
@@ -321,7 +321,7 @@ var data = {
         dozent: ["Prof. Dr. Patrick Baudisch"],
         nameLV: "Future Interactive Technology"
     },
-    Geovisualisierung: {
+    geovisualisierung: {
         kurz: "Geovisualisierung",
         kennung: ["ITSE","VT HCT","VT IST"],
         lehrform: ["Vorlesung"],
@@ -333,7 +333,7 @@ var data = {
         dozent: ["Prof. Dr. Jürgen Döllner","Sebastian Pasewaldt","Sebastian Schmechel","Dr. Matthias Trapp"],
         nameLV: "Geovisualisierung"
     },
-    HCIProject: {
+    hciProject: {
         kurz: "HCI<br />Projekt",
         kennung: ["ITSE", "VT HCT", "VT SAMT"],
         lehrform: ["Projekt", " Seminar"],
@@ -452,7 +452,7 @@ var data = {
         dozent: ["Martin Faust","David Schwalb","Dipl.-Kfm. Jens Krüger","Dr. Jürgen Müller","Christian Schwarz"],
         nameLV: "In-Memory Databases: Algorithms and Data Structures on Modern Hardware"
     },
-    InMemoryDataManagementResearch: {
+    inMemoryDataManagementResearch: {
         kurz: "InMem Data<br />Management",
         kennung: ["VT BPET", "VT OSIS", "VT SAMT"],
         lehrform: ["Seminar"],
@@ -464,7 +464,7 @@ var data = {
         dozent: ["Dr. Matthias Uflacker", "Dipl.-Kfm. Jens Krüger"],
         nameLV: "In-Memory Data Management Research"
     },
-    InMemoryDataStructuresAlgorithms: {
+    inMemoryDataStructuresAlgorithms: {
         kurz: "In-Memory <br />Data &amp; Algorthims",
         kennung: ["ITSE", "OSIS", "SAMT", "BPET"],
         lehrform: ["Seminar"],
@@ -488,7 +488,7 @@ var data = {
         dozent: ["Prof. Dr. Robert Hirschfeld","Marcel Taeumel","Tim Felgentreff","Jens Lincke"],
         nameLV: "Interactive Representations of Data Structures and Algorithms"
     },
-    IntroductionOfDesignThinking: {
+    introductionOfDesignThinking: {
         kurz: "Introduction<br />Design Thinking",
         kennung: ["SSK-DT"],
         lehrform: ["Seminar"," Projekt"],
@@ -500,7 +500,7 @@ var data = {
         dozent: ["Dr. Claudia Nicolai","Prof. Ulrich Weinberg"],
         nameLV: "Introduction of Design Thinking (Einführung in das Design Thinking)"
     },
-    ITEntrepreneurship: {
+    itEntrepreneurship: {
         kurz: "Entrepreneurship",
         kennung: ["SSK-MA", "SSK-RE", "SSK-KO"],
         lehrform: ["Seminar"],
@@ -511,7 +511,7 @@ var data = {
         dozent: ["Dr. Rouven Westphal"],
         nameLV: "IT-Entrepreneurship"
     },
-    ITEntrepreneurshipII: {
+    itEntrepreneurshipII: {
         kurz: "Entrepreneurship II",
         kennung: ["SSK-MA","SSK-KO","SSK-RE"],
         lehrform: ["Seminar"],
@@ -557,7 +557,7 @@ var data = {
         dozent: ["Prof. Dr. Christoph Meinel", "Nuhad Shaabani"],
         nameLV: "Komplexitätstheorie"
     },
-    KonfliktUndKommunikationsmanagement: {
+    konfliktUndKommunikationsmanagement: {
         kurz: "Kommunikations-<br />management",
         kennung: ["SSK-KO","SSK-MA"],
         lehrform: ["Seminar"],
@@ -581,8 +581,8 @@ var data = {
         dozent: ["Dr. Peter Tröger"],
         nameLV: "Konzepte paralleler Programmierung"
     },
-    languageprocessing: {
-        kurz: "Language<br />Processing",
+    nlp: {
+        kurz: "NLP",
         kennung: ["OSIS", "BPET"],
         lehrform: ["Vorlesung", "Übung"],
         modul: ["Vertiefungsgebiete"],
@@ -699,7 +699,7 @@ var data = {
         dozent: ["Prof. Dr. Christoph Meinel","Hosnieh Rafiee"],
         nameLV: "Penetration Testing and Securing IPv6 Networks"
     },
-    PersoenlichkeitUndSelbstmanagement: {
+    persoenlichkeitUndSelbstmanagement: {
         kurz: "Persönlichkeit &<br />Selbstmanagement",
         kennung: ["SSK-KO","SSK-MA"],
         lehrform: ["Seminar"],
@@ -816,7 +816,7 @@ var data = {
         dozent: ["Prof. Dr. Holger Giese", "Thomas Vogel"],
         nameLV: "Software Engineering for Self-adaptive Systems"
     },
-    SemanticMultimedia: {
+    semanticMultimedia: {
 		kurz: "Semantic Multimedia",
         kennung: ["VT IST","VT OSIS","VT HCT"],
         lehrform: ["Seminar"],
@@ -979,12 +979,12 @@ var data = {
         dozent: ["apl. Prof. Dr. Hannelore Liero"],
         nameLV: "Statistische Datenanalyse"
     },
-    StudiumPlus: {
+    studiumPlus: {
         kurz: "Studium Plus",
         kennung: ["SSK-SK","SSK2"],
         lehrform: [""],
         modul: ["Softskills"],
-        semester: [ss13],
+        semester: [ss13, ws13_14, ss14],
         benotet: false,
         pflicht: false,
         cp: 3,
@@ -1003,8 +1003,8 @@ var data = {
         dozent: ["Dr. Matthias Ulfacker", "Martin Boissier", "Christian Schwarz"],
         nameLV: "Trends and Concepts Exercise: Designing and Programming Applications for In-Memory Databases"
     },
-    TrendsInIT: {
-        kurz: "Trends in IT",
+    toc1: {
+        kurz: "ToC I",
         kennung: ["ITSE","VT BPET","VT OSIS","VT SAMT"],
         lehrform: ["Vorlesung"],
         modul: ["IT-Systems Engineering","Vertiefungsgebiete"],
@@ -1015,8 +1015,8 @@ var data = {
         dozent: ["Prof. Dr. Hasso Plattner"],
         nameLV: "Trends and Concepts in the Software Industry I: Inner Mechanics of In-Memory Databases"
     },
-    TrendsInITII: {
-		kurz: "Trends in IT II",
+    toc2: {
+		kurz: "ToC II",
         kennung: ["ITSE","VT BPET","VT OSIS","VT SAMT"],
         lehrform: ["Vorlesung"],
         modul: ["IT-Systems Engineering","Vertiefungsgebiete"],
@@ -1051,7 +1051,7 @@ var data = {
         dozent: ["Dr. Werner Dieball"],
         nameLV: "Überzeugend präsentieren -<br />Noch besser auftreten!"
     },
-    Unternehmensgruendung: {
+    unternehmensgruendung: {
         kurz: "Unternehmens-<br />gründung",
         kennung: ["SSK-KO","SSK-MA","SSK-RE"],
         lehrform: ["Vorlesung"],
