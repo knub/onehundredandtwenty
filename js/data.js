@@ -93,7 +93,7 @@ var data = {
         benotet: true, 
         pflicht: false, 
         cp: 6, 
-        dozent: ["Prof. Dr. J\u00fcrgen D\u00f6llner","Rico Richter","Stefan Buschmann"], 
+        dozent: ["Prof. Dr. Jürgen Döllner","Rico Richter","Stefan Buschmann"], 
         nameLV: "Algorithmen und Techniken der Geovisualisierung (ehem.: Geovisualisierungsverfahren)"
     },
     automatedAnalysisOfFormalModels: {
@@ -103,7 +103,7 @@ var data = {
         modul: ["IT-Systems Engineering","Vertiefungsgebiete"], 
         semester: [ss13,ws13_14, ss14], 
         benotet: true, 
-        pflicht: false, 
+        pflicht: false,
         cp: 3, 
         dozent: ["Prof. Dr. Holger Giese","Leen Lambers","M.Sc. Johannes Dyck"], 
         nameLV: "Automated Analysis of Formal Models"
@@ -153,7 +153,7 @@ var data = {
         pflicht: false, 
         cp: 3, 
         dozent: ["Prof. Dr. Andreas Polze","Christian Neuhaus"], 
-        nameLV: "Algorithmen und Analysemethoden f\u00fcr Sicherheit in Cloud-Infrastrukturen"
+        nameLV: "Algorithmen und Analysemethoden für Sicherheit in Cloud-Infrastrukturen"
     },
     CloudUndVirtualisierung: {
         kurz: "Cloud &<br /> Virtualisierung",
@@ -182,7 +182,7 @@ var data = {
     dataMining: {
         kurz: "Data<br />Mining",
         kennung: ["VT OSIS", "VT SAMT"], 
-        lehrform: ["Vorlesung", " \u00dcbung"], 
+        lehrform: ["Vorlesung", " Übung"], 
         modul: ["Vertiefungsgebiete"],  
         semester: [ws13_14], 
         benotet: true, 
@@ -193,7 +193,7 @@ var data = {
     dataProfilingAndCleansing: {
         kurz: "Data Profiling<br /> and Cleansing",
         kennung: ["ITSE","VT BPET","VT OSIS"], 
-        lehrform: ["Vorlesung"," \u00dcbung"], 
+        lehrform: ["Vorlesung"," Übung"], 
         modul: ["Vertiefungsgebiete"], 
         semester: [ss13], 
         benotet: true, 
@@ -211,7 +211,7 @@ var data = {
         benotet: true, 
         pflicht: false, 
         cp: 6, 
-        dozent: ["Dr. Peter Tr\u00f6ger"], 
+        dozent: ["Dr. Peter Tröger"], 
         nameLV: "Dependable Systems"
     },
     DesigningProgrammingInMemoryDatabases: {
@@ -223,7 +223,7 @@ var data = {
         benotet: true, 
         pflicht: false, 
         cp: 6, 
-        dozent: ["Christian Schwarz","Dr. J\u00fcrgen M\u00fcller","Dipl.-Kfm. Jens Kr\u00fcger"], 
+        dozent: ["Christian Schwarz","Dr. Jürgen Müller","Dipl.-Kfm. Jens Krüger"], 
         nameLV: "Designing and Programming Applications for In-Memory Databases"
     },
     designThinkingBasics: {
@@ -298,7 +298,7 @@ var data = {
         nameLV: "Event Processing Technologies"
     },
     Fuehrungskompetenz: {
-        kurz: "F\u00fchrungs-<br />kompetenz",
+        kurz: "Führungs-<br />kompetenz",
         kennung: ["SSK-MA"], 
         lehrform: ["Seminar"], 
         modul: ["Softskills"], 
@@ -307,7 +307,7 @@ var data = {
         pflicht: false, 
         cp: 6, 
         dozent: ["Michael Karl Heidemann M.A.","Eugen Unger"], 
-        nameLV: "F\u00fchrungskompetenz"
+        nameLV: "Führungskompetenz"
     },
     futureinteractivetechnology: {
         kurz: "Future Interactive<br>Technology",
@@ -330,7 +330,7 @@ var data = {
         benotet: true, 
         pflicht: false, 
         cp: 6, 
-        dozent: ["Prof. Dr. J\u00fcrgen D\u00f6llner","Sebastian Pasewaldt","Sebastian Schmechel","Dr. Matthias Trapp"], 
+        dozent: ["Prof. Dr. Jürgen Döllner","Sebastian Pasewaldt","Sebastian Schmechel","Dr. Matthias Trapp"], 
         nameLV: "Geovisualisierung"
     },
     HCIProject: {
@@ -407,7 +407,7 @@ var data = {
     informationssicherheit: {
         kurz: "Information<br />Security",
         kennung: ["ITSE","VT IST","VT OSIS"], 
-        lehrform: ["Vorlesung"," \u00dcbung"], 
+        lehrform: ["Vorlesung"," Übung"], 
         modul: ["IT-Systems Engineering","Vertiefungsgebiete"], 
         semester: [ss13], 
         benotet: true, 
@@ -449,7 +449,7 @@ var data = {
         benotet: true, 
         pflicht: false, 
         cp: 6, 
-        dozent: ["Martin Faust","David Schwalb","Dipl.-Kfm. Jens Kr\u00fcger","Dr. J\u00fcrgen M\u00fcller","Christian Schwarz"], 
+        dozent: ["Martin Faust","David Schwalb","Dipl.-Kfm. Jens Krüger","Dr. Jürgen Müller","Christian Schwarz"], 
         nameLV: "In-Memory Databases: Algorithms and Data Structures on Modern Hardware"
     },
     InMemoryDataManagementResearch: {
@@ -461,7 +461,7 @@ var data = {
         benotet: true, 
         vertiefung: [""], 
         cp: 6, 
-        dozent: ["Dr. Matthias Uflacker", "Dipl.-Kfm. Jens Kr\u00fcger"], 
+        dozent: ["Dr. Matthias Uflacker", "Dipl.-Kfm. Jens Krüger"], 
         nameLV: "In-Memory Data Management Research"
     }, 
     InMemoryDataStructuresAlgorithms: {
@@ -498,7 +498,7 @@ var data = {
         pflicht: false, 
         cp: 3, 
         dozent: ["Dr. Claudia Nicolai","Prof. Ulrich Weinberg"], 
-        nameLV: "Introduction of Design Thinking (Einf\u00fchrung in das Design Thinking)"
+        nameLV: "Introduction of Design Thinking (Einführung in das Design Thinking)"
     },
     ITEntrepreneurship: {
         kurz: "Entrepreneurship",
@@ -532,7 +532,7 @@ var data = {
         benotet: true, 
         cp: 6, 
         dozent: ["Prof. Dr.-Ing. Werner Zorn"], 
-        nameLV: "IT-Fallstudien - Was wir aus gescheiterten IT-Projekten lernen k\u00f6nnen"
+        nameLV: "IT-Fallstudien - Was wir aus gescheiterten IT-Projekten lernen können"
     },
     itRecht: {
         kurz: "IT-Recht",
@@ -578,7 +578,7 @@ var data = {
         benotet: true, 
         vertiefung: [""], 
         cp: 6, 
-        dozent: ["Dr. Peter Tr\u00f6ger"], 
+        dozent: ["Dr. Peter Tröger"], 
         nameLV: "Konzepte paralleler Programmierung"
     },
     languageprocessing: {
@@ -626,7 +626,7 @@ var data = {
         benotet: true, 
         pflicht: false, 
         cp: 3, 
-        dozent: ["Prof. Dr. Katharina H\u00f6lzle"], 
+        dozent: ["Prof. Dr. Katharina Hölzle"], 
         nameLV: "Management Essentials"
     },
     methodikGeoinformationstechnik: {
@@ -700,7 +700,7 @@ var data = {
         nameLV: "Penetration Testing and Securing IPv6 Networks"
     },
     PersoenlichkeitUndSelbstmanagement: {
-        kurz: "Pers\u00f6nlichkeit &<br />Selbstmanagement",
+        kurz: "Persönlichkeit &<br />Selbstmanagement",
         kennung: ["SSK-KO","SSK-MA"], 
         lehrform: ["Seminar"], 
         modul: ["Vertiefungsgebiete"], 
@@ -709,7 +709,7 @@ var data = {
         pflicht: false, 
         cp: 3, 
         dozent: ["Dr. Michaela Schumacher"], 
-        nameLV: "Pers\u00f6nlichkeit und Selbstmanagement"
+        nameLV: "Persönlichkeit und Selbstmanagement"
     },  
     personalManagementSkills: {
         kurz: "Personal<br />Management",
@@ -754,7 +754,7 @@ var data = {
         semester: [ws13_14], 
         benotet: true, 
         cp: 3, 
-        dozent: ["Dr. Matthias Uflacker", "Dipl.-Kfm. Jens Kr\u00fcger", "Thomas Kowark", "Franziska H\u00e4ger"], 
+        dozent: ["Dr. Matthias Uflacker", "Dipl.-Kfm. Jens Krüger", "Thomas Kowark", "Franziska Häger"], 
         nameLV: "Global Team-Based Product Innovation & Engineering III - ME 310 Coaching Research"
     },
     productInnovationEngineeringII: {
@@ -765,7 +765,7 @@ var data = {
         semester: [ws13_14], 
         benotet: true, 
         cp: 3, 
-        dozent: ["Dr. Matthias Uflacker", "Dipl.-Kfm. Jens Kr\u00fcger", "Thomas Kowark", "Franziska H\u00e4ger"], 
+        dozent: ["Dr. Matthias Uflacker", "Dipl.-Kfm. Jens Krüger", "Thomas Kowark", "Franziska Häger"], 
         nameLV: "Global Team-Based Product Innovation & Engineering III - ME 310 Coaching Research"
     },
     reverseengineering: {
@@ -825,13 +825,13 @@ var data = {
         benotet: true, 
         pflicht: false, 
         cp: 6, 
-        dozent: ["Dr. rer. nat. Harald Sack","J\u00f6rg Waitelonis","Nadine Steinmetz","Magnus Knuth"], 
+        dozent: ["Dr. rer. nat. Harald Sack","Jörg Waitelonis","Nadine Steinmetz","Magnus Knuth"], 
         nameLV: "Semantic Multimedia"
     },  
     semanticWebTechnologien: {
         kurz: "Semantic<br />Web",
         kennung: ["ITSE", "VT BPET", "VT IST"], 
-        lehrform: ["Vorlesung", " \u00dcbung"], 
+        lehrform: ["Vorlesung", " Übung"], 
         modul: ["IT-Systems Engineering", " Vertiefungsgebiete"],  
         semester: [ws13_14], 
         benotet: true, 
@@ -859,7 +859,7 @@ var data = {
         semester: [ws13_14], 
         benotet: true, 
         cp: 6, 
-        dozent: ["Prof. Dr. J\u00fcrgen D\u00f6llner", "Rico Richter", "Amir Semmo"], 
+        dozent: ["Prof. Dr. Jürgen Döllner", "Rico Richter", "Amir Semmo"], 
         nameLV: "Seminar Geovisualisierung"
     },
     servicebasedvisualization: {
@@ -916,7 +916,7 @@ var data = {
         semester: [ws13_14], 
         benotet: true, 
         cp: 6, 
-        dozent: ["Prof. Dr. J\u00fcrgen D\u00f6llner", "Sebastian Schmechel", "Sebastian Kay Belle", "Jonas Tr\u00fcmper", "Daniel Limberger"], 
+        dozent: ["Prof. Dr. Jürgen Döllner", "Sebastian Schmechel", "Sebastian Kay Belle", "Jonas Trümper", "Daniel Limberger"], 
         nameLV: "Software Analytics"
     },
     softwareAsAService: {
@@ -934,7 +934,7 @@ var data = {
     softwareEngineeringEmbeddedSystems: {
         kurz: "SE for<br />Embedded Systems",
         kennung: ["ITSE", "VT SAMT"], 
-        lehrform: ["Vorlesung", " \u00dcbung", " Projekt"], 
+        lehrform: ["Vorlesung", " Übung", " Projekt"], 
         modul: ["IT-Systems Engineering", " Vertiefungsgebiete"],  
         semester: [ws13_14], 
         benotet: true, 
@@ -952,7 +952,7 @@ var data = {
         benotet: true, 
         pflicht: false, 
         cp: 3, 
-        dozent: ["Dr. Peter Tr\u00f6ger","Frank Feinbube"], 
+        dozent: ["Dr. Peter Tröger","Frank Feinbube"], 
         nameLV: "Software Profiling"
     },  
     Softwarevisualisierung: {
@@ -964,7 +964,7 @@ var data = {
         benotet: true, 
         pflicht: false, 
         cp: 6, 
-        dozent: ["Prof. Dr. J\u00fcrgen D\u00f6llner","Jonas Tr\u00fcmper","Sebastian Schmechel","Sebastian Kay Belle"], 
+        dozent: ["Prof. Dr. Jürgen Döllner","Jonas Trümper","Sebastian Schmechel","Sebastian Kay Belle"], 
         nameLV: "Softwarevisualisierungsverfahren"
     },    
     statistischeDatenanalyse: {
@@ -1040,7 +1040,7 @@ var data = {
         nameLV: "IT-Unternehmensarchitektur"
     },
     ueberzeugendPraesentieren: {
-        kurz: "\u00dcberzeugend<br />pr\u00e4sentieren",
+        kurz: "Überzeugend<br />präsentieren",
         kennung: ["SSK-KO"], 
         lehrform: ["Seminar"], 
         modul: ["Softskills"], 
@@ -1049,10 +1049,10 @@ var data = {
         pflicht: false, 
         cp: 3, 
         dozent: ["Dr. Werner Dieball"], 
-        nameLV: "\u00dcberzeugend pr\u00e4sentieren -<br />Noch besser auftreten!"
+        nameLV: "Überzeugend präsentieren -<br />Noch besser auftreten!"
     },    
     Unternehmensgruendung: {
-        kurz: "Unternehmens-<br />gr\u00fcndung",
+        kurz: "Unternehmens-<br />gründung",
         kennung: ["SSK-KO","SSK-MA","SSK-RE"], 
         lehrform: ["Vorlesung"], 
         modul: ["Softskills"], 
@@ -1060,8 +1060,8 @@ var data = {
         benotet: true, 
         pflicht: false, 
         cp: 6, 
-        dozent: ["Prof. Dr. Katharina H\u00f6lzle","Dr. Jens Schmidt-Ehmcke"], 
-        nameLV: "Unternehmensgr\u00fcndung im IT-Sektor"
+        dozent: ["Prof. Dr. Katharina Hölzle","Dr. Jens Schmidt-Ehmcke"], 
+        nameLV: "Unternehmensgründung im IT-Sektor"
     },  
     verlaesslichesysteme: {
         kurz: "Verlässliche<br />Systeme",
@@ -1084,6 +1084,6 @@ var data = {
         benotet: true, 
         cp: 6, 
         dozent: ["Prof. Dr. Robert Hirschfeld", "Tobias Pape", "Tim Felgentreff", "Bastian Steinert"], 
-        nameLV: "Virtuelle Maschinen und Ausf\u00fchrungsumgebungen"
+        nameLV: "Virtuelle Maschinen und Ausführungsumgebungen"
     }
 }
