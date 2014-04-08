@@ -464,8 +464,8 @@ var data = {
         dozent: ["Dr. Matthias Uflacker", "Dipl.-Kfm. Jens Kr\u00fcger"], 
         nameLV: "In-Memory Data Management Research"
     }, 
-    inmemoryresearch: {
-        kurz: "Research<br />In-Memory",
+    InMemoryDataStructuresAlgorithms: {
+        kurz: "In-Memory <br />Data &amp; Algorthims",
         kennung: ["ITSE", "OSIS", "SAMT", "BPET"], 
         lehrform: ["Seminar"], 
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"], 
@@ -474,7 +474,7 @@ var data = {
         pflicht: false, 
         cp: 6, 
         dozent: ["Dr. Matthias Uflacker", "Martin Faust", "David Schwalb"], 
-        nameLV: "Research Seminar in In-Memory Databases"
+        nameLV: "Data Structures and Algorithms for In-Memory Databases"
     },
     interactiveData: {
         kurz: "Interactive Data",
@@ -549,7 +549,7 @@ var data = {
         kurz: "Komplexitätstheorie",
         kennung: ["ITSE", "IST", "OSIS"], 
         lehrform: ["Vorlesung", "Übung"], 
-        modul: ["IT-Systems Engineering"; "Vertiefungsgebiete"], 
+        modul: ["IT-Systems Engineering", "Vertiefungsgebiete"], 
         semester: [ss14], 
         benotet: true, 
         pflicht: false, 
@@ -808,7 +808,7 @@ var data = {
         kurz: "Self-adaptive<br />Systems",
         kennung: ["ITSE", "SAMT"], 
         lehrform: ["Vorlesung", "Projekt"], 
-        modul: ["IT-Systems Engineering"; "Vertiefungsgebiete"], 
+        modul: ["IT-Systems Engineering", "Vertiefungsgebiete"], 
         semester: [ss14], 
         benotet: true, 
         pflicht: false, 
@@ -995,7 +995,7 @@ var data = {
         kurz: "Trends & Concepts<brf />Exercise",
         kennung: ["ITSE", "SAMT", "OSIS", "BPET"], 
         lehrform: ["Seminar", "Projekt"], 
-        modul: ["IT-Systems Engineering"; "Vertiefungsgebiete"], 
+        modul: ["IT-Systems Engineering", "Vertiefungsgebiete"], 
         semester: [ss14], 
         benotet: true, 
         pflicht: false, 
@@ -1049,7 +1049,7 @@ var data = {
         pflicht: false, 
         cp: 3, 
         dozent: ["Dr. Werner Dieball"], 
-        nameLV: "\u00dcberzeugend pr\u00e4sentieren -<br />Noch besser auftreten! (Fortgeschrittene)"
+        nameLV: "\u00dcberzeugend pr\u00e4sentieren -<br />Noch besser auftreten!"
     },    
     Unternehmensgruendung: {
         kurz: "Unternehmens-<br />gr\u00fcndung",
