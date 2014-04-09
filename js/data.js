@@ -948,7 +948,7 @@ var data = {
         dozent: ["Dr. Peter Tröger", "Frank Feinbube"],
         nameLV: "Software Profiling"
     },
-    Softwarevisualisierung: {
+    softwarevisualisierung: {
         kurz: "Software-<br />visualisierung",
         kennung: ["HCT", "OSIS", "SAMT"],
         lehrform: ["Seminar"],

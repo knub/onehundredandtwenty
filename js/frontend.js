@@ -140,6 +140,8 @@ var frontend = {
 				if (!data.hasOwnProperty(key)) continue;
 				courseToSemester[key] = f.getSemester(key);
 			}
+			courseToSemester['masterproject'] = f.getSemester("masterproject");
+			courseToSemester['masterthesis'] = f.getSemester("masterthesis");
 			/* save repetitions */
 			for (var repetition in f.repetitionManager.repetitions) {
 				if (!f.repetitionManager.repetitions.hasOwnProperty(repetition)) continue;
@@ -711,6 +713,23 @@ $(function() {
 	 */
 
 	var coursesPoolItems = "";
+
+
+	if (localStorage.onehundredandtwenty_courseToSemester !== undefined && localStorage.onehundredandtwenty_courseToSemester != null) {
+		var localStorageData = JSON.parse(localStorage.onehundredandtwenty_courseToSemester);
+		var projectSemester = localStorageData['masterproject'];
+		$("#semester3").html("");
+		$("#semester4").html("");
+		if (projectSemester < 1)
+			projectSemester = 3;
+		$("#semester" + projectSemester).html('<li class="oneliner double-time" id="course-masterproject">Masterprojekt</li>');
+
+		var thesisSemester = localStorageData['masterthesis'];
+		if (thesisSemester < 1)
+			thesisSemester = 3;
+		$("#semester" + thesisSemester).html('<li class="oneliner quintuple-time" id="course-masterthesis">Masterarbeit</li>');
+
+	}
 	// for each course in data
 	for (var key in data) {
 		if (!data.hasOwnProperty(key)) continue;
@@ -724,11 +743,12 @@ $(function() {
 		// lookup, if there is localStorage data for this semester
 		// if this is the case, use this information
 		if (localStorage.onehundredandtwenty_courseToSemester !== undefined && localStorage.onehundredandtwenty_courseToSemester !== null) {
-			var semester = JSON.parse(localStorage.onehundredandtwenty_courseToSemester)[key];
+			var semester = localStorageData[key];
 			if (semester === undefined || semester === - 1) coursesPoolItems += html;
 			else if (semester >= 0) $("#semester" + JSON.parse(localStorage.onehundredandtwenty_courseToSemester)[key]).append(html);
 		}
 		// else use standard behaviour
+
 		else {
 			// if it is not recommended for a specific semester ..
 			coursesPoolItems += html;
