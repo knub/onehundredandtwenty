@@ -8,7 +8,7 @@
  */
 var studyRegulations = {
 	softskills: ["SSK-MA", "SSK-RE", "SSK-KO", "SSK-DT", "SSK-SK"],
-	modules: ["ITSE", "VT BPET", "VT HCT", "VT IST", "VT OSIS", "VT SAMT"],
+	modules: ["ITSE", "BPET", "HCT", "IST", "OSIS", "SAMT"],
 };
 var semesterManager = {
 	semesters: [ "WS13/14", "SS14", "WS14/15", "SS15", "WS15/16", "SS16", "WS16/17", "SS17", "WS17/18", "SS18"],
