@@ -602,7 +602,7 @@ var data = {
         nameLV: "Principles of Linked Data Publishing"
     },
     linkedopendata: {
-        kurz: "Linked<br />Open Data",
+        kurz: "LOD<br />Movies",
         kennung: ["ITSE", "BPET", "IST"],
         lehrform: ["Seminar"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
