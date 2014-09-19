@@ -652,6 +652,18 @@ var data = {
         dozent: ["Dr. Michaela Schumacher"],
         nameLV: "Konflikt-<br />und Kommunikationsmanagement"
     },
+    kontextorientiertesProgrammieren: {
+        kurz: "COP",
+        kennung: ["SAMT", "OSIS"],
+        lehrform: ["Seminar"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ws13_14],
+        benotet: true,
+        pflicht: false,
+        cp: 3,
+        dozent: ["Prof. Dr. Robert Hirschfeld", "Marcel Taeumel", "Jens Lincke", "Tim Felgentreff"],
+        nameLV: "Kontextorientiertes Programmieren"
+    },
     konzepteParallelerProgrammierung: {
         kurz: "Parallel<br />Programming",
         kennung: ["ITSE", "OSIS"],
