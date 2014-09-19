@@ -761,9 +761,9 @@ var data = {
     networkSecurityPractice: {
         kurz: "Network<br />Security",
         kennung: ["ITSE", "IST", "OSIS"],
-        lehrform: ["Seminar"],
+        lehrform: ["Seminar", "Projekt"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
-        semester: [ws13_14],
+        semester: [ws13_14, ws14_15],
         benotet: true,
         cp: 6,
         dozent: ["Dr. Feng Cheng", "Prof. Dr. Christoph Meinel"],
