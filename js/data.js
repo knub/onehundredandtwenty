@@ -155,6 +155,18 @@ var data = {
         dozent: ["Matthias Kunze"],
         nameLV: "Business Process Compliance"
     },
+    cloudComputing: {
+        kurz: "Cloud Computing",
+        kennung: ["IST", "OSIS", "ITSE"],
+        lehrform: ["Seminar"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ws14_15],
+        benotet: true,
+        pflicht: false,
+        cp: 3,
+        dozent: ["Prof. Dr. Andreas Polze"],
+        nameLV: "Industrieseminar Cloud Computing"
+    },
     cloudSicherheit: {
         kurz: "Cloud Sicherheit",
         kennung: ["IST", "OSIS", "SAMT"],
