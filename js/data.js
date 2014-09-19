@@ -369,6 +369,18 @@ var data = {
         dozent: ["Prof. Dr. Patrick Baudisch"],
         nameLV: "Future Interactive Technology"
     },
+    geoinformationstechnologien: {
+        kurz: "Geoinformations-<br />technologien",
+        kennung: ["ITSE", "HCT", "IST"],
+        lehrform: ["Vorlesung"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ws14_15],
+        benotet: true,
+        pflicht: false,
+        cp: 3,
+        dozent: ["Dr. Markus Jobst"],
+        nameLV: "Geovinormationstechnologien"
+    },
     geovisualisierung: {
         kurz: "Geovisualisierung",
         kennung: ["ITSE", "HCT", "IST"],
@@ -795,7 +807,7 @@ var data = {
         kennung: ["MA1"],
         lehrform: ["Seminar", "Projekt"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
-        semester: [ws13_14],
+        semester: [ws13_14, ws14_15],
         benotet: true,
         cp: 3,
         dozent: ["Dr. Matthias Uflacker", "Dipl.-Kfm. Jens Krüger", "Thomas Kowark", "Franziska Häger"],
@@ -806,7 +818,7 @@ var data = {
         kennung: ["MA1"],
         lehrform: ["Seminar", "Projekt"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
-        semester: [ws13_14],
+        semester: [ws13_14, 14_15],
         benotet: true,
         cp: 3,
         dozent: ["Dr. Matthias Uflacker", "Dipl.-Kfm. Jens Krüger", "Thomas Kowark", "Franziska Häger"],
