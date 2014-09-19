@@ -179,6 +179,18 @@ var data = {
         dozent: ["Prof. Dr. Andreas Polze", "Christian Neuhaus"],
         nameLV: "Algorithmen und Analysemethoden für Sicherheit in Cloud-Infrastrukturen"
     },
+    cloudStorages: {
+        kurz: "Cloud Storages",
+        kennung: ["IST", "OSIS", "ITSE"],
+        lehrform: ["Seminar", "Projekt"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ws14_15],
+        benotet: true,
+        pflicht: false,
+        cp: 6,
+        dozent: ["Prof. Dr. Christoph Meinel", "Hendrik Graupner", "Kennedy Torkura"],
+        nameLV: "Securing Cloud Storages"
+    },
     cloudUndVirtualisierung: {
         kurz: "Cloud &<br />Virtualisierung",
         kennung: ["ITSE", "IST", "OSIS"],
@@ -888,7 +900,7 @@ var data = {
         kennung: ["SAMT", "OSIS"],
         lehrform: ["Seminar"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
-        semester: [ss14],
+        semester: [ws14_15],
         benotet: true,
         pflicht: false,
         cp: 3,
@@ -960,7 +972,7 @@ var data = {
         kennung: ["ITSE", "BPET", "IST"],
         lehrform: ["Vorlesung", "Übung"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
-        semester: [ws13_14],
+        semester: [ws13_14, ws14_15],
         benotet: true,
         cp: 6,
         dozent: ["Dr. rer. nat. Harald Sack"],
@@ -983,7 +995,7 @@ var data = {
         kennung: ["ITSE", "HCT", "IST"],
         lehrform: ["Seminar", "Projekt"],
         modul: ["Vertiefungsgebiete", "IT-Systems Engineering"],
-        semester: [ws13_14],
+        semester: [ws13_14, ws14_15],
         benotet: true,
         cp: 6,
         dozent: ["Prof. Dr. Jürgen Döllner", "Rico Richter", "Amir Semmo"],
@@ -1023,6 +1035,17 @@ var data = {
         dozent: ["Prof. Dr. Christoph Meinel", "Philipp Berger", "Patrick Hennig"],
         nameLV: "Social Media Analyses"
     },
+    socialMediaMining: {
+        kurz: "Social<br />Media Mining",
+        kennung: ["ITSE", "IST", "OSIS"],
+        lehrform: ["Seminar", "Projekt"],
+        modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
+        semester: [ws14_15],
+        benotet: true,
+        cp: 6,
+        dozent: ["Prof. Dr. Christoph Meinel", "Philipp Berger", "Patrick Hennig"],
+        nameLV: "Social Media Mining"
+    },
     softwareAdaption: {
 		kurz: "Software Adaption",
         kennung: ["ITSE", "SAMT"],
@@ -1040,7 +1063,7 @@ var data = {
         kennung: ["ITSE", "HCT", "SAMT"],
         lehrform: ["Seminar"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
-        semester: [ws13_14],
+        semester: [ws13_14, ws14_15],
         benotet: true,
         cp: 6,
         dozent: ["Prof. Dr. Jürgen Döllner", "Sebastian Schmechel", "Sebastian Kay Belle", "Jonas Trümper", "Daniel Limberger"],
