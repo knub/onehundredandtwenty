@@ -226,6 +226,18 @@ var data = {
         dozent: ["Prof. Dr. Felix Naumann"],
         nameLV: "Data Profiling and Data Cleansing"
     },
+    dataProfilingAndCleansing2: {
+        kurz: "Data Profiling2",
+        kennung: ["BPET", "OSIS"],
+        lehrform: ["Vorlesung", "Übung"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ws14_15],
+        benotet: true,
+        pflicht: false,
+        cp: 6,
+        dozent: ["Prof. Dr. Felix Naumann", "Thorsten Papenbrock"],
+        nameLV: "Data Profiling and Data Cleansing"
+    },
     dependableSystems: {
         kurz: "Dependable<br />Systems",
         kennung: ["ITSE", "OSIS"],
