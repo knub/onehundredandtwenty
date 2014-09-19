@@ -191,6 +191,18 @@ var data = {
         dozent: ["Prof. Dr. Robert Hirschfeld", "Tim Felgentreff"],
         nameLV: "Constraint-based Programming"
     },
+    darkWebMonitoring: {
+        kurz: "Dark Web",
+        kennung: ["ITSE","IST","OSIS"],
+        lehrform: ["Seminar"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ws14_15],
+        benotet: true,
+        pflicht: false,
+        cp: 6,
+        dozent: ["Prof. Dr. Christoph Meinel", "David Jaeger", "Hendrik Graupner"],
+        nameLV: "Dark Web Monitoring and Analysis of Leak Data"
+    },
     dataMining: {
         kurz: "Data<br />Mining",
         kennung: ["OSIS", "SAMT"],
