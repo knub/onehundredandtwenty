@@ -84,6 +84,18 @@ var data = {
         dozent: ["Dr. Gjergji Kasneci"],
         nameLV: "Advanced Recommendation Techniques"
     },
+    advancedTopicsInMemoryDatabases: {
+    	kurz: "Advanced<br />In-Memory DB",
+    	kennung: ["BPET", "OSIS", "SAMT"],
+    	lehrform: ["Seminar0"],
+    	modul: ["Vertiefungsgebiete"],
+    	semester: [ws14_15],
+        benotet: true,
+        pflicht: false,
+        cp: 6,
+        dozent: ["Dr. Matthias Uflacker", "Carsten Meyer", "Martin Boissier"],
+        nameLV: "Advanced Topics on In-Memory Database Systems"
+    },
     algorithmenGeovisualisierung: {
         kurz: "Algorithmen der<br />Geovisualisierung",
         kennung: ["ITSE", "HCT", "IST"],
@@ -125,7 +137,7 @@ var data = {
         kennung: ["SSK-SK", "SSK-KO"],
         lehrform: ["Seminar"],
         modul: ["Softskills"],
-        semester: [ss13, ws13_14, ss14],
+        semester: [ss13, ws13_14, ss14, ws14_15],
         benotet: true,
         pflicht: false,
         cp: 3,
