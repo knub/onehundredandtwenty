@@ -440,6 +440,18 @@ var data = {
         dozent: ["Prof. Dr. Patrick Baudisch"],
         nameLV: "HCI Project Seminar on Virtual Reality Gaming"
     },
+    hciProjectSeminarHPFVR: {
+        kurz: "HCI Projekt<br />Haptics",
+        kennung: ["ITSE", "HCT", "SMAT"],
+        lehrform: ["Seminar", "Projekt"],
+        modul: ["IT Systems Engineering", "Vertiefungsgebiete"],
+        semester: ws14_15,
+        benotet: true,
+        pflicht: false,
+        cp: 6,
+        dozent: ["Prof. Dr. Patrick Baudisch"],
+        nameLV: "HCI Project Seminar Haptics, Personal Fabrication, and Virtual Reality"
+    },
     hciResearch: {
         kurz: "HCI Research",
         kennung: ["ITSE", "HCT", "SAMT"],
