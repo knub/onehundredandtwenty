@@ -1086,10 +1086,10 @@ var data = {
         kennung: ["ITSE", "SAMT"],
         lehrform: ["Vorlesung", "Übung", "Projekt"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
-        semester: [ws13_14],
+        semester: [ws13_14, ws14_15],
         benotet: true,
         cp: 6,
-        dozent: ["Prof. Dr. Holger Giese"],
+        dozent: ["Prof. Dr. Holger Giese", "Sebastian Wätzoldt", "Joachim Hänsel"],
         nameLV: "Software Engineering for Embedded Systems"
     },
     softwareProfiling: {
@@ -1150,6 +1150,18 @@ var data = {
         cp: 6,
         dozent: ["Dr. Matthias Ulfacker", "Martin Boissier", "Christian Schwarz"],
         nameLV: "Trends and Concepts Exercise: Designing and Programming Applications for In-Memory Databases"
+    },
+    trendsInBetriebssystemen: {
+        kurz: "Trends in <br />Betriebssystemen",
+        kennung: ["IST", "SAMT", "OSIS"],
+        lehrform: ["Seminar"],
+        modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
+        semester: [ws14_15],
+        benotet: true,
+        pflicht: false,
+        cp: 3,
+        dozent: ["Prof. Dr. Andreas Polze"],
+        nameLV: "Trends in Betriebssystemen (Forschungsseminar)"
     },
     toc1: {
         kurz: "ToC I",
