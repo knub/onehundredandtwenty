@@ -769,6 +769,17 @@ var data = {
         dozent: ["Dr. Feng Cheng", "Prof. Dr. Christoph Meinel"],
         nameLV: "Network Security in Practice"
     },
+    nonUniformMemoryAccess: {
+        kurz: "NUMA",
+        kennung: ["SAMT", "OSIS"],
+        lehrform: ["Seminar"],
+        modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
+        semester: [ws14_15],
+        benotet: true,
+        cp: 3,
+        dozent: ["Prof. Dr. Andreas Polze"],
+        nameLV: "Non-Uniform Memory Access (NUMA) - Herausforderungen paralleler Systeme "
+    },
     pearlsComputerScience: {
         kurz: "Pearls",
         kennung: ["BPET", "OSIS", "SAMT"],
