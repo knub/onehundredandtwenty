@@ -746,6 +746,18 @@ var data = {
         dozent: ["Prof. Dr. Andreas Polze", "Christian Neuhaus", "Frank Feinbube"],
         nameLV: "Komponentenprogrammierung und Middleware"
     },
+    modellgetriebeneEntwicklung: {
+        kurz: "Modellgetriebene",
+        kennung: ["ITSE", "SAMT"],
+        lehrform: ["Vorlesung", "Projekt"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ws14_15],
+        benotet: true,
+        pflicht: false,
+        cp: 6,
+        dozent: ["Prof. Dr. Holger Giese", "Thomas Vogel"],
+        nameLV: "Modellgetriebene Softwareentwicklung"
+    },
     networkSecurityPractice: {
         kurz: "Network<br />Security",
         kennung: ["ITSE", "IST", "OSIS"],
