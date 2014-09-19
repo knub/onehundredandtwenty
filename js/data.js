@@ -883,6 +883,18 @@ var data = {
         dozent: ["Dr. Matthias Uflacker", "Dipl.-Kfm. Jens Krüger", "Thomas Kowark", "Franziska Häger"],
         nameLV: "Global Team-Based Product Innovation & Engineering III - ME 310 Coaching Research"
     },
+    recommenderSystems: {
+        kurz: "Recommender<br />Systems",
+        kennung: ["SAMT", "OSIS"],
+        lehrform: ["Seminar"],
+        modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
+        semester: [ss14],
+        benotet: true,
+        pflicht: false,
+        cp: 3,
+        dozent: ["Prof. Dr. Felix Naumann", "Dr. Ralf Krestel"],
+        nameLV: "Recommender Systems"
+    },
     reverseengineering: {
         kurz: "Reverse<br />Engineering",
         kennung: ["ITSE", "IST", "OSIS"],
