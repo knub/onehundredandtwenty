@@ -32,7 +32,9 @@
     ws12_13 = "WS12/13",
     ss13    = "SS13",
     ws13_14 = "WS13/14",
-    ss14 = "SS14";
+    ss14 = "SS14",
+    ws14_15 = "WS14/15",
+    ss15 = "SS15";
 
 var data = {
     advancedDataProfiling: {
@@ -264,7 +266,7 @@ var data = {
         kennung: ["SSK-SK", "SSK-KO"],
         lehrform: ["Seminar"],
         modul: ["Softskills"],
-        semester: [ss13, ws13_14, ss14],
+        semester: [ss13, ws13_14, ss14, ws14_15],
         benotet: true,
         pflicht: false,
         cp: 3,
@@ -749,7 +751,7 @@ var data = {
         benotet: true,
         cp: 3,
         dozent: ["Dr. Matthias Uflacker", "Dipl.-Kfm. Jens Krüger", "Thomas Kowark", "Franziska Häger"],
-        nameLV: "Global Team-Based Product Innovation & Engineering III - ME 310 Coaching Research"
+        nameLV: "Global Team-Based Product Innovation & Engineering I - ME 310 Coaching Research"
     },
     productInnovationEngineeringII: {
         kurz: "Product<br />Engineering II",
@@ -838,7 +840,7 @@ var data = {
         kennung: ["BPET", "HCT", "IST", "OSIS", "SAMT"],
         lehrform: ["Seminar"],
         modul: ["Vertiefungsgebiete"],
-        semester: [ss13, ws13_14, ss14],
+        semester: [ss13, ws13_14, ss14, ws14_15],
         benotet: false,
         pflicht: false,
         cp: 3,
@@ -1017,7 +1019,7 @@ var data = {
         pflicht: false,
         cp: 3,
         dozent: ["Prof. Dr. Hasso Plattner"],
-        nameLV: "Trends and Concepts in the Software Industry I: Inner Mechanics of In-Memory Databases"
+        nameLV: "Trends and Concepts in the Software Industry II: Development of Enterprise Software"
     },
     unternehmensarchitektur: {
         kurz: "IT-Unternehmens-<br />architektur",
@@ -1036,7 +1038,7 @@ var data = {
         kennung: ["SSK-KO"],
         lehrform: ["Seminar"],
         modul: ["Softskills"],
-        semester: [ss13, ss14],
+        semester: [ss13, ss14, ws13_14, ws14_15],
         benotet: true,
         pflicht: false,
         cp: 3,
@@ -1072,7 +1074,7 @@ var data = {
         kennung: ["OSIS", "SAMT"],
         lehrform: ["Projekt", "Seminar"],
         modul: ["Vertiefungsgebiete"],
-        semester: [ws13_14],
+        semester: [ws13_14, ws14_15],
         benotet: true,
         cp: 6,
         dozent: ["Prof. Dr. Robert Hirschfeld", "Tobias Pape", "Tim Felgentreff", "Bastian Steinert"],
