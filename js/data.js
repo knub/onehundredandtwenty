@@ -657,7 +657,7 @@ var data = {
         kennung: ["SAMT", "OSIS"],
         lehrform: ["Seminar"],
         modul: ["Vertiefungsgebiete"],
-        semester: [ws13_14],
+        semester: [ws14_15],
         benotet: true,
         pflicht: false,
         cp: 3,
