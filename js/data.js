@@ -321,6 +321,18 @@ var data = {
         dozent: ["Dr. Anne Baumgraß", "Prof. Dr. Mathias Weske"],
         nameLV: "Event Processing"
     },
+    eventProcessingSystems: {
+        kurz: "Event Processing<br /> Systems",
+        kennung: ["BPET", "OSIS"],
+        lehrform: ["Seminar"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ws14_15],
+        benotet: true,
+        pflicht: false,
+        cp: 6,
+        dozent: ["Dr. Anne Baumgraß", "Prof. Dr. Mathias Weske"],
+        nameLV: "Event Processing Systems"
+    },
     eventProcessingTechnologies: {
         kurz: "Event Processing<br />Technologies",
         kennung: ["BPET", "OSIS"],
