@@ -6,7 +6,7 @@
  */
 
  /*
- *	NOTES to Conversion from Bachelor to Master
+ *    NOTES to Conversion from Bachelor to Master
  *   Pflicht is always false, leave out
  *   vertiefung is always empty, logic uses kennung
  */
@@ -85,11 +85,11 @@ var data = {
         nameLV: "Advanced Recommendation Techniques"
     },
     advancedTopicsInMemoryDatabases: {
-    	kurz: "Advanced<br />In-Memory DB",
-    	kennung: ["BPET", "OSIS", "SAMT"],
-    	lehrform: ["Seminar0"],
-    	modul: ["Vertiefungsgebiete"],
-    	semester: [ws14_15],
+        kurz: "Advanced<br />In-Memory DB",
+        kennung: ["BPET", "OSIS", "SAMT"],
+        lehrform: ["Seminar"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ws14_15],
         benotet: true,
         pflicht: false,
         cp: 6,
@@ -217,7 +217,7 @@ var data = {
     },
     darkWebMonitoring: {
         kurz: "Dark Web",
-        kennung: ["ITSE","IST","OSIS"],
+        kennung: ["ITSE", "IST", "OSIS"],
         lehrform: ["Seminar"],
         modul: ["Vertiefungsgebiete"],
         semester: [ws14_15],
@@ -403,7 +403,7 @@ var data = {
         pflicht: false,
         cp: 3,
         dozent: ["Dr. Markus Jobst"],
-        nameLV: "Geovinormationstechnologien"
+        nameLV: "Geoinformationstechnologien"
     },
     geovisualisierung: {
         kurz: "Geovisualisierung",
@@ -466,7 +466,7 @@ var data = {
     },
     hciProjectSeminarHPFVR: {
         kurz: "HCI Projekt<br />Haptics",
-        kennung: ["ITSE", "HCT", "SMAT"],
+        kennung: ["ITSE", "HCT", "SAMT"],
         lehrform: ["Seminar", "Projekt"],
         modul: ["IT Systems Engineering", "Vertiefungsgebiete"],
         semester: ws14_15,
@@ -875,21 +875,21 @@ var data = {
     },
     productInnovationEngineeringI: {
         kurz: "Product<br />Engineering I",
-        kennung: ["MA1"],
+        kennung: ["ITSE", "BPET"],
         lehrform: ["Seminar", "Projekt"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ws13_14, ws14_15],
         benotet: true,
-        cp: 3,
+        cp: 6,
         dozent: ["Dr. Matthias Uflacker", "Dipl.-Kfm. Jens Krüger", "Thomas Kowark", "Franziska Häger"],
-        nameLV: "Global Team-Based Product Innovation & Engineering I - ME 310 Coaching Research"
+        nameLV: "Global Team-Based Product Innovation & Engineering I - ME 310"
     },
-    productInnovationEngineeringII: {
-        kurz: "Product<br />Engineering II",
-        kennung: ["MA1"],
+    productInnovationEngineeringIII: {
+        kurz: "Product<br />Engineering III",
+        kennung: ["ITSE", "BPET"],
         lehrform: ["Seminar", "Projekt"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
-        semester: [ws13_14, 14_15],
+        semester: [ws13_14, ws14_15],
         benotet: true,
         cp: 3,
         dozent: ["Dr. Matthias Uflacker", "Dipl.-Kfm. Jens Krüger", "Thomas Kowark", "Franziska Häger"],
@@ -956,7 +956,7 @@ var data = {
         nameLV: "Software Engineering for Self-adaptive Systems"
     },
     semanticMultimedia: {
-		kurz: "Semantic Multimedia",
+        kurz: "Semantic Multimedia",
         kennung: ["IST", "OSIS", "HCT"],
         lehrform: ["Seminar"],
         modul: ["Vertiefungsgebiete"],
@@ -1047,7 +1047,7 @@ var data = {
         nameLV: "Social Media Mining"
     },
     softwareAdaption: {
-		kurz: "Software Adaption",
+        kurz: "Software Adaption",
         kennung: ["ITSE", "SAMT"],
         lehrform: ["Vorlesung", "Projekt"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
@@ -1176,7 +1176,7 @@ var data = {
         nameLV: "Trends and Concepts in the Software Industry I: Inner Mechanics of In-Memory Databases"
     },
     toc2: {
-		kurz: "ToC II",
+        kurz: "ToC II",
         kennung: ["ITSE", "BPET", "OSIS", "SAMT"],
         lehrform: ["Vorlesung"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
