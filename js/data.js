@@ -42,7 +42,7 @@ var data = {
         modul: ["Vertiefungsgebiete"],
         semester: [ws13_14],
         benotet: true,
-        cp: 4,
+        cp: 3,
         dozent: ["Prof. Dr. Felix Naumann", "Thorsten Papenbrock"],
         nameLV: "Advanced Data Profiling"
     },
