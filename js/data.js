@@ -367,7 +367,7 @@ var data = {
         nameLV: "HCI Project Seminar on Crowd Interaction, Physical Computing and Digital Fabrication"
     },
     hciProjectSeminarVRG: {
-        kurz: "HCI Projekt<br<VR Gaming",
+        kurz: "HCI Projekt<br />VR Gaming",
         kennung: ["ITSE", "HCT", "SMAT"],
         lehrform: ["Seminar", "Projekt"],
         modul: ["IT Systems Engineering", "Vertiefungsgebiete"],
@@ -660,7 +660,7 @@ var data = {
         nameLV: "Network Security in Practice"
     },
     pearlsComputerScience: {
-        kurz: "Pearls",
+        kurz: "Pearls of CS",
         kennung: ["BPET", "OSIS", "SAMT"],
         lehrform: ["Seminar"],
         modul: ["Vertiefungsgebiete"],
@@ -671,7 +671,7 @@ var data = {
         nameLV: "Pearls of Computer Science"
     },
     pearlsofBPM: {
-        kurz: "Business Processybr />Management",
+        kurz: "Pearls of BPM",
         kennung: ["OSIS", "BPET"],
         lehrform: ["Seminar"],
         modul: ["Vertiefungsgebiete"],
@@ -729,7 +729,7 @@ var data = {
         nameLV: "Privacy and Security in IPv6"
     },
     productInnovationAndEngineering: {
-        kurz: "Product Innovation",
+        kurz: "me310 II",
         kennung: ["ITSE", "BPET", "HCT"],
         lehrform: ["Projekt", "Seminar"],
         modul: ["Vertiefungsgebiete", "IT-Systems Engineering"],
@@ -741,7 +741,7 @@ var data = {
         nameLV: "Global Team-Based Product Innovation & Engineering II -<br />ME 310"
     },
     productInnovationEngineeringI: {
-        kurz: "Product<br />Engineering I",
+        kurz: "me310 I",
         kennung: ["MA1"],
         lehrform: ["Seminar", "Projekt"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
@@ -749,10 +749,10 @@ var data = {
         benotet: true,
         cp: 3,
         dozent: ["Dr. Matthias Uflacker", "Dipl.-Kfm. Jens Krüger", "Thomas Kowark", "Franziska Häger"],
-        nameLV: "Global Team-Based Product Innovation & Engineering III - ME 310 Coaching Research"
+        nameLV: "Global Team-Based Product Innovation & Engineering I - ME 310"
     },
     productInnovationEngineeringII: {
-        kurz: "Product<br />Engineering II",
+        kurz: "me310 Coaching",
         kennung: ["MA1"],
         lehrform: ["Seminar", "Projekt"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
@@ -775,7 +775,7 @@ var data = {
         nameLV: "Vulnerabilities through Reverse Engineering"
     },
     regelungSteuerung: {
-        kurz: "Regelung & Steuerung",
+        kurz: "GRuS",
         kennung: ["ITSE", "OSIS", "SAMT"],
         lehrform: ["Vorlesung"],
         modul: ["Vertiefungsgebiete", "IT-Systems Engineering"],
@@ -869,7 +869,7 @@ var data = {
         nameLV: "Service-based Visualization"
     },
     sicherheitInKomplexenITLandschaften: {
-        kurz: "Sicherheit<br />komplexer IT",
+        kurz: "SikIL",
         kennung: ["ITSE", "IST", "BPET", "OSIS"],
         lehrform: ["Seminar"],
         modul: ["Vertiefungsgebiete"],
@@ -996,7 +996,7 @@ var data = {
         nameLV: "Trends and Concepts Exercise: Designing and Programming Applications for In-Memory Databases"
     },
     toc1: {
-        kurz: "ToC I",
+        kurz: "TuK I",
         kennung: ["ITSE", "BPET", "OSIS", "SAMT"],
         lehrform: ["Vorlesung"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
@@ -1008,7 +1008,7 @@ var data = {
         nameLV: "Trends and Concepts in the Software Industry I: Inner Mechanics of In-Memory Databases"
     },
     toc2: {
-		kurz: "ToC II",
+		kurz: "TuK II",
         kennung: ["ITSE", "BPET", "OSIS", "SAMT"],
         lehrform: ["Vorlesung"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
