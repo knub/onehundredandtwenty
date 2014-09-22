@@ -96,7 +96,7 @@ var data = {
         nameLV: "In-Memory Databases: Algorithms and Data Structures on Modern Hardware"
     }, 
     dataProfilingAndCleansing: {
-		kurz: "Data Profiling<br /> and Cleansing",
+		kurz: "DPDC",
         kennung: ["ITSE","VT BPET","VT OSIS"], 
         lehrform: ["Vorlesung"," \u00dcbung"], 
         modul: ["Vertiefungsgebiete"], 
@@ -192,7 +192,7 @@ var data = {
         nameLV: "Geovisualisierung"
     }, 
     regelungSteuerung: {
-		kurz: "Regelung & Steuerung",
+		kurz: "GRuS",
         kennung: ["ITSE","VT OSIS","VT SAMT"], 
         lehrform: ["Vorlesung"], 
         modul: ["Vertiefungsgebiete"," IT-Systems Engineering"], 
@@ -252,7 +252,7 @@ var data = {
         nameLV: "Konflikt-<br />und Kommunikationsmanagement"
     }, 
     TrendsInIT: {
-		kurz: "Trends in IT",
+		kurz: "TuK I",
         kennung: ["ITSE","VT BPET","VT OSIS","VT SAMT"], 
         lehrform: ["Vorlesung"], 
         modul: ["IT-Systems Engineering","Vertiefungsgebiete"], 
@@ -324,7 +324,7 @@ var data = {
         nameLV: "Dependable Systems"
     }, 
     productInnovationAndEngineering: {
-		kurz: "Product Innovation",
+		kurz: "me310 II",
         kennung: ["ITSE","VT BPET","VT HCT"], 
         lehrform: ["Projekt"," Seminar"], 
         modul: ["Vertiefungsgebiete"," IT-Systems Engineering"], 
@@ -608,7 +608,7 @@ var data = {
         nameLV: "HCI Project Seminar on Interactive Fabrication and Muscle Interfaces"
     }, 
 	productInnovationEngineeringII: {
-		kurz: "Product<br />Engineering II",
+		kurz: "me310 Coaching",
         kennung: ["MA1"], 
         lehrform: ["Seminar", " Projekt"], 
         modul: ["IT-Systems Engineering", " Vertiefungsgebiete"],  
@@ -696,7 +696,7 @@ var data = {
         nameLV: "Software Analytics"
     },
 	sicherheitInKomplexenITLandschaften: {
-		kurz: "Sicherheit<br />komplexer IT", 
+		kurz: "SikIL", 
         kennung: ["ITSE", "VT IST", "VT BPET", "VT OSIS"], 
         lehrform: ["Seminar"], 
         modul: ["Vertiefungsgebiete"],  
@@ -729,7 +729,7 @@ var data = {
         nameLV: "IT-Fallstudien - Was wir aus gescheiterten IT-Projekten lernen k\u00f6nnen"
     }, 
 	productInnovationEngineeringI: {
-		kurz: "Product<br />Engineering I",
+		kurz: "me310 I",
         kennung: ["MA1"], 
         lehrform: ["Seminar", " Projekt"], 
         modul: ["IT-Systems Engineering", " Vertiefungsgebiete"],  
@@ -752,7 +752,7 @@ var data = {
         nameLV: "Privacy and Security in IPv6"
     }, 
 	statistischeDatenanalyse: {
-		kurz: "statistische<br />Datenanalyse",
+		kurz: "Statistik",
         kennung: ["ITSE", "VT BPET"], 
         lehrform: ["Vorlesung"], 
         modul: ["IT-Systems Engineering", " Vertiefungsgebiete"],  
@@ -764,7 +764,7 @@ var data = {
         nameLV: "Statistische Datenanalyse"
     }, 
 	pearlsComputerScience: {
-		kurz: "Pearls",
+		kurz: "Pearls of CS",
         kennung: ["VT BPET", "VT OSIS", "VT SAMT"], 
         lehrform: ["Seminar"], 
         modul: ["Vertiefungsgebiete"],  
@@ -787,7 +787,7 @@ var data = {
         nameLV: "Seminar Geovisualisierung"
     }, 
     TrendsInITII: {
-		kurz: "Trends in IT II",
+		kurz: "TuK II",
         kennung: ["ITSE","VT BPET","VT OSIS","VT SAMT"], 
         lehrform: ["Vorlesung"], 
         modul: ["IT-Systems Engineering","Vertiefungsgebiete"], 
