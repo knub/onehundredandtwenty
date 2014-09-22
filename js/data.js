@@ -747,7 +747,7 @@ var data = {
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ws13_14],
         benotet: true,
-        cp: 3,
+        cp: 6,
         dozent: ["Dr. Matthias Uflacker", "Dipl.-Kfm. Jens Krüger", "Thomas Kowark", "Franziska Häger"],
         nameLV: "Global Team-Based Product Innovation & Engineering I - ME 310"
     },
@@ -972,7 +972,7 @@ var data = {
         nameLV: "Statistische Datenanalyse"
     },
     studiumPlus: {
-        kurz: "Studium Plus",
+        kurz: "Studium Plus 3LP",
         kennung: ["SSK-SK", "SSK2"],
         lehrform: [""],
         modul: ["Softskills"],
@@ -980,6 +980,18 @@ var data = {
         benotet: false,
         pflicht: false,
         cp: 3,
+        dozent: [""],
+        nameLV: "StudiumPlus"
+    },
+	studiumPlus2: {
+        kurz: "Studium Plus 6LP",
+        kennung: ["SSK-SK", "SSK2"],
+        lehrform: [""],
+        modul: ["Softskills"],
+        semester: [ss13, ws13_14, ss14],
+        benotet: false,
+        pflicht: false,
+        cp: 6,
         dozent: [""],
         nameLV: "StudiumPlus"
     },
