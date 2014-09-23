@@ -729,7 +729,7 @@ var data = {
         nameLV: "Privacy and Security in IPv6"
     },
     productInnovationAndEngineering: {
-        kurz: "me310 II",
+        kurz: "ME310 II",
         kennung: ["ITSE", "BPET", "HCT"],
         lehrform: ["Projekt", "Seminar"],
         modul: ["Vertiefungsgebiete", "IT-Systems Engineering"],
@@ -741,7 +741,7 @@ var data = {
         nameLV: "Global Team-Based Product Innovation & Engineering II -<br />ME 310"
     },
     productInnovationEngineeringI: {
-        kurz: "me310 I",
+        kurz: "ME310 I",
         kennung: ["ITSE", "BPET"],
         lehrform: ["Seminar", "Projekt"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
@@ -752,7 +752,7 @@ var data = {
         nameLV: "Global Team-Based Product Innovation & Engineering I - ME 310"
     },
     productInnovationEngineeringII: {
-        kurz: "me310 Coaching",
+        kurz: "ME310 Coaching",
         kennung: ["ITSE", "BPET"],
         lehrform: ["Seminar", "Projekt"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
@@ -811,7 +811,7 @@ var data = {
         nameLV: "Software Engineering for Self-adaptive Systems"
     },
     semanticMultimedia: {
-		kurz: "Semantic Multimedia",
+        kurz: "Semantic Multimedia",
         kennung: ["IST", "OSIS", "HCT"],
         lehrform: ["Seminar"],
         modul: ["Vertiefungsgebiete"],
@@ -891,7 +891,7 @@ var data = {
         nameLV: "Social Media Analyses"
     },
     softwareAdaption: {
-		kurz: "Software Adaption",
+        kurz: "Software Adaption",
         kennung: ["ITSE", "SAMT"],
         lehrform: ["Vorlesung", "Projekt"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
@@ -983,7 +983,7 @@ var data = {
         dozent: [""],
         nameLV: "StudiumPlus"
     },
-	studiumPlus2: {
+    studiumPlus2: {
         kurz: "Studium Plus 6LP",
         kennung: ["SSK-SK", "SSK2"],
         lehrform: [""],
@@ -1020,7 +1020,7 @@ var data = {
         nameLV: "Trends and Concepts in the Software Industry I: Inner Mechanics of In-Memory Databases"
     },
     toc2: {
-		kurz: "TuK II",
+        kurz: "TuK II",
         kennung: ["ITSE", "BPET", "OSIS", "SAMT"],
         lehrform: ["Vorlesung"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
