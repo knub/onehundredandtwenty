@@ -996,7 +996,7 @@ var data = {
         nameLV: "StudiumPlus"
     },
     trendconceptsexercise: {
-        kurz: "Trends & Concepts<brf />Exercise",
+        kurz: "TuK<br />Übung",
         kennung: ["ITSE", "SAMT", "OSIS", "BPET"],
         lehrform: ["Seminar", "Projekt"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
