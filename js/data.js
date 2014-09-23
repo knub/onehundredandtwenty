@@ -33,10 +33,22 @@
     ws14_15 = "WS14/15",
     ss15 = "SS15";
 
+var BPET = "BPET",
+    SAMT = "SAMT",
+    OSIS = "OSIS",
+    IST  = "IST",
+    HCT  = "HCT",
+    ITSE = "ITSE",
+    SSKMA = "SSK-MA",
+    SSKSK = "SSK-SK",
+    SSKRE = "SSK-RE",
+    SSKDT = "SSK-DT",
+    SSKKO = "SSK-KO";
+
 var data = {
     advancedDataProfiling: {
         kurz: "Adv. Data<br />Profiling",
-        kennung: ["BPET", "OSIS"],
+        kennung: [BPET, OSIS],
         lehrform: ["Projekt", "Seminar"],
         modul: ["Vertiefungsgebiete"],
         semester: [ws13_14],
@@ -47,7 +59,7 @@ var data = {
     },
     advancedDesignThinking: {
         kurz: "D-School<br />Advanced Track",
-        kennung: ["SSK-DT"],
+        kennung: [SSKDT],
         lehrform: ["Seminar", "Projekt"],
         modul: ["Softskills"],
         semester: [ss13, ws13_14, ss14, ws14_15],
@@ -58,7 +70,7 @@ var data = {
     },
     advancedMDE: {
         kurz: "Advanced MDE",
-        kennung: ["ITSE", "SAMT"],
+        kennung: [ITSE, SAMT],
         lehrform: ["Seminar", "Projekt"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss13],
@@ -69,7 +81,7 @@ var data = {
     },
     advancedRecommendationTechniques: {
         kurz: "Advanced<br />Recommendation",
-        kennung: ["BPET", "OSIS"],
+        kennung: [BPET, OSIS],
         lehrform: ["Seminar", "Projekt"],
         modul: ["Vertiefungsgebiete"],
         semester: [ss13],
@@ -80,7 +92,7 @@ var data = {
     },
     advancedTopicsInMemoryDatabases: {
         kurz: "Advanced<br />In-Memory DB",
-        kennung: ["BPET", "OSIS", "SAMT"],
+        kennung: [BPET, OSIS, SAMT],
         lehrform: ["Seminar"],
         modul: ["Vertiefungsgebiete"],
         semester: [ws14_15],
@@ -91,7 +103,7 @@ var data = {
     },
     algorithmenGeovisualisierung: {
         kurz: "Algorithmen der<br />Geovisualisierung",
-        kennung: ["ITSE", "HCT", "IST"],
+        kennung: [ITSE, HCT, IST],
         lehrform: ["Seminar", "Projekt"],
         modul: ["Vertiefungsgebiete", "IT-Systems Engineering"],
         semester: [ss13],
@@ -102,7 +114,7 @@ var data = {
     },
     automatedAnalysisOfFormalModels: {
         kurz: "Analysis of<br />Formal Models",
-        kennung: ["ITSE", "SAMT"],
+        kennung: [ITSE, SAMT],
         lehrform: ["Seminar"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss13,ws13_14, ss14],
@@ -113,7 +125,7 @@ var data = {
     },
     bringYourOwnProject: {
         kurz: "ByoP",
-        kennung: ["SSK-KO", "SSK-SK", "SSK-MA"],
+        kennung: [SSKKO, SSKSK, SSKMA],
         lehrform: ["Seminar"],
         modul: ["Vertiefungsgebiete"],
         semester: [ss13, ws13_14],
@@ -124,7 +136,7 @@ var data = {
     },
     businessEtikette: {
         kurz: "Business Etikette",
-        kennung: ["SSK-SK", "SSK-KO"],
+        kennung: [SSKSK, SSKKO],
         lehrform: ["Seminar"],
         modul: ["Softskills"],
         semester: [ss13, ws13_14, ss14, ws14_15],
@@ -135,7 +147,7 @@ var data = {
     },
     businessProcessCompliance: {
         kurz: "BPC",
-        kennung: ["BPET", "SAMT"],
+        kennung: [BPET, SAMT],
         lehrform: ["Vorlesung"],
         modul: ["Vertiefungsgebiete"],
         semester: [ws13_14],
@@ -146,7 +158,7 @@ var data = {
     },
     cloudComputing: {
         kurz: "Cloud Computing",
-        kennung: ["IST", "OSIS", "ITSE"],
+        kennung: [IST, OSIS, ITSE],
         lehrform: ["Seminar"],
         modul: ["Vertiefungsgebiete"],
         semester: [ws14_15],
@@ -157,7 +169,7 @@ var data = {
     },
     cloudSicherheit: {
         kurz: "Cloud Sicherheit",
-        kennung: ["IST", "OSIS", "SAMT"],
+        kennung: [IST, OSIS, SAMT],
         lehrform: ["Seminar"],
         modul: ["Vertiefungsgebiete"],
         semester: [ss13],
@@ -168,7 +180,7 @@ var data = {
     },
     cloudStorages: {
         kurz: "Cloud Storages",
-        kennung: ["IST", "OSIS", "ITSE"],
+        kennung: [IST, OSIS, ITSE],
         lehrform: ["Seminar", "Projekt"],
         modul: ["Vertiefungsgebiete"],
         semester: [ws14_15],
@@ -179,7 +191,7 @@ var data = {
     },
     cloudUndVirtualisierung: {
         kurz: "Cloud &<br />Virtualisierung",
-        kennung: ["ITSE", "IST", "OSIS"],
+        kennung: [ITSE, IST, OSIS],
         lehrform: ["Seminar"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss13],
@@ -190,7 +202,7 @@ var data = {
     },
     constraintbasedprogramming: {
         kurz: "Constraint-based<br />Programming",
-        kennung: ["ITSE", "OSIS", "SAMT"],
+        kennung: [ITSE, OSIS, SAMT],
         lehrform: ["Seminar"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss14],
@@ -201,7 +213,7 @@ var data = {
     },
     darkWebMonitoring: {
         kurz: "Dark Web",
-        kennung: ["ITSE", "IST", "OSIS"],
+        kennung: [ITSE, IST, OSIS],
         lehrform: ["Seminar"],
         modul: ["Vertiefungsgebiete"],
         semester: [ws14_15],
@@ -212,7 +224,7 @@ var data = {
     },
     dataMining: {
         kurz: "Data<br />Mining",
-        kennung: ["OSIS", "SAMT"],
+        kennung: [OSIS, SAMT],
         lehrform: ["Vorlesung", "Übung"],
         modul: ["Vertiefungsgebiete"],
         semester: [ws13_14],
@@ -223,7 +235,7 @@ var data = {
     },
     dataProfilingAndCleansing: {
         kurz: "Data Profiling<br />and Cleansing",
-        kennung: ["BPET", "OSIS"],
+        kennung: [BPET, OSIS],
         lehrform: ["Vorlesung", "Übung"],
         modul: ["Vertiefungsgebiete"],
         semester: [ss13, ws14_15],
@@ -234,7 +246,7 @@ var data = {
     },
     dependableSystems: {
         kurz: "Dependable<br />Systems",
-        kennung: ["ITSE", "OSIS"],
+        kennung: [ITSE, OSIS],
         lehrform: ["Vorlesung"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss13, ss14],
@@ -245,7 +257,7 @@ var data = {
     },
     designingProgrammingInMemoryDatabases: {
         kurz: "Apps for IMDB",
-        kennung: ["ITSE", "BPET", "OSIS", "SAMT"],
+        kennung: [ITSE, BPET, OSIS, SAMT],
         lehrform: ["Projekt", "Seminar"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss13],
@@ -256,7 +268,7 @@ var data = {
     },
     designThinkingBasics: {
         kurz: "D-School<br />Basic Track",
-        kennung: ["SSK-DT"],
+        kennung: [SSKDT],
         lehrform: ["Seminar", "Projekt"],
         modul: ["Softskills"],
         semester: [ss13,ws13_14, ss14, ws14_15],
@@ -267,7 +279,7 @@ var data = {
     },
     duplicationDetection: {
         kurz: "Duplication Detection",
-        kennung: ["BPET", "OSIS"],
+        kennung: [BPET, OSIS],
         lehrform: ["Seminar"],
         modul: ["Vertiefungsgebiete"],
         semester: [ss13],
@@ -278,7 +290,7 @@ var data = {
     },
     eingebetteteBetriebssysteme: {
         kurz: "Embedded<br />Systems",
-        kennung: ["IST", "OSIS", "SAMT"],
+        kennung: [IST, OSIS, SAMT],
         lehrform: ["Vorlesung", "Projekt"],
         modul: ["Vertiefungsgebiete"],
         semester: [ws13_14],
@@ -289,7 +301,7 @@ var data = {
     },
     englisch3: {
         kurz: "Fachenglisch<br />Level 3",
-        kennung: ["SSK-SK", "SSK-KO"],
+        kennung: [SSKSK, SSKKO],
         lehrform: ["Seminar"],
         modul: ["Softskills"],
         semester: [ss13, ws13_14, ss14, ws14_15],
@@ -300,7 +312,7 @@ var data = {
     },
     eventprocessing: {
         kurz: "Event Processing",
-        kennung: ["ITSE", "OSIS"],
+        kennung: [ITSE, OSIS],
         lehrform: ["Vorlesung"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss14],
@@ -311,7 +323,7 @@ var data = {
     },
     eventProcessingSystems: {
         kurz: "Event Processing<br /> Systems",
-        kennung: ["BPET", "OSIS"],
+        kennung: [BPET, OSIS],
         lehrform: ["Seminar"],
         modul: ["Vertiefungsgebiete"],
         semester: [ws14_15],
@@ -322,7 +334,7 @@ var data = {
     },
     eventProcessingTechnologies: {
         kurz: "Event Processing<br />Technologies",
-        kennung: ["BPET", "OSIS"],
+        kennung: [BPET, OSIS],
         lehrform: ["Seminar"],
         modul: ["Vertiefungsgebiete"],
         semester: [ss13],
@@ -333,7 +345,7 @@ var data = {
     },
     fuehrungskompetenz: {
         kurz: "Führungs-<br />kompetenz",
-        kennung: ["SSK-MA"],
+        kennung: [SSKMA],
         lehrform: ["Seminar"],
         modul: ["Softskills"],
         semester: [ss13, ss14],
@@ -344,7 +356,7 @@ var data = {
     },
     futureinteractivetechnology: {
         kurz: "Future Interactive<br>Technology",
-        kennung: ["ITSE", "HCT", "SAMT"],
+        kennung: [ITSE, HCT, SAMT],
         lehrform: ["Vorlesung"],
         modul: ["IT Systems Engineering", "Vertiefungsgebiete"],
         semester: ss14,
@@ -355,7 +367,7 @@ var data = {
     },
     geoinformationstechnologien: {
         kurz: "Geoinformations-<br />technologien",
-        kennung: ["ITSE", "HCT", "IST"],
+        kennung: [ITSE, HCT, IST],
         lehrform: ["Vorlesung"],
         modul: ["Vertiefungsgebiete"],
         semester: [ws14_15],
@@ -366,7 +378,7 @@ var data = {
     },
     geovisualisierung: {
         kurz: "Geovisualisierung",
-        kennung: ["ITSE", "HCT", "IST"],
+        kennung: [ITSE, HCT, IST],
         lehrform: ["Vorlesung"],
         modul: ["Vertiefungsgebiete", "IT-Systems Engineering"],
         semester: [ss13],
@@ -377,7 +389,7 @@ var data = {
     },
     hciProject: {
         kurz: "HCI<br />Projekt",
-        kennung: ["ITSE", "HCT", "SAMT"],
+        kennung: [ITSE, HCT, SAMT],
         lehrform: ["Projekt", "Seminar"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ws13_14],
@@ -388,7 +400,7 @@ var data = {
     },
     hciProjectSeminar: {
         kurz: "HCI Cameras<br /> and Haptics",
-        kennung: ["ITSE", "HCT", "SAMT"],
+        kennung: [ITSE, HCT, SAMT],
         lehrform: ["Projekt", "Seminar"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss13],
@@ -399,7 +411,7 @@ var data = {
     },
     hciProjectSeminar2: {
         kurz: "HCI Projekt<br />Crowd Interaction",
-        kennung: ["ITSE", "HCT", "SAMT"],
+        kennung: [ITSE, HCT, SAMT],
         lehrform: ["Seminar", "Projekt"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss14],
@@ -410,7 +422,7 @@ var data = {
     },
     hciProjectSeminarVRG: {
         kurz: "HCI Projekt<br />VR Gaming",
-        kennung: ["ITSE", "HCT", "SMAT"],
+        kennung: [ITSE, HCT, SAMT],
         lehrform: ["Seminar", "Projekt"],
         modul: ["IT Systems Engineering", "Vertiefungsgebiete"],
         semester: ss14,
@@ -421,7 +433,7 @@ var data = {
     },
     hciProjectSeminarHPFVR: {
         kurz: "HCI Projekt<br />Haptics",
-        kennung: ["ITSE", "HCT", "SAMT"],
+        kennung: [ITSE, HCT, SAMT],
         lehrform: ["Seminar", "Projekt"],
         modul: ["IT Systems Engineering", "Vertiefungsgebiete"],
         semester: ws14_15,
@@ -432,7 +444,7 @@ var data = {
     },
     hciResearch: {
         kurz: "HCI Research",
-        kennung: ["ITSE", "HCT", "SAMT"],
+        kennung: [ITSE, HCT, SAMT],
         lehrform: ["Vorlesung"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss13, ss14],
@@ -443,7 +455,7 @@ var data = {
     },
     informationretrieval: {
         kurz: "Information<br /> Retrieval",
-        kennung: ["OSIS", "IST"],
+        kennung: [OSIS, IST],
         lehrform: ["Vorlesung", "Übung"],
         modul: ["Vertiefungsgebiete"],
         semester: [ss14],
@@ -454,7 +466,7 @@ var data = {
     },
     informationssicherheit: {
         kurz: "Information<br />Security",
-        kennung: ["ITSE", "IST", "OSIS"],
+        kennung: [ITSE, IST, OSIS],
         lehrform: ["Vorlesung", "Übung"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss13],
@@ -465,7 +477,7 @@ var data = {
     },
     informationvisualization: {
         kurz: "Information<br /> Visualization",
-        kennung: ["HCT", "IST"],
+        kennung: [HCT, IST],
         lehrform: ["Seminar"],
         modul: ["Vertiefungsgebiete"],
         semester: [ss14],
@@ -476,7 +488,7 @@ var data = {
     },
     inmemorycomputing: {
         kurz: "In-Memory<br />Computing",
-        kennung: ["ITSE", "HCT", "IST"],
+        kennung: [ITSE, HCT, IST],
         lehrform: ["Seminar"],
         modul: ["Vertiefungsgebiete"],
         semester: [ss14],
@@ -487,7 +499,7 @@ var data = {
     },
     inMemoryDatabases: {
         kurz: "In Memory<br />Databases",
-        kennung: ["ITSE", "BPET", "OSIS", "SAMT"],
+        kennung: [ITSE, BPET, OSIS, SAMT],
         lehrform: ["Seminar"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss13],
@@ -498,7 +510,7 @@ var data = {
     },
     inMemoryDataManagementResearch: {
         kurz: "IMDB Data<br />Management",
-        kennung: ["BPET", "OSIS", "SAMT"],
+        kennung: [BPET, OSIS, SAMT],
         lehrform: ["Seminar"],
         modul: ["Vertiefungsgebiete"],
         semester: [ws13_14],
@@ -509,7 +521,7 @@ var data = {
     },
     inMemoryDataStructuresAlgorithms: {
         kurz: "IMDB<br />Algorithms",
-        kennung: ["ITSE", "OSIS", "SAMT", "BPET"],
+        kennung: [ITSE, OSIS, SAMT, BPET],
         lehrform: ["Seminar"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss14],
@@ -520,7 +532,7 @@ var data = {
     },
     interactiveData: {
         kurz: "Interactive Data",
-        kennung: ["ITSE", "SAMT", "HCT"],
+        kennung: [ITSE, SAMT, HCT],
         lehrform: ["Seminar"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss13],
@@ -531,7 +543,7 @@ var data = {
     },
     introductionOfDesignThinking: {
         kurz: "Introduction<br />Design Thinking",
-        kennung: ["SSK-DT"],
+        kennung: [SSKDT],
         lehrform: ["Seminar", "Projekt"],
         modul: ["Softskills"],
         semester: [ss13,ws13_14, ss14, ws14_15],
@@ -542,7 +554,7 @@ var data = {
     },
     itEntrepreneurship: {
         kurz: "Entrepreneurship",
-        kennung: ["SSK-MA", "SSK-RE", "SSK-KO"],
+        kennung: [SSKMA, SSKRE, SSKKO],
         lehrform: ["Seminar"],
         modul: ["Softskills"],
         semester: [ws13_14, ws14_15],
@@ -553,7 +565,7 @@ var data = {
     },
     itEntrepreneurshipII: {
         kurz: "Entrepreneurship II",
-        kennung: ["SSK-MA", "SSK-KO", "SSK-RE"],
+        kennung: [SSKMA, SSKKO, SSKRE],
         lehrform: ["Seminar"],
         modul: ["Softskills"],
         semester: [ss13],
@@ -564,7 +576,7 @@ var data = {
     },
     itFallstudien: {
         kurz: "Fallstudien",
-        kennung: ["SSK-MA", "SSK-RE"],
+        kennung: [SSKMA, SSKRE],
         lehrform: ["Vorlesung"],
         modul: ["Softskills"],
         semester: [ws13_14],
@@ -575,7 +587,7 @@ var data = {
     },
     itRecht: {
         kurz: "IT-Recht",
-        kennung: ["SSK-RE"],
+        kennung: [SSKRE],
         lehrform: ["Vorlesung"],
         modul: ["Softskills"],
         semester: [ws13_14, ws14_15],
@@ -586,7 +598,7 @@ var data = {
     },
     komplexitaestheorie: {
         kurz: "Komplexitätstheorie",
-        kennung: ["ITSE", "IST", "OSIS"],
+        kennung: [ITSE, IST, OSIS],
         lehrform: ["Vorlesung", "Übung"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss14],
@@ -597,7 +609,7 @@ var data = {
     },
     konfliktUndKommunikationsmanagement: {
         kurz: "Kommunikations-<br />management",
-        kennung: ["SSK-KO", "SSK-MA"],
+        kennung: [SSKKO, SSKMA],
         lehrform: ["Seminar"],
         modul: ["Softskills"],
         semester: [ss13,ws13_14, ss14, ws14_15],
@@ -608,7 +620,7 @@ var data = {
     },
     kontextorientiertesProgrammieren: {
         kurz: "COP",
-        kennung: ["SAMT", "OSIS"],
+        kennung: [SAMT, OSIS],
         lehrform: ["Seminar"],
         modul: ["Vertiefungsgebiete"],
         semester: [ws14_15],
@@ -619,7 +631,7 @@ var data = {
     },
     konzepteParallelerProgrammierung: {
         kurz: "Parallel<br />Programming",
-        kennung: ["ITSE", "OSIS"],
+        kennung: [ITSE, OSIS],
         lehrform: ["Vorlesung"],
         modul: ["Vertiefungsgebiete"],
         semester: [ws13_14],
@@ -630,7 +642,7 @@ var data = {
     },
     nlp: {
         kurz: "NLP",
-        kennung: ["OSIS", "BPET"],
+        kennung: [OSIS, BPET],
         lehrform: ["Vorlesung", "Übung"],
         modul: ["Vertiefungsgebiete"],
         semester: [ss14],
@@ -641,7 +653,7 @@ var data = {
     },
     linkeddatapublishing: {
         kurz: "Linked Data<br /> Publishing",
-        kennung: ["ITSE", "BPET", "IST"],
+        kennung: [ITSE, BPET, IST],
         lehrform: ["Seminar"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss14],
@@ -652,7 +664,7 @@ var data = {
     },
     linkedopendata: {
         kurz: "LOD<br />Movies",
-        kennung: ["ITSE", "BPET", "IST"],
+        kennung: [ITSE, BPET, IST],
         lehrform: ["Seminar"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss14],
@@ -663,7 +675,7 @@ var data = {
     },
     managementEssentials: {
         kurz: "Management Essentials",
-        kennung: ["SSK-MA"],
+        kennung: [SSKMA],
         lehrform: ["Vorlesung"],
         modul: ["Softskills"],
         semester: [ss13, ss14, ws14_15],
@@ -674,7 +686,7 @@ var data = {
     },
     methodikGeoinformationstechnik: {
         kurz: "Methodik<br />GeoInfo",
-        kennung: ["HCT", "IST"],
+        kennung: [HCT, IST],
         lehrform: ["Vorlesung"],
         modul: ["Vertiefungsgebiete"],
         semester: [ws13_14],
@@ -685,7 +697,7 @@ var data = {
     },
     middleware: {
         kurz: "Komponenten<br />& Middleware",
-        kennung: ["OSIS", "SAMT"],
+        kennung: [OSIS, SAMT],
         lehrform: ["Seminar"],
         modul: ["Vertiefungsgebiete"],
         semester: [ss14],
@@ -696,7 +708,7 @@ var data = {
     },
     modellgetriebeneEntwicklung: {
         kurz: "Modellgetriebene",
-        kennung: ["ITSE", "SAMT"],
+        kennung: [ITSE, SAMT],
         lehrform: ["Vorlesung", "Projekt"],
         modul: ["Vertiefungsgebiete"],
         semester: [ws14_15],
@@ -707,7 +719,7 @@ var data = {
     },
     networkSecurityPractice: {
         kurz: "Network<br />Security",
-        kennung: ["ITSE", "IST", "OSIS"],
+        kennung: [ITSE, IST, OSIS],
         lehrform: ["Seminar", "Projekt"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ws13_14, ws14_15],
@@ -718,7 +730,7 @@ var data = {
     },
     nonUniformMemoryAccess: {
         kurz: "NUMA",
-        kennung: ["SAMT", "OSIS"],
+        kennung: [SAMT, OSIS],
         lehrform: ["Seminar"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ws14_15],
@@ -729,7 +741,7 @@ var data = {
     },
     pearlsComputerScience: {
         kurz: "Pearls of CS",
-        kennung: ["BPET", "OSIS", "SAMT"],
+        kennung: [BPET, OSIS, SAMT],
         lehrform: ["Seminar"],
         modul: ["Vertiefungsgebiete"],
         semester: [ws13_14],
@@ -740,7 +752,7 @@ var data = {
     },
     pearlsofBPM: {
         kurz: "Pearls of BPM",
-        kennung: ["OSIS", "BPET"],
+        kennung: [OSIS, BPET],
         lehrform: ["Seminar"],
         modul: ["Vertiefungsgebiete"],
         semester: [ss14],
@@ -751,7 +763,7 @@ var data = {
     },
     penTesting: {
         kurz: "Penetration Testing",
-        kennung: ["ITSE", "IST", "OSIS"],
+        kennung: [ITSE, IST, OSIS],
         lehrform: ["Seminar", "Projekt"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss13],
@@ -762,7 +774,7 @@ var data = {
     },
     persoenlichkeitUndSelbstmanagement: {
         kurz: "Persönlichkeit &<br />Selbstmanagement",
-        kennung: ["SSK-KO", "SSK-MA"],
+        kennung: [SSKKO, SSKMA],
         lehrform: ["Seminar"],
         modul: ["Vertiefungsgebiete"],
         semester: [ss13, ws13_14, ss14, ws14_15,],
@@ -773,7 +785,7 @@ var data = {
     },
     personalManagementSkills: {
         kurz: "Personal<br />Management",
-        kennung: ["SSK-MA"],
+        kennung: [SSKMA],
         lehrform: ["Seminar"],
         modul: ["Softskills"],
         semester: [ws13_14, ws14_15],
@@ -784,7 +796,7 @@ var data = {
     },
     privacyAndSecurityIPv6: {
         kurz: "Privacy&Sec<br />IPv6",
-        kennung: ["ITSE", "IST", "OSIS"],
+        kennung: [ITSE, IST, OSIS],
         lehrform: ["Seminar", "Projekt"],
         modul: ["Vertiefungsgebiete", "IT-Systems Engineering"],
         semester: [ws13_14],
@@ -795,7 +807,7 @@ var data = {
     },
     productInnovationAndEngineering: {
         kurz: "ME310 II",
-        kennung: ["ITSE", "BPET", "HCT"],
+        kennung: [ITSE, BPET, HCT],
         lehrform: ["Projekt", "Seminar"],
         modul: ["Vertiefungsgebiete", "IT-Systems Engineering"],
         semester: [ss13, ss14],
@@ -806,7 +818,7 @@ var data = {
     },
     productInnovationEngineeringI: {
         kurz: "ME310 I",
-        kennung: ["ITSE", "BPET"],
+        kennung: [ITSE, BPET],
         lehrform: ["Seminar", "Projekt"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ws13_14, ws14_15],
@@ -817,7 +829,7 @@ var data = {
     },
     productInnovationEngineeringIII: {
         kurz: "ME310 Coaching",
-        kennung: ["ITSE", "BPET"],
+        kennung: [ITSE, BPET],
         lehrform: ["Seminar", "Projekt"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ws13_14, ws14_15],
@@ -828,7 +840,7 @@ var data = {
     },
     recommenderSystems: {
         kurz: "Recommender<br />Systems",
-        kennung: ["SAMT", "OSIS"],
+        kennung: [SAMT, OSIS],
         lehrform: ["Seminar"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ws14_15],
@@ -839,7 +851,7 @@ var data = {
     },
     reverseengineering: {
         kurz: "Reverse<br />Engineering",
-        kennung: ["ITSE", "IST", "OSIS"],
+        kennung: [ITSE, IST, OSIS],
         lehrform: ["Seminar", "Projekt"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss14],
@@ -850,7 +862,7 @@ var data = {
     },
     regelungSteuerung: {
         kurz: "GRuS",
-        kennung: ["ITSE", "OSIS", "SAMT"],
+        kennung: [ITSE, OSIS, SAMT],
         lehrform: ["Vorlesung"],
         modul: ["Vertiefungsgebiete", "IT-Systems Engineering"],
         semester: [ss13],
@@ -861,7 +873,7 @@ var data = {
     },
     schnittstellenGeoinformationGeokommunikation: {
         kurz: "Geo-Schnittstellen",
-        kennung: ["HCT", "IST"],
+        kennung: [HCT, IST],
         lehrform: ["Vorlesung"],
         modul: ["Vertiefungsgebiete"],
         semester: [ss13],
@@ -872,7 +884,7 @@ var data = {
     },
     selfadaptivesystems: {
         kurz: "Self-Adaptive<br />Systems",
-        kennung: ["ITSE", "SAMT"],
+        kennung: [ITSE, SAMT],
         lehrform: ["Vorlesung", "Projekt"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss14],
@@ -883,7 +895,7 @@ var data = {
     },
     semanticMultimedia: {
         kurz: "Semantic Multimedia",
-        kennung: ["IST", "OSIS", "HCT"],
+        kennung: [IST, OSIS, HCT],
         lehrform: ["Seminar"],
         modul: ["Vertiefungsgebiete"],
         semester: [ss13],
@@ -894,7 +906,7 @@ var data = {
     },
     semanticWebTechnologien: {
         kurz: "Semantic<br />Web",
-        kennung: ["ITSE", "BPET", "IST"],
+        kennung: [ITSE, BPET, IST],
         lehrform: ["Vorlesung", "Übung"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ws13_14, ws14_15],
@@ -905,7 +917,7 @@ var data = {
     },
     seminarDesForschungskollegs: {
         kurz: "Seminar des<br />Forschungskollegs",
-        kennung: ["BPET", "HCT", "IST", "OSIS", "SAMT"],
+        kennung: [BPET, HCT, IST, OSIS, SAMT],
         lehrform: ["Seminar"],
         modul: ["Vertiefungsgebiete"],
         semester: [ss13, ws13_14, ss14, ws14_15],
@@ -916,7 +928,7 @@ var data = {
     },
     seminarGeovisualisierung: {
         kurz: "Geo Seminar",
-        kennung: ["ITSE", "HCT", "IST"],
+        kennung: [ITSE, HCT, IST],
         lehrform: ["Seminar", "Projekt"],
         modul: ["Vertiefungsgebiete", "IT-Systems Engineering"],
         semester: [ws13_14, ws14_15],
@@ -927,7 +939,7 @@ var data = {
     },
     servicebasedvisualization: {
         kurz: "Service-based<br />Visualization",
-        kennung: ["HCT", "IST"],
+        kennung: [HCT, IST],
         lehrform: ["Seminar"],
         modul: ["Vertiefungsgebiete"],
         semester: [ss14],
@@ -938,7 +950,7 @@ var data = {
     },
     sicherheitInKomplexenITLandschaften: {
         kurz: "SikIL",
-        kennung: ["ITSE", "IST", "BPET", "OSIS"],
+        kennung: [ITSE, IST, BPET, OSIS],
         lehrform: ["Seminar"],
         modul: ["Vertiefungsgebiete"],
         semester: [ws13_14],
@@ -949,7 +961,7 @@ var data = {
     },
     socialMediaAnalyses: {
         kurz: "Social<br />Media",
-        kennung: ["ITSE", "IST", "OSIS"],
+        kennung: [ITSE, IST, OSIS],
         lehrform: ["Seminar", "Projekt"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ws13_14],
@@ -960,7 +972,7 @@ var data = {
     },
     socialMediaMining: {
         kurz: "Social<br />Media Mining",
-        kennung: ["ITSE", "IST", "OSIS"],
+        kennung: [ITSE, IST, OSIS],
         lehrform: ["Seminar", "Projekt"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ws14_15],
@@ -971,7 +983,7 @@ var data = {
     },
     softwareAdaption: {
         kurz: "Software Adaption",
-        kennung: ["ITSE", "SAMT"],
+        kennung: [ITSE, SAMT],
         lehrform: ["Vorlesung", "Projekt"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss13],
@@ -982,7 +994,7 @@ var data = {
     },
     softwareAnalytics: {
         kurz: "Software<br />Analytics",
-        kennung: ["ITSE", "HCT", "SAMT"],
+        kennung: [ITSE, HCT, SAMT],
         lehrform: ["Seminar"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ws13_14, ws14_15],
@@ -993,7 +1005,7 @@ var data = {
     },
     softwareAsAService: {
         kurz: "Software as a Service",
-        kennung: ["ITSE", "IST", "SAMT"],
+        kennung: [ITSE, IST, SAMT],
         lehrform: ["Seminar"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss13],
@@ -1004,7 +1016,7 @@ var data = {
     },
     softwareEngineeringEmbeddedSystems: {
         kurz: "SE for<br />Embedded Systems",
-        kennung: ["ITSE", "SAMT"],
+        kennung: [ITSE, SAMT],
         lehrform: ["Vorlesung", "Übung", "Projekt"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ws13_14, ws14_15],
@@ -1015,7 +1027,7 @@ var data = {
     },
     softwareProfiling: {
         kurz: "Software Profiling",
-        kennung: ["ITSE", "OSIS"],
+        kennung: [ITSE, OSIS],
         lehrform: ["Seminar"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss13],
@@ -1026,7 +1038,7 @@ var data = {
     },
     softwarevisualisierung: {
         kurz: "Software-<br />visualisierung",
-        kennung: ["HCT", "OSIS", "SAMT"],
+        kennung: [HCT, OSIS, SAMT],
         lehrform: ["Seminar"],
         modul: ["Vertiefungsgebiete"],
         semester: [ss13],
@@ -1037,7 +1049,7 @@ var data = {
     },
     statistischeDatenanalyse: {
         kurz: "Statistische<br />Datenanalyse",
-        kennung: ["ITSE", "BPET"],
+        kennung: [ITSE, BPET],
         lehrform: ["Vorlesung"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ws13_14],
@@ -1048,7 +1060,7 @@ var data = {
     },
     studiumPlus: {
         kurz: "Studium Plus 3LP",
-        kennung: ["SSK-SK", "SSK2"],
+        kennung: [SSKSK],
         lehrform: [""],
         modul: ["Softskills"],
         semester: [ss13, ws13_14, ss14],
@@ -1059,7 +1071,7 @@ var data = {
     },
     studiumPlus2: {
         kurz: "Studium Plus 6LP",
-        kennung: ["SSK-SK", "SSK2"],
+        kennung: [SSKSK],
         lehrform: [""],
         modul: ["Softskills"],
         semester: [ss13, ws13_14, ss14],
@@ -1070,7 +1082,7 @@ var data = {
     },
     trendconceptsexercise: {
         kurz: "TuK<br />Übung",
-        kennung: ["ITSE", "SAMT", "OSIS", "BPET"],
+        kennung: [ITSE, SAMT, OSIS, BPET],
         lehrform: ["Seminar", "Projekt"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss14],
@@ -1081,7 +1093,7 @@ var data = {
     },
     trendsInBetriebssystemen: {
         kurz: "Trends in <br />Betriebssystemen",
-        kennung: ["IST", "SAMT", "OSIS"],
+        kennung: [IST, SAMT, OSIS],
         lehrform: ["Seminar"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ws14_15],
@@ -1092,7 +1104,7 @@ var data = {
     },
     toc1: {
         kurz: "TuK I",
-        kennung: ["ITSE", "BPET", "OSIS", "SAMT"],
+        kennung: [ITSE, BPET, OSIS, SAMT],
         lehrform: ["Vorlesung"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss13, ss14],
@@ -1103,7 +1115,7 @@ var data = {
     },
     toc2: {
         kurz: "TuK II",
-        kennung: ["ITSE", "BPET", "OSIS", "SAMT"],
+        kennung: [ITSE, BPET, OSIS, SAMT],
         lehrform: ["Vorlesung"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ws13_14, ws14_15],
@@ -1114,7 +1126,7 @@ var data = {
     },
     unternehmensarchitektur: {
         kurz: "IT-Unternehmens-<br />architektur",
-        kennung: ["ITSE", "BPET", "OSIS", "SAMT"],
+        kennung: [ITSE, BPET, OSIS, SAMT],
         lehrform: ["Vorlesung"],
         modul: ["IT Engineering", "Vertiefungsgebiete"],
         semester: [ss14],
@@ -1125,7 +1137,7 @@ var data = {
     },
     ueberzeugendPraesentieren: {
         kurz: "Überzeugend<br />präsentieren",
-        kennung: ["SSK-KO"],
+        kennung: [SSKKO],
         lehrform: ["Seminar"],
         modul: ["Softskills"],
         semester: [ss13, ss14, ws13_14, ws14_15],
@@ -1136,7 +1148,7 @@ var data = {
     },
     unternehmensgruendung: {
         kurz: "Unternehmens-<br />gründung",
-        kennung: ["SSK-KO", "SSK-MA", "SSK-RE"],
+        kennung: [SSKKO, SSKMA, SSKRE],
         lehrform: ["Vorlesung"],
         modul: ["Softskills"],
         semester: [ss13, ss14],
@@ -1147,7 +1159,7 @@ var data = {
     },
     verlaesslichesysteme: {
         kurz: "Verlässliche<br />Systeme",
-        kennung: ["SAMT", "OSIS"],
+        kennung: [SAMT, OSIS],
         lehrform: ["Seminar"],
         modul: ["Vertiefungsgebiete"],
         semester: [ss14],
@@ -1158,7 +1170,7 @@ var data = {
     },
     virtuelleMaschinen: {
         kurz: "Virtuelle<br />Maschinen",
-        kennung: ["OSIS", "SAMT"],
+        kennung: [OSIS, SAMT],
         lehrform: ["Projekt", "Seminar"],
         modul: ["Vertiefungsgebiete"],
         semester: [ws13_14, ws14_15],
