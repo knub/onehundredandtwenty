@@ -17,7 +17,6 @@
  *    lehrform: "Seminar" or "Projekt" or "Vorlesung"
  *    modul: "Vertiefungsgebiete" is what you want in most cases here
  *    semester: semester string: (WS|SS)[0-9]{2}, e.g. WS11
- *    pflicht: whether this course must be chosen or not
  *    cp: how much credit points you get for this course
  *    dozent: self explaining
  *    nameLV: long name
@@ -53,7 +52,6 @@ var data = {
         modul: ["Softskills"],
         semester: [ss13, ws13_14, ss14, ws14_15],
         benotet: true,
-        pflicht: false,
         cp: 6,
         dozent: ["Dr. Claudia Nicolai", "Prof. Ulrich Weinberg"],
         nameLV: "Advanced Design Thinking (D-School Advanced Track)"
@@ -65,7 +63,6 @@ var data = {
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss13],
         benotet: true,
-        pflicht: false,
         cp: 6,
         dozent: ["Prof. Dr. Holger Giese", "M. Sc. Thomas Beyhl"],
         nameLV: "Advanced MDE: Model Management"
@@ -77,7 +74,6 @@ var data = {
         modul: ["Vertiefungsgebiete"],
         semester: [ss13],
         benotet: true,
-        pflicht: false,
         cp: 6,
         dozent: ["Dr. Gjergji Kasneci"],
         nameLV: "Advanced Recommendation Techniques"
@@ -89,7 +85,6 @@ var data = {
         modul: ["Vertiefungsgebiete"],
         semester: [ws14_15],
         benotet: true,
-        pflicht: false,
         cp: 6,
         dozent: ["Dr. Matthias Uflacker", "Carsten Meyer", "Martin Boissier"],
         nameLV: "Advanced Topics on In-Memory Database Systems"
@@ -101,7 +96,6 @@ var data = {
         modul: ["Vertiefungsgebiete", "IT-Systems Engineering"],
         semester: [ss13],
         benotet: true,
-        pflicht: false,
         cp: 6,
         dozent: ["Prof. Dr. Jürgen Döllner", "Rico Richter", "Stefan Buschmann"],
         nameLV: "Algorithmen und Techniken der Geovisualisierung (ehem.: Geovisualisierungsverfahren)"
@@ -113,7 +107,6 @@ var data = {
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss13,ws13_14, ss14],
         benotet: true,
-        pflicht: false,
         cp: 3,
         dozent: ["Prof. Dr. Holger Giese", "Leen Lambers", "M.Sc. Johannes Dyck"],
         nameLV: "Automated Analysis of Formal Models"
@@ -125,7 +118,6 @@ var data = {
         modul: ["Vertiefungsgebiete"],
         semester: [ss13, ws13_14],
         benotet: false,
-        pflicht: false,
         cp: 3,
         dozent: ["Dr. Karen Dittmann"],
         nameLV: "Bring your own project: IT-Projekte erfolgreich planen und managen"
@@ -137,7 +129,6 @@ var data = {
         modul: ["Softskills"],
         semester: [ss13, ws13_14, ss14, ws14_15],
         benotet: true,
-        pflicht: false,
         cp: 3,
         dozent: ["Dr. Timm Krohn", "Imme Vogelsang"],
         nameLV: "Business Etikette-<br />HPI Charm School"
@@ -160,7 +151,6 @@ var data = {
         modul: ["Vertiefungsgebiete"],
         semester: [ws14_15],
         benotet: true,
-        pflicht: false,
         cp: 3,
         dozent: ["Prof. Dr. Andreas Polze"],
         nameLV: "Industrieseminar Cloud Computing"
@@ -172,7 +162,6 @@ var data = {
         modul: ["Vertiefungsgebiete"],
         semester: [ss13],
         benotet: true,
-        pflicht: false,
         cp: 3,
         dozent: ["Prof. Dr. Andreas Polze", "Christian Neuhaus"],
         nameLV: "Algorithmen und Analysemethoden für Sicherheit in Cloud-Infrastrukturen"
@@ -184,7 +173,6 @@ var data = {
         modul: ["Vertiefungsgebiete"],
         semester: [ws14_15],
         benotet: true,
-        pflicht: false,
         cp: 6,
         dozent: ["Prof. Dr. Christoph Meinel", "Hendrik Graupner", "Kennedy Torkura"],
         nameLV: "Securing Cloud Storages"
@@ -196,7 +184,6 @@ var data = {
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss13],
         benotet: true,
-        pflicht: false,
         cp: 3,
         dozent: ["Prof. Dr. Christoph Meinel", "Maxim Schnjakin"],
         nameLV: "Cloud und Virtualisierung"
@@ -208,7 +195,6 @@ var data = {
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss14],
         benotet: true,
-        pflicht: false,
         cp: 3,
         dozent: ["Prof. Dr. Robert Hirschfeld", "Tim Felgentreff"],
         nameLV: "Constraint-based Programming"
@@ -220,7 +206,6 @@ var data = {
         modul: ["Vertiefungsgebiete"],
         semester: [ws14_15],
         benotet: true,
-        pflicht: false,
         cp: 6,
         dozent: ["Prof. Dr. Christoph Meinel", "David Jaeger", "Hendrik Graupner"],
         nameLV: "Dark Web Monitoring and Analysis of Leak Data"
@@ -243,7 +228,6 @@ var data = {
         modul: ["Vertiefungsgebiete"],
         semester: [ss13, ws14_15],
         benotet: true,
-        pflicht: false,
         cp: 6,
         dozent: ["Prof. Dr. Felix Naumann" , "Thorsten Papenbrock"],
         nameLV: "Data Profiling and Data Cleansing"
@@ -255,7 +239,6 @@ var data = {
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss13, ss14],
         benotet: true,
-        pflicht: false,
         cp: 6,
         dozent: ["Dr. Peter Tröger"],
         nameLV: "Dependable Systems"
@@ -267,7 +250,6 @@ var data = {
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss13],
         benotet: true,
-        pflicht: false,
         cp: 6,
         dozent: ["Christian Schwarz", "Dr. Jürgen Müller", "Dipl.-Kfm. Jens Krüger"],
         nameLV: "Designing and Programming Applications for In-Memory Databases"
@@ -279,7 +261,6 @@ var data = {
         modul: ["Softskills"],
         semester: [ss13,ws13_14, ss14, ws14_15],
         benotet: true,
-        pflicht: false,
         cp: 9,
         dozent: ["Dr. Claudia Nicolai", "Prof. Ulrich Weinberg"],
         nameLV: "Design Thinking Basics (D-School Basic Track)"
@@ -291,7 +272,6 @@ var data = {
         modul: ["Vertiefungsgebiete"],
         semester: [ss13],
         benotet: true,
-        pflicht: false,
         cp: 6,
         dozent: ["Prof. Dr. Felix Naumann", "Arvid Heise"],
         nameLV: "Large Scale Duplicate Detection"
@@ -314,7 +294,6 @@ var data = {
         modul: ["Softskills"],
         semester: [ss13, ws13_14, ss14, ws14_15],
         benotet: true,
-        pflicht: false,
         cp: 3,
         dozent: ["David Meier"],
         nameLV: "Fachspezifisches Englisch (Level 3)"
@@ -326,7 +305,6 @@ var data = {
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss14],
         benotet: true,
-        pflicht: false,
         cp: 6,
         dozent: ["Dr. Anne Baumgraß", "Prof. Dr. Mathias Weske"],
         nameLV: "Event Processing"
@@ -338,7 +316,6 @@ var data = {
         modul: ["Vertiefungsgebiete"],
         semester: [ws14_15],
         benotet: true,
-        pflicht: false,
         cp: 6,
         dozent: ["Dr. Anne Baumgraß", "Prof. Dr. Mathias Weske"],
         nameLV: "Event Processing Systems"
@@ -350,7 +327,6 @@ var data = {
         modul: ["Vertiefungsgebiete"],
         semester: [ss13],
         benotet: true,
-        pflicht: false,
         cp: 6,
         dozent: ["Prof. Dr. Jan Mendling"],
         nameLV: "Event Processing Technologies"
@@ -362,7 +338,6 @@ var data = {
         modul: ["Softskills"],
         semester: [ss13, ss14],
         benotet: true,
-        pflicht: false,
         cp: 6,
         dozent: ["Michael Karl Heidemann M.A.", "Eugen Unger"],
         nameLV: "Führungskompetenz"
@@ -374,7 +349,6 @@ var data = {
         modul: ["IT Systems Engineering", "Vertiefungsgebiete"],
         semester: ss14,
         benotet: true,
-        pflicht: false,
         cp: 6,
         dozent: ["Prof. Dr. Patrick Baudisch"],
         nameLV: "Future Interactive Technology"
@@ -386,7 +360,6 @@ var data = {
         modul: ["Vertiefungsgebiete"],
         semester: [ws14_15],
         benotet: true,
-        pflicht: false,
         cp: 3,
         dozent: ["Dr. Markus Jobst"],
         nameLV: "Geoinformationstechnologien"
@@ -398,7 +371,6 @@ var data = {
         modul: ["Vertiefungsgebiete", "IT-Systems Engineering"],
         semester: [ss13],
         benotet: true,
-        pflicht: false,
         cp: 6,
         dozent: ["Prof. Dr. Jürgen Döllner", "Sebastian Pasewaldt", "Sebastian Schmechel", "Dr. Matthias Trapp"],
         nameLV: "Geovisualisierung"
@@ -421,7 +393,6 @@ var data = {
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss13],
         benotet: true,
-        pflicht: false,
         cp: 6,
         dozent: ["Prof. Dr. Patrick Baudisch"],
         nameLV: "HCI Project Seminar on Cameras, Haptics & Interactive Fabrication"
@@ -433,7 +404,6 @@ var data = {
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss14],
         benotet: true,
-        pflicht: false,
         cp: 6,
         dozent: ["Prof. Dr. Patrick Baudisch"],
         nameLV: "HCI Project Seminar on Crowd Interaction, Physical Computing and Digital Fabrication"
@@ -445,7 +415,6 @@ var data = {
         modul: ["IT Systems Engineering", "Vertiefungsgebiete"],
         semester: ss14,
         benotet: true,
-        pflicht: false,
         cp: 6,
         dozent: ["Prof. Dr. Patrick Baudisch"],
         nameLV: "HCI Project Seminar on Virtual Reality Gaming"
@@ -457,7 +426,6 @@ var data = {
         modul: ["IT Systems Engineering", "Vertiefungsgebiete"],
         semester: ws14_15,
         benotet: true,
-        pflicht: false,
         cp: 6,
         dozent: ["Prof. Dr. Patrick Baudisch"],
         nameLV: "HCI Project Seminar Haptics, Personal Fabrication, and Virtual Reality"
@@ -469,7 +437,6 @@ var data = {
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss13, ss14],
         benotet: true,
-        pflicht: false,
         cp: 6,
         dozent: ["Prof. Dr. Patrick Baudisch"],
         nameLV: "Human Computer Interaction Research"
@@ -481,7 +448,6 @@ var data = {
         modul: ["Vertiefungsgebiete"],
         semester: [ss14],
         benotet: true,
-        pflicht: false,
         cp: 3,
         dozent: ["Prof. Dr. Felix Naumann"],
         nameLV: "Information Retrieval"
@@ -493,7 +459,6 @@ var data = {
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss13],
         benotet: true,
-        pflicht: false,
         cp: 6,
         dozent: ["Prof. Dr. Christoph Meinel"],
         nameLV: "Informationssicherheit"
@@ -505,7 +470,6 @@ var data = {
         modul: ["Vertiefungsgebiete"],
         semester: [ss14],
         benotet: true,
-        pflicht: false,
         cp: 6,
         dozent: ["Prof. Dr. Jürgen Döllner", "Rico Richter", "Sebastian Kai Belle"],
         nameLV: "Information Visualization"
@@ -517,7 +481,6 @@ var data = {
         modul: ["Vertiefungsgebiete"],
         semester: [ss14],
         benotet: true,
-        pflicht: false,
         cp: 6,
         dozent: ["Dr. Matthias Uflacker", "Dr. Matthieu Schpranow", "Dr. Mariana Neves", "Cindy Fähnrich"],
         nameLV: "In-Memory Computing for Life Sciences"
@@ -529,7 +492,6 @@ var data = {
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss13],
         benotet: true,
-        pflicht: false,
         cp: 6,
         dozent: ["Martin Faust", "David Schwalb", "Dipl.-Kfm. Jens Krüger", "Dr. Jürgen Müller", "Christian Schwarz"],
         nameLV: "In-Memory Databases: Algorithms and Data Structures on Modern Hardware"
@@ -552,7 +514,6 @@ var data = {
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss14],
         benotet: true,
-        pflicht: false,
         cp: 6,
         dozent: ["Dr. Matthias Uflacker", "Martin Faust", "David Schwalb"],
         nameLV: "Data Structures and Algorithms for In-Memory Databases"
@@ -564,7 +525,6 @@ var data = {
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss13],
         benotet: true,
-        pflicht: false,
         cp: 6,
         dozent: ["Prof. Dr. Robert Hirschfeld", "Marcel Taeumel", "Tim Felgentreff", "Jens Lincke"],
         nameLV: "Interactive Representations of Data Structures and Algorithms"
@@ -576,7 +536,6 @@ var data = {
         modul: ["Softskills"],
         semester: [ss13,ws13_14, ss14, ws14_15],
         benotet: false,
-        pflicht: false,
         cp: 3,
         dozent: ["Dr. Claudia Nicolai", "Prof. Ulrich Weinberg"],
         nameLV: "Introduction of Design Thinking"
@@ -599,7 +558,6 @@ var data = {
         modul: ["Softskills"],
         semester: [ss13],
         benotet: true,
-        pflicht: false,
         cp: 3,
         dozent: ["Dr. Rouven Westphal"],
         nameLV: "IT Entrepreneurship II"
@@ -633,7 +591,6 @@ var data = {
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss14],
         benotet: true,
-        pflicht: false,
         cp: 6,
         dozent: ["Prof. Dr. Christoph Meinel", "Nuhad Shaabani"],
         nameLV: "Komplexitätstheorie"
@@ -645,7 +602,6 @@ var data = {
         modul: ["Softskills"],
         semester: [ss13,ws13_14, ss14, ws14_15],
         benotet: true,
-        pflicht: false,
         cp: 3,
         dozent: ["Dr. Michaela Schumacher"],
         nameLV: "Konflikt-<br />und Kommunikationsmanagement"
@@ -657,7 +613,6 @@ var data = {
         modul: ["Vertiefungsgebiete"],
         semester: [ws14_15],
         benotet: true,
-        pflicht: false,
         cp: 3,
         dozent: ["Prof. Dr. Robert Hirschfeld", "Marcel Taeumel", "Jens Lincke", "Tim Felgentreff"],
         nameLV: "Kontextorientiertes Programmieren"
@@ -680,7 +635,6 @@ var data = {
         modul: ["Vertiefungsgebiete"],
         semester: [ss14],
         benotet: true,
-        pflicht: false,
         cp: 3,
         dozent: ["Dr. Mariana Neves", "Prof. Dr. Felix Naumann"],
         nameLV: "Natural Language Processing"
@@ -692,7 +646,6 @@ var data = {
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss14],
         benotet: true,
-        pflicht: false,
         cp: 3,
         dozent: ["Prof. Dr. Harald Sack"],
         nameLV: "Principles of Linked Data Publishing"
@@ -704,7 +657,6 @@ var data = {
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss14],
         benotet: true,
-        pflicht: false,
         cp: 6,
         dozent: ["Dr. rer. nat. Harad Sack"],
         nameLV: "A LOD of Movies - Linked Open Data Knowledge Mining"
@@ -716,7 +668,6 @@ var data = {
         modul: ["Softskills"],
         semester: [ss13, ss14, ws14_15],
         benotet: true,
-        pflicht: false,
         cp: 3,
         dozent: ["Prof. Dr. Katharina Hölzle"],
         nameLV: "Management Essentials"
@@ -739,7 +690,6 @@ var data = {
         modul: ["Vertiefungsgebiete"],
         semester: [ss14],
         benotet: true,
-        pflicht: false,
         cp: 3,
         dozent: ["Prof. Dr. Andreas Polze", "Christian Neuhaus", "Frank Feinbube"],
         nameLV: "Komponentenprogrammierung und Middleware"
@@ -751,7 +701,6 @@ var data = {
         modul: ["Vertiefungsgebiete"],
         semester: [ws14_15],
         benotet: true,
-        pflicht: false,
         cp: 6,
         dozent: ["Prof. Dr. Holger Giese", "Thomas Vogel"],
         nameLV: "Modellgetriebene Softwareentwicklung"
@@ -796,7 +745,6 @@ var data = {
         modul: ["Vertiefungsgebiete"],
         semester: [ss14],
         benotet: true,
-        pflicht: false,
         cp: 6,
         dozent: ["Prof. Dr. Mathias Weske", "Ekaterina Bazhenova"],
         nameLV: "Pearls of Business Process Management"
@@ -808,7 +756,6 @@ var data = {
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss13],
         benotet: true,
-        pflicht: false,
         cp: 6,
         dozent: ["Prof. Dr. Christoph Meinel", "Hosnieh Rafiee"],
         nameLV: "Penetration Testing and Securing IPv6 Networks"
@@ -820,7 +767,6 @@ var data = {
         modul: ["Vertiefungsgebiete"],
         semester: [ss13, ws13_14, ss14, ws14_15,],
         benotet: true,
-        pflicht: false,
         cp: 3,
         dozent: ["Dr. Michaela Schumacher"],
         nameLV: "Persönlichkeit und Selbstmanagement"
@@ -854,7 +800,6 @@ var data = {
         modul: ["Vertiefungsgebiete", "IT-Systems Engineering"],
         semester: [ss13, ss14],
         benotet: true,
-        pflicht: false,
         cp: 6,
         dozent: ["Dr. Matthias Uflacker", "Franziska Häger", "Thomas Kowark"],
         nameLV: "Global Team-Based Product Innovation & Engineering II -<br />ME 310"
@@ -888,7 +833,6 @@ var data = {
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ws14_15],
         benotet: true,
-        pflicht: false,
         cp: 3,
         dozent: ["Prof. Dr. Felix Naumann", "Dr. Ralf Krestel"],
         nameLV: "Recommender Systems"
@@ -900,7 +844,6 @@ var data = {
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss14],
         benotet: true,
-        pflicht: false,
         cp: 6,
         dozent: ["Prof. Dr. Christoph Meinel", "David Jäger", "Amir Azodi"],
         nameLV: "Vulnerabilities through Reverse Engineering"
@@ -912,7 +855,6 @@ var data = {
         modul: ["Vertiefungsgebiete", "IT-Systems Engineering"],
         semester: [ss13],
         benotet: true,
-        pflicht: false,
         cp: 6,
         dozent: ["Dr.-Ing. Ralf Wollowski"],
         nameLV: "Systemtechnische Grundlagen der Regelungs-<br />und Steuerungstechnik"
@@ -924,7 +866,6 @@ var data = {
         modul: ["Vertiefungsgebiete"],
         semester: [ss13],
         benotet: true,
-        pflicht: false,
         cp: 3,
         dozent: ["Dr. techn. Markus Jobst", "Sebastian Pasewaldt"],
         nameLV: "Schnittstellen der Geoinformation und Geokommunikation"
@@ -936,7 +877,6 @@ var data = {
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss14],
         benotet: true,
-        pflicht: false,
         cp: 6,
         dozent: ["Prof. Dr. Holger Giese", "Thomas Vogel"],
         nameLV: "Software Engineering for Self-adaptive Systems"
@@ -948,7 +888,6 @@ var data = {
         modul: ["Vertiefungsgebiete"],
         semester: [ss13],
         benotet: true,
-        pflicht: false,
         cp: 6,
         dozent: ["Dr. rer. nat. Harald Sack", "Jörg Waitelonis", "Nadine Steinmetz", "Magnus Knuth"],
         nameLV: "Semantic Multimedia"
@@ -971,7 +910,6 @@ var data = {
         modul: ["Vertiefungsgebiete"],
         semester: [ss13, ws13_14, ss14, ws14_15],
         benotet: false,
-        pflicht: false,
         cp: 3,
         dozent: ["Prof. Dr. Andreas Polze", "Prof. Dr. Robert Hirschfeld"],
         nameLV: "Seminar des Forschungskollegs"
@@ -994,7 +932,6 @@ var data = {
         modul: ["Vertiefungsgebiete"],
         semester: [ss14],
         benotet: true,
-        pflicht: false,
         cp: 6,
         dozent: ["Prof. Dr. Jürgen Döllner", "Benjamin Hagendorn", "Jan Klimke"],
         nameLV: "Service-based Visualization"
@@ -1039,7 +976,6 @@ var data = {
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss13],
         benotet: true,
-        pflicht: false,
         cp: 6,
         dozent: ["Prof. Dr. Holger Giese", "Thomas Vogel"],
         nameLV: "Software Adaption"
@@ -1062,7 +998,6 @@ var data = {
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss13],
         benotet: true,
-        pflicht: false,
         cp: 3,
         dozent: ["Prof. Dr. Christoph Meinel", "Eyad Saleh"],
         nameLV: "Software-as-a-Service and Multi-tenancy"
@@ -1085,7 +1020,6 @@ var data = {
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss13],
         benotet: true,
-        pflicht: false,
         cp: 3,
         dozent: ["Dr. Peter Tröger", "Frank Feinbube"],
         nameLV: "Software Profiling"
@@ -1097,7 +1031,6 @@ var data = {
         modul: ["Vertiefungsgebiete"],
         semester: [ss13],
         benotet: true,
-        pflicht: false,
         cp: 6,
         dozent: ["Prof. Dr. Jürgen Döllner", "Jonas Trümper", "Sebastian Schmechel", "Sebastian Kay Belle"],
         nameLV: "Softwarevisualisierungsverfahren"
@@ -1120,7 +1053,6 @@ var data = {
         modul: ["Softskills"],
         semester: [ss13, ws13_14, ss14],
         benotet: false,
-        pflicht: false,
         cp: 3,
         dozent: [""],
         nameLV: "StudiumPlus"
@@ -1132,7 +1064,6 @@ var data = {
         modul: ["Softskills"],
         semester: [ss13, ws13_14, ss14],
         benotet: false,
-        pflicht: false,
         cp: 6,
         dozent: [""],
         nameLV: "StudiumPlus"
@@ -1144,7 +1075,6 @@ var data = {
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss14],
         benotet: true,
-        pflicht: false,
         cp: 6,
         dozent: ["Dr. Matthias Ulfacker", "Martin Boissier", "Christian Schwarz"],
         nameLV: "Trends and Concepts Exercise: Designing and Programming Applications for In-Memory Databases"
@@ -1156,7 +1086,6 @@ var data = {
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ws14_15],
         benotet: true,
-        pflicht: false,
         cp: 3,
         dozent: ["Prof. Dr. Andreas Polze"],
         nameLV: "Trends in Betriebssystemen (Forschungsseminar)"
@@ -1168,7 +1097,6 @@ var data = {
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss13, ss14],
         benotet: true,
-        pflicht: false,
         cp: 3,
         dozent: ["Prof. Dr. Hasso Plattner"],
         nameLV: "Trends and Concepts in the Software Industry I: Inner Mechanics of In-Memory Databases"
@@ -1180,7 +1108,6 @@ var data = {
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ws13_14, ws14_15],
         benotet: true,
-        pflicht: false,
         cp: 3,
         dozent: ["Prof. Dr. Hasso Plattner"],
         nameLV: "Trends and Concepts in the Software Industry II: Development of Enterprise Software"
@@ -1192,7 +1119,6 @@ var data = {
         modul: ["IT Engineering", "Vertiefungsgebiete"],
         semester: [ss14],
         benotet: true,
-        pflicht: false,
         cp: 3,
         dozent: ["Dr. Sabine Buckl", "Wolfgang Keller", "Prof. Dr. Robert Hirschfeld"],
         nameLV: "IT-Unternehmensarchitektur"
@@ -1204,7 +1130,6 @@ var data = {
         modul: ["Softskills"],
         semester: [ss13, ss14, ws13_14, ws14_15],
         benotet: true,
-        pflicht: false,
         cp: 3,
         dozent: ["Dr. Werner Dieball"],
         nameLV: "Überzeugend präsentieren -<br />Noch besser auftreten!"
@@ -1216,7 +1141,6 @@ var data = {
         modul: ["Softskills"],
         semester: [ss13, ss14],
         benotet: true,
-        pflicht: false,
         cp: 6,
         dozent: ["Prof. Dr. Katharina Hölzle", "Dr. Jens Schmidt-Ehmcke"],
         nameLV: "Unternehmensgründung im IT-Sektor"
@@ -1228,7 +1152,6 @@ var data = {
         modul: ["Vertiefungsgebiete"],
         semester: [ss14],
         benotet: true,
-        pflicht: false,
         cp: 3,
         dozent: ["Prof. Dr. Andreas Polze", "Daniel Richter", "Lena Herscheid"],
         nameLV: "Verlässliche konfigurierbare Systeme"
