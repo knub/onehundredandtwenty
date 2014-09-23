@@ -42,7 +42,7 @@ var data = {
         modul: ["Vertiefungsgebiete"],
         semester: [ws13_14],
         benotet: true,
-        cp: 3,
+        cp: 6,
         dozent: ["Prof. Dr. Felix Naumann", "Thorsten Papenbrock"],
         nameLV: "Advanced Data Profiling"
     },
@@ -742,7 +742,7 @@ var data = {
     },
     productInnovationEngineeringI: {
         kurz: "me310 I",
-        kennung: ["MA1"],
+        kennung: ["ITSE", "BPET"],
         lehrform: ["Seminar", "Projekt"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ws13_14],
@@ -753,7 +753,7 @@ var data = {
     },
     productInnovationEngineeringII: {
         kurz: "me310 Coaching",
-        kennung: ["MA1"],
+        kennung: ["ITSE", "BPET"],
         lehrform: ["Seminar", "Projekt"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ws13_14],
