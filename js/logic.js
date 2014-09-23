@@ -11,7 +11,7 @@ var studyRegulations = {
 	modules: ["ITSE", "BPET", "HCT", "IST", "OSIS", "SAMT"],
 };
 var semesterManager = {
-	semesters: [ "WS13/14", "SS14", "WS14/15", "SS15", "WS15/16", "SS16", "WS16/17", "SS17", "WS17/18", "SS18"],
+	semesters: ["SS13", "WS13/14", "SS14", "WS14/15", "SS15", "WS15/16", "SS16", "WS16/17", "SS17", "WS17/18", "SS18"],
 	shownSemesters: [
 	/*
 		"SS13"
