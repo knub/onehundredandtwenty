@@ -882,6 +882,16 @@ var data = {
         dozent: ["Dr. techn. Markus Jobst", "Sebastian Pasewaldt"],
         nameLV: "Schnittstellen der Geoinformation und Geokommunikation"
     },
+    selbstorganisation: {
+        kurz: "StubS",
+        kennung: [SSKSK],
+        lehrform: ["Seminarleitung"],
+        modul: ["Softskills"],
+        semester: [ws14_15],
+        cp: 3,
+        dozent: ["Dr. Ralf Wollowski"],
+        nameLV: "Betreuung des Studienbegleitenden Seminars für die Erstis"
+    },
     selfadaptivesystems: {
         kurz: "Self-Adaptive<br />Systems",
         kennung: [ITSE, SAMT],
