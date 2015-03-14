@@ -2,7 +2,7 @@
 "use strict";
 
 /*
- * Holds all relevant information from the study regulations 
+ * Holds all relevant information from the study regulations
  * 'Fachspezifische Ordnung für das Bachelor- und Masterstudium im Fach IT-Systems Engineering an der Universität Potsdam'
  * (variable names in german, because 'Vertiefungsgebiete' is hard to translate and not really nice)
  */
@@ -18,7 +18,7 @@ var semesterManager = {
 		*/
 	],
 	numberDisplayed: 4,
-	current: "WS14/15",
+	current: "SS15",
 	lastSummerSemester: "SS14",
 	lastWinterSemester: "WS14/15",
 	/* the semester that is the first semester when you first start the application */
@@ -233,16 +233,16 @@ var itseRule = {
 		// return all courses which are in ITSE
 		var getCourses = function() {
 			var courses = [];
-			for (var course in data) {				
+			for (var course in data) {
 				if (!data.hasOwnProperty(course)) continue;
 				if (getSemester(course) == - 1 ) continue;
-				
+
 				if (data[course].kennung.indexOf("ITSE") !== -1) {
 					courses.push(course);
 				}
 			}
 			return courses;
-		};		
+		};
 		var cpSum = function(courses){
 			var sum = 0;
 			courses.forEach(function(element){
@@ -250,16 +250,16 @@ var itseRule = {
 			});
 			return sum;
 		};
-		
+
 		/* actual function */
 		var courses = getCourses();
-		
+
 		var itsecourses = [];
 		courses.forEach(function(element){
 			if ( data[element].kennung.indexOf("ITSE") !== -1 ) {
 				itsecourses.push(element);
 			}
-		});		
+		});
 		var itsesum = cpSum(itsecourses);
 		return (itsesum >= 24);
 
@@ -279,10 +279,10 @@ var modulesRule = {
 	check: function(getSemester) {
 		/* Helper */
 		// return all courses which are in any Vertiefungsgebiet
-		var getCourses = function() {		
+		var getCourses = function() {
 			var modules = studyRegulations.modules;
 			var courses = [];
-			for (var course in data) {				
+			for (var course in data) {
 				if (!data.hasOwnProperty(course)) continue;
 				if (getSemester(course) == - 1 ) continue;
 				// go through kennung and add (once) if any VT-kennung is hit
@@ -295,7 +295,7 @@ var modulesRule = {
 				});
 			}
 			return courses;
-		};		
+		};
 		var getModulesAbove15 = function(courses){
 			var modules = [];
 			studyRegulations.modules.forEach(function(element){
@@ -321,7 +321,7 @@ var modulesRule = {
 					sum += data[element].cp;
 			});
 			return sum;
-		};		
+		};
 		var getVTs = function(courses){
 			var vts = [];
 			for (var course in data) {
@@ -344,19 +344,19 @@ var modulesRule = {
 			}
 			return cpy;
 		}
-		
+
 		/* actual function */
 		// Several valid combinations are possible
 		// Each combination is a set of courses ordered in the module it is counted to.
 		// IMPORTANT: This rule assumes no course is SSK-* as well as ITSE or any VT
 		//
 		var combinations = [];
-		
-		
+
+
 		var courses = getCourses();
 		this.vertiefungen = courses;
 		var modules = getModulesAbove15(courses);
-		
+
 		var vts = getVTs(courses); //not including ITSE
 		//build all 2-sized combinations
 		var vtcombos = [];
@@ -370,8 +370,8 @@ var modulesRule = {
 				combinations.push(elem);
 			}
 		}
-		
-		
+
+
 		// For each course and each combination, create new configurations, with the course added in one of its modules each, and throw away the old ones
 		for (var i = 0; i < courses.length; i += 1) {
 			var newcombinations = [];
@@ -388,10 +388,10 @@ var modulesRule = {
 			}
 			combinations = newcombinations;
 		}
-		
+
 		//console.log(combinations.length);
-		
-		// now we have all interesting combinations, copy valid ones 
+
+		// now we have all interesting combinations, copy valid ones
 		// note the format is different now: for the frontend, all we need to know is VT1,VT2
 		// in what exact combinations this is reached does not matter (is too much to be printed)
 		var validcombinations = [];
@@ -401,7 +401,7 @@ var modulesRule = {
 			for (var element in combinations[i]){
 				sums[element] = cpSum(combinations[i][element]);
 			}
-			
+
 			// Requirement 1: 24 cp in ITSE
 			if(sums["ITSE"] < 24) continue;
 			// Requirement 2: 24 cp in VT1 and 15 cp in VT2
@@ -442,10 +442,10 @@ var softskillsRule = {
 	check: function(getSemester) {
 		/* Helper */
 		// return all courses with a SSK-* kennung
-		var getSSKCourses = function() {		
+		var getSSKCourses = function() {
 			var ssk = studyRegulations.softskills;
 			var sskCourses = [];
-			for (var course in data) {				
+			for (var course in data) {
 				if (!data.hasOwnProperty(course)) continue;
 				if (getSemester(course) == - 1 ) continue;
 				// go through kennung and add (once) if any SSK- kennung is hit
@@ -466,14 +466,14 @@ var softskillsRule = {
 			});
 			return sum;
 		};
-		
-		/* actual function */		
+
+		/* actual function */
 		var creditpoints = 0;
-		
+
 		// Several valid combinations might be possible
 		// Each combination is a set of SSK-MA-Courses (generally one) with 6CP and a set of SSK-Courses from the other SSK-Types (RE/KO/DT/SK)
 		var courses = getSSKCourses();
-		
+
 		// first filter all SSK-MA courses
 		var macourses = [];
 		var restcourses = [];
@@ -484,7 +484,7 @@ var softskillsRule = {
 				restcourses.push(element);
 			}
 		});
-		
+
 		var masum = cpSum(macourses);
 		var restsum = cpSum(restcourses);
 		if(masum >= 6 && restsum >= 12) return true; // yay, that was easy
@@ -494,9 +494,9 @@ var softskillsRule = {
 		}
 		// otherwise, this is the error message
 		this.message = "Es müssen mindestens 12 Leistungspunkte in den weiteren Softskills-Bereichen erworben werden."
-		
+
 		// unfortunately, most SSK-* courses are also SSK-MA or something, so macourses will be to big and restcourses too small
-		
+
 		// Now we have macourses, which probably contains way too many elements and restcourses, which definately are SSK, but not MA
 		// We have to find any valid combination
 		for (var i = 0; i < macourses.length; i += 1) {
@@ -507,7 +507,7 @@ var softskillsRule = {
 				restmacourses.splice(i,1);
 				var restmasum = cpSum(restmacourses);
 				if (restmasum + restsum >= 12){
-					return true;				
+					return true;
 				}
 			} else { // with less than 6 cp (3cp), we need to add a second course
 				for (var j = i+1; j < macourses.length; j += 1) { // only search the ones behind us, the ones in front of us have already been tried (or rather, tried us)
@@ -521,7 +521,7 @@ var softskillsRule = {
 					}
 				}
 			}
-		}		
+		}
 		// no valid combination was found
 		return false;
 	},
@@ -539,7 +539,7 @@ ruleManager.rules.push(semesterRule);
 /* now walk through the array and add data-dependent rules */
 for (var course in data) {
 	if (!data.hasOwnProperty(course)) continue;
-	
+
 	/* 2: create time-rules for all courses saved in data */
 	ruleManager.rules.push(Object.create(timeRule).init(course));
 }
