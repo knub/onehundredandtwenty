@@ -211,6 +211,17 @@ var data = {
         dozent: ["Prof. Dr. Robert Hirschfeld", "Tim Felgentreff"],
         nameLV: "Constraint-based Programming"
     },
+    compilerbau: {
+        kurz: "Compilerbau",
+        kennung: [ITSE, OSIS, SAMT],
+        lehrform: ["Vorlesung", "Übung"],
+        modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
+        semester: [ws14_15],
+        benotet: true,
+        cp: 6,
+        dozent: ["PD Dr. Henning Bordihn "],
+        nameLV: "Compiler und Programmtransformation"
+    },
     darkWebMonitoring: {
         kurz: "Dark Web",
         kennung: [ITSE, IST, OSIS],
@@ -881,6 +892,17 @@ var data = {
         cp: 3,
         dozent: ["Dr. techn. Markus Jobst", "Sebastian Pasewaldt"],
         nameLV: "Schnittstellen der Geoinformation und Geokommunikation"
+    },
+    searchEngineImplementation: {
+        kurz: "Search Engine",
+        kennung: [OSIS, IST],
+        lehrform: ["Seminar"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ss14],
+        benotet: true,
+        cp: 3,
+        dozent: ["Prof. Dr. Felix Naumann"],
+        nameLV: "Search Engine Implementation"
     },
     selbstorganisation: {
         kurz: "StubS",
