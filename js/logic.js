@@ -514,7 +514,10 @@ var softskillsRule = {
 					// even in worst case 3+3 = 6, so SSK-MA is satisfied
 					// now that we have chosen two SSK-MA, make sure the rest is 12 cp
 					// create copy without these two from the array and count
-					var restmacourses = macourses.slice().splice(j,1).splice(i,1); // order is important here, since j>=i we don't need to worry about i changing
+					var restmacourses = macourses.slice();
+					// order is important here, since j>i we don't need to worry about i changing
+					restmacourses.splice(j,1);
+					restmacourses.splice(i,1);
 					var restmasum = cpSum(restmacourses);
 					if (restmasum + restsum >= 12) {
 						return true;
