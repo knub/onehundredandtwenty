@@ -219,8 +219,8 @@ var data = {
         semester: [ws14_15],
         benotet: true,
         cp: 6,
-        dozent: ["PD Dr. Henning Bordihn "],
-        nameLV: "Compiler und Programmtransformation"
+        dozent: ["Dr. Henning Bordihn"],
+        nameLV: "Compilerbau und Programmtransformation"
     },
     darkWebMonitoring: {
         kurz: "Dark Web",
@@ -901,7 +901,7 @@ var data = {
         semester: [ss14],
         benotet: true,
         cp: 3,
-        dozent: ["Prof. Dr. Felix Naumann"],
+        dozent: ["Dr. Ralf Krestel"],
         nameLV: "Search Engine Implementation"
     },
     selbstorganisation: {
