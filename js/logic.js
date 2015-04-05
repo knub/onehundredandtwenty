@@ -8,7 +8,7 @@
  */
 var studyRegulations = {
 	softskills: ["SSK-MA", "SSK-RE", "SSK-KO", "SSK-DT", "SSK-SK"],
-    otherSoftskillsMax: { "SSK-RE": 6, "SSK-KO": 6, "SSK-DT": 12, "SSK-SK": 6 },
+	otherSoftskillsMax: { "SSK-RE": 6, "SSK-KO": 6, "SSK-DT": 12, "SSK-SK": 6 },
 	modules: ["ITSE", "BPET", "HCT", "IST", "OSIS", "SAMT"],
 };
 var semesterManager = {
@@ -138,13 +138,13 @@ var timeRule = {
 			if (semesterTime.indexOf("SS") >= 0) {
 				// check if it was explicitly allowed or offered in the last summer semester
 				return data[this.course].semester.indexOf(semesterTime) !== -1 ||
-				       data[this.course].semester.indexOf(semesterManager.lastSummerSemester) !== - 1;
+					   data[this.course].semester.indexOf(semesterManager.lastSummerSemester) !== - 1;
 			}
 			// if the course is currently chosen for a winter semester
 			else if (semesterTime.indexOf("WS") >= 0) {
 				// check if it was explicitly allowed or offered in the last winter semester
 				return data[this.course].semester.indexOf(semesterTime) !== -1 ||
-				       data[this.course].semester.indexOf(semesterManager.lastWinterSemester) !== - 1;
+					   data[this.course].semester.indexOf(semesterManager.lastWinterSemester) !== - 1;
 			}
 			// else something went completly wrong
 			else {
@@ -478,52 +478,51 @@ var softskillsRule = {
 		
 		/* actual function */		
 		// Several valid combinations might be possible
-        // Each combination is a set of courses ordered in the module it is counted to.
+		// Each combination is a set of courses ordered in the module it is counted to.
 		// IMPORTANT: This rule assumes no course is SSK-* as well as ITSE or any VT
-        //
-        var combinations = [];        
+		//
+		var combinations = [];		
 		var courses = getSSKCourses();
-        
-        // build one empty combination
-        var base = {};
-        studyRegulations.softskills.forEach(function(element){
-            base[element] = [];
-        });
-        combinations.push(base);
-        
-        // For each course and each combination, create new configurations, with the course added in the one of its modules each, and throw away the old ones
-        for (var i = 0; i < courses.length; i += 1) {
+		
+		// build one empty combination
+		var base = {};
+		studyRegulations.softskills.forEach(function(element){
+			base[element] = [];
+		});
+		combinations.push(base);
+		
+		// For each course and each combination, create new configurations, with the course added in the one of its modules each, and throw away the old ones
+		for (var i = 0; i < courses.length; i += 1) {
 			var newcombinations = [];
 			for (var j = 0; j < combinations.length; j += 1) {
 				data[courses[i]].kennung.forEach(function(element){
 					if (element in combinations[j]){
-                        var newcombination = cloneCombination(combinations[j]);
-                        newcombination[element].push(courses[i]);
-                        newcombinations.push(newcombination);
+						var newcombination = cloneCombination(combinations[j]);
+						newcombination[element].push(courses[i]);
+						newcombinations.push(newcombination);
 					}
 				});
 			}
 			combinations = newcombinations;
 		}
-        
-        // check if there is at least one valid combination
-        for (var i = 0; i < combinations.length; i += 1) {
-            var otherSum = 0;
-            var maSum = 0;
+		
+		// check if there is at least one valid combination
+		for (var i = 0; i < combinations.length; i += 1) {
+			var otherSum = 0;
+			var maSum = 0;
 			for (var element in combinations[i]){
-                var moduleSum = cpSum(combinations[i][element]);
-                if (element == "SSK-MA") {
-                    maSum = moduleSum;
-                } else {
-                    // only count up to otherSoftskillsMax;
-                    otherSum += Math.min(studyRegulations.otherSoftskillsMax[element], moduleSum);
-                }
+				var moduleSum = cpSum(combinations[i][element]);
+				if (element == "SSK-MA") {
+					maSum = moduleSum;
+				} else {
+					// only count up to otherSoftskillsMax;
+					otherSum += Math.min(studyRegulations.otherSoftskillsMax[element], moduleSum);
+				}
 			}
-            
-            if (maSum >= 6 && otherSum >= 12) return true;
-            
-        }
-        
+			if (maSum >= 6 && otherSum >= 12) return true;
+		}
+		
+		this.courses = courses;
 		// no valid combination was found
 		return false;
 	},

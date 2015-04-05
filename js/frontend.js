@@ -169,7 +169,7 @@ var frontend = {
 			var course = data[vertiefungen[i]];
 			cp += course.cp;
 			table += "<tr><td>" + course.nameLV + "</td>" +
-			         "<td>" + course.cp + "</td>" +
+					 "<td>" + course.cp + "</td>" +
 				 "<td>" + course.kennung.join(", ") + "</td>" +
 				 "<td>" + course.dozent.join(", ") + "</td>" +
 				 "</tr>";
@@ -243,8 +243,12 @@ var frontend = {
 			for (var rule = 0; rule < rules.length; rule += 1) {
 				if (rules[rule].success === true) continue;
 				var extra = '';
-				if (rules[rule].type === 'softskillsRule') extra = ' <a href="fragen.html#softskills">Was bedeutet das?</a>';
-				else if (rules[rule].type === 'itseRule') extra = ' <a href="fragen.html#itse">Was bedeutet das?</a>';
+				if (rules[rule].type === 'softskillsRule') {
+					var ssks = rules[rule].courses;
+					extra = ' <a href="fragen.html#softskills">Was bedeutet das?</a><div class="extra-inf">Folgende Softskills-Kurse sind bisher gewählt; dies erfüllt aber noch nicht alle Kriterien:';
+					extra += f.makeVertiefungsgebieteTable(ssks);
+					extra += "</div>";
+				} else if (rules[rule].type === 'itseRule') extra = ' <a href="fragen.html#itse">Was bedeutet das?</a>';
 				else if (rules[rule].type === 'modulesRule' && rules[rule].vertiefungen !== null) {
 					var vertiefungen = rules[rule].vertiefungen;
 					extra += ' <a href="fragen.html#vertiefungsgebiete">Was bedeutet das?</a><div class="extra-inf">Folgende Vertiefungsgebiete sind bisher gewählt; dies erfüllt aber noch nicht alle Kriterien:';
