@@ -8,6 +8,7 @@
  */
 var studyRegulations = {
 	softskills: ["SSK-MA", "SSK-RE", "SSK-KO", "SSK-DT", "SSK-SK"],
+	otherSoftskillsMax: { "SSK-RE": 6, "SSK-KO": 6, "SSK-DT": 12, "SSK-SK": 6 },
 	modules: ["ITSE", "BPET", "HCT", "IST", "OSIS", "SAMT"],
 };
 var semesterManager = {
@@ -137,13 +138,13 @@ var timeRule = {
 			if (semesterTime.indexOf("SS") >= 0) {
 				// check if it was explicitly allowed or offered in the last summer semester
 				return data[this.course].semester.indexOf(semesterTime) !== -1 ||
-				       data[this.course].semester.indexOf(semesterManager.lastSummerSemester) !== - 1;
+					   data[this.course].semester.indexOf(semesterManager.lastSummerSemester) !== - 1;
 			}
 			// if the course is currently chosen for a winter semester
 			else if (semesterTime.indexOf("WS") >= 0) {
 				// check if it was explicitly allowed or offered in the last winter semester
 				return data[this.course].semester.indexOf(semesterTime) !== -1 ||
-				       data[this.course].semester.indexOf(semesterManager.lastWinterSemester) !== - 1;
+					   data[this.course].semester.indexOf(semesterManager.lastWinterSemester) !== - 1;
 			}
 			// else something went completly wrong
 			else {
@@ -466,70 +467,67 @@ var softskillsRule = {
 			});
 			return sum;
 		};
+		var cloneCombination = function(obj){
+			var cpy = {};
+			for (var key in obj) {
+				// these are arrays, slice()-copy them
+				cpy[key] = obj[key].slice();
+			}
+			return cpy;
+		}
 		
 		/* actual function */		
-		var creditpoints = 0;
-		
 		// Several valid combinations might be possible
-		// Each combination is a set of SSK-MA-Courses (generally one) with 6CP and a set of SSK-Courses from the other SSK-Types (RE/KO/DT/SK)
+		// Each combination is a set of courses ordered in the module it is counted to.
+		// IMPORTANT: This rule assumes no course is SSK-* as well as ITSE or any VT
+		//
+		var combinations = [];		
 		var courses = getSSKCourses();
 		
-		// first filter all SSK-MA courses
-		var macourses = [];
-		var restcourses = [];
-		courses.forEach(function(element){
-			if ( data[element].kennung.indexOf("SSK-MA") !== -1 ) {
-				macourses.push(element);
-			} else {
-				restcourses.push(element);
-			}
+		// build one empty combination
+		var base = {};
+		studyRegulations.softskills.forEach(function(element){
+			base[element] = [];
 		});
+		combinations.push(base);
 		
-		var masum = cpSum(macourses);
-		var restsum = cpSum(restcourses);
-		if(masum >= 6 && restsum >= 12) return true; // yay, that was easy
-		if(masum < 6) { // early ending
-			this.message = "Es müssen mindestens 6 Leistungspunkte in SSK: Management erbracht werden."
-			return false;
-		}
-		// otherwise, this is the error message
-		this.message = "Es müssen mindestens 12 Leistungspunkte in den weiteren Softskills-Bereichen erworben werden."
-		
-		// unfortunately, most SSK-* courses are also SSK-MA or something, so macourses will be to big and restcourses too small
-		
-		// Now we have macourses, which probably contains way too many elements and restcourses, which definately are SSK, but not MA
-		// We have to find any valid combination
-		for (var i = 0; i < macourses.length; i += 1) {
-			if (data[macourses[i]].cp >= 6) {
-				// now that we have chosen a SSK-MA, make sure the rest is 12 cp
-				// create copy without this one from the array and count
-				var restmacourses = macourses.slice();
-				restmacourses.splice(i,1);
-				var restmasum = cpSum(restmacourses);
-				if (restmasum + restsum >= 12){
-					return true;				
-				}
-			} else { // with less than 6 cp (3cp), we need to add a second course
-				for (var j = i+1; j < macourses.length; j += 1) { // only search the ones behind us, the ones in front of us have already been tried (or rather, tried us)
-					// even in worst case 3+3 = 6, so SSK-MA is satisfied
-					// now that we have chosen two SSK-MA, make sure the rest is 12 cp
-					// create copy without these two from the array and count
-					var restmacourses = macourses.slice();
-					// order is important here, since j>i we don't need to worry about i changing
-					restmacourses.splice(j,1);
-					restmacourses.splice(i,1);
-					var restmasum = cpSum(restmacourses);
-					if (restmasum + restsum >= 12) {
-						return true;
+		// For each course and each combination, create new configurations, with the course added in the one of its modules each, and throw away the old ones
+		for (var i = 0; i < courses.length; i += 1) {
+			var newcombinations = [];
+			for (var j = 0; j < combinations.length; j += 1) {
+				data[courses[i]].kennung.forEach(function(element){
+					if (element in combinations[j]){
+						var newcombination = cloneCombination(combinations[j]);
+						newcombination[element].push(courses[i]);
+						newcombinations.push(newcombination);
 					}
+				});
+			}
+			combinations = newcombinations;
+		}
+		
+		// check if there is at least one valid combination
+		for (var i = 0; i < combinations.length; i += 1) {
+			var otherSum = 0;
+			var maSum = 0;
+			for (var element in combinations[i]){
+				var moduleSum = cpSum(combinations[i][element]);
+				if (element == "SSK-MA") {
+					maSum = moduleSum;
+				} else {
+					// only count up to otherSoftskillsMax;
+					otherSum += Math.min(studyRegulations.otherSoftskillsMax[element], moduleSum);
 				}
 			}
-		}		
+			if (maSum >= 6 && otherSum >= 12) return true;
+		}
+		
+		this.courses = courses;
 		// no valid combination was found
 		return false;
 	},
 	/* message */
-	message: '' //overriden in check
+	message: 'Es müssen mindestens 6 LP in SSK: Management und 12 LP in weiteren SSK-Bereichen erbracht werden.'
 };
 
 
