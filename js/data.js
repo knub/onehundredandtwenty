@@ -557,10 +557,10 @@ var data = {
         kennung: [ITSE, IST, OSIS],
         lehrform: ["Vorlesung", "Übung"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
-        semester: [ss13],
+        semester: [ss13, ss15],
         benotet: true,
         cp: 6,
-        dozent: ["Prof. Dr. Christoph Meinel"],
+        dozent: ["Prof. Dr. Christoph Meinel", "David Jaeger", "Andrey Sapegin"],
         nameLV: "Informationssicherheit"
     },
     informationvisualization: {
@@ -595,6 +595,17 @@ var data = {
         cp: 6,
         dozent: ["Martin Faust", "David Schwalb", "Dipl.-Kfm. Jens Krüger", "Dr. Jürgen Müller", "Christian Schwarz"],
         nameLV: "In-Memory Databases: Algorithms and Data Structures on Modern Hardware"
+    },
+    inMemoryDatabasesAiH: {
+        kurz: "In Memory<br />Databases Healthcare",
+        kennung: [ITSE, BPET, OSIS],
+        lehrform: ["Seminar"],
+        modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
+        semester: [ss13],
+        benotet: true,
+        cp: 6,
+        dozent: ["Dr. Matthias Uflacker", "Dr. Matthieu Schapranow", "Dr. Mariana Neves", "Cindy Fähnrich"],
+        nameLV: "In-Memory Databases: Applications in Healthcare"
     },
     inMemoryDataManagementResearch: {
         kurz: "IMDB Data<br />Management",
