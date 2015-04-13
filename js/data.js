@@ -310,6 +310,17 @@ var data = {
         dozent: ["Dr. Claudia Nicolai", "Prof. Ulrich Weinberg"],
         nameLV: "Design Thinking Basics (D-School Basic Track)"
     },
+    distributedBDA: {
+        kurz: "Distributed BDA",
+        kennung: [BPET, OSIS],
+        lehrform: ["Seminar"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ss15],
+        benotet: true,
+        cp: 6,
+        dozent: ["Prof. Dr. Felix Naumann", " Toni Grütze", "Sebastian Kruse"],
+        nameLV: "Distributed Big Data Analytics"
+    },
     duplicationDetection: {
         kurz: "Duplication Detection",
         kennung: [BPET, OSIS],
