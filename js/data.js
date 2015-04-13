@@ -755,7 +755,7 @@ var data = {
         kennung: [OSIS, BPET],
         lehrform: ["Vorlesung", "Übung"],
         modul: ["Vertiefungsgebiete"],
-        semester: [ss14],
+        semester: [ss14, ss15],
         benotet: true,
         cp: 3,
         dozent: ["Dr. Mariana Neves", "Prof. Dr. Felix Naumann"],
@@ -826,6 +826,17 @@ var data = {
         cp: 6,
         dozent: ["Prof. Dr. Holger Giese", "Thomas Vogel"],
         nameLV: "Modellgetriebene Softwareentwicklung"
+    },
+    modulsysteme: {
+        kurz: "Modulsysteme",
+        kennung: [ITSE, SAMT],
+        lehrform: ["Seminar", "Projekt"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ss15],
+        benotet: true,
+        cp: 6,
+        dozent: ["Prof. Dr. Robert Hirschfeld", "Tim Felgentreff", "Jens Lincke", "Marcel Taeumel", "Tobias Pape"],
+        nameLV: "Modulsysteme"
     },
     networkSecurityPractice: {
         kurz: "Network<br />Security",
