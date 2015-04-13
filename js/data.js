@@ -1030,7 +1030,7 @@ var data = {
         kennung: [ITSE, OSIS, SAMT],
         lehrform: ["Vorlesung"],
         modul: ["Vertiefungsgebiete", "IT-Systems Engineering"],
-        semester: [ss13],
+        semester: [ss13, ss15],
         benotet: true,
         cp: 6,
         dozent: ["Dr.-Ing. Ralf Wollowski"],
