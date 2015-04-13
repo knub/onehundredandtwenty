@@ -992,6 +992,17 @@ var data = {
         dozent: ["Dr. Matthias Uflacker", "Dipl.-Kfm. Jens Krüger", "Thomas Kowark", "Franziska Häger"],
         nameLV: "Global Team-Based Product Innovation & Engineering III - ME 310 Coaching Research"
     },
+    programmierungVerteilterSysteme: {
+        kurz: "ParProg",
+        kennung: [SAMT, OSIS, IST],
+        lehrform: ["Vorlesung"],
+        modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
+        semester: [ss15],
+        benotet: true,
+        cp: 3,
+        dozent: ["Prof. Dr. Andreas Polze", "Frank Feinbube", "Felix Eberhardt "],
+        nameLV: "Programmierung paralleler und verteilter Systeme"
+    },
     recommenderSystems: {
         kurz: "Recommender<br />Systems",
         kennung: [SAMT, OSIS],
