@@ -1222,6 +1222,17 @@ var data = {
         dozent: ["Prof. Dr. Christoph Meinel", "Eyad Saleh"],
         nameLV: "Software-as-a-Service and Multi-tenancy"
     },
+    spatialAnalytics: {
+        kurz: "Spatial Analytics",
+        kennung: [HCT, IST],
+        lehrform: ["Seminar"],
+        modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
+        semester: [ss15],
+        benotet: true,
+        cp: 6,
+        dozent: ["Prof. Dr. Jürgen Döllner", "Rico Richter", "Benjamin Hagedorn"],
+        nameLV: "Spatial Analytics"
+    },
     advancedSEFES: {
         kurz: "Advanced<br />SEFES",
         kennung: [ITSE, SAMT],
