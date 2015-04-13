@@ -871,6 +871,17 @@ var data = {
         dozent: ["Prof. Dr. Christoph Meinel",  "Jan Renz", "Thomas Staubits", "Christian Willems"],
         nameLV: "openHPI: Concepts for Linux Container Virtualization for web development and deployment"
     },
+    parallelProgrammingIMDB: {
+        kurz: "Parallel Programming<br />In-Memory Databases",
+        kennung: [ITSE, BPET, OSIS, SAMT],
+        lehrform: ["Seminar"],
+        modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
+        semester: [ss15],
+        benotet: true,
+        cp: 6,
+        dozent: ["Dr. Matthias Uflacker", "Martin Faust", "David Schwalb", "Carsten Meyer", "Martin Boissier"],
+        nameLV: "Parallel Programming and Algorithms for In-Memory Databases"
+    },
     pearlsComputerScience: {
         kurz: "Pearls of CS",
         kennung: [BPET, OSIS, SAMT],
