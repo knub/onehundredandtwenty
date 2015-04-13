@@ -860,6 +860,17 @@ var data = {
         dozent: ["Prof. Dr. Andreas Polze"],
         nameLV: "Non-Uniform Memory Access (NUMA) - Herausforderungen paralleler Systeme "
     },
+    openHPI: {
+        kurz: "openHPI",
+        kennung: [ITSE, IST, OSIS],
+        lehrform: ["Seminar"],
+        modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
+        semester: [ss15],
+        benotet: true,
+        cp: 6,
+        dozent: ["Prof. Dr. Christoph Meinel",  "Jan Renz", "Thomas Staubits", "Christian Willems"],
+        nameLV: "openHPI: Concepts for Linux Container Virtualization for web development and deployment"
+    },
     pearlsComputerScience: {
         kurz: "Pearls of CS",
         kennung: [BPET, OSIS, SAMT],
