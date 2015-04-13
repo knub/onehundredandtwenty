@@ -1409,4 +1409,14 @@ var data = {
         dozent: ["Prof. Dr. Robert Hirschfeld", "Tobias Pape", "Tim Felgentreff", "Bastian Steinert"],
         nameLV: "Virtuelle Maschinen und Ausführungsumgebungen"
     }
+    visualSoftwareAnalytics: {
+        kurz: "Visual Software<br />Analytics",
+        kennung: [ITSE, HCT, SAMT],
+        lehrform: ["Seminar"],
+        modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
+        semester: [ss15],
+        benotet: true,
+        cp: 6,
+        dozent: ["Prof. Dr. Jürgen Döllner", "Willy Scheibel", "Sebastian Hahn"],
+        nameLV: "Visual Software Analytics"
 }
