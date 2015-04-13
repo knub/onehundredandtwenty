@@ -1326,7 +1326,7 @@ var data = {
         kennung: [IST, SAMT, OSIS],
         lehrform: ["Seminar"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
-        semester: [ws14_15],
+        semester: [ws14_15, ss15],
         benotet: true,
         cp: 3,
         dozent: ["Prof. Dr. Andreas Polze"],
