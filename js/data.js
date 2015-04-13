@@ -751,7 +751,7 @@ var data = {
         nameLV: "Kontextorientiertes Programmieren"
     },
     konzepteParallelerProgrammierung: {
-        kurz: "Parallel<br />Programming",
+        kurz: "ParProg 6LP",
         kennung: [ITSE, OSIS],
         lehrform: ["Vorlesung"],
         modul: ["Vertiefungsgebiete"],
@@ -1015,7 +1015,7 @@ var data = {
         nameLV: "Global Team-Based Product Innovation & Engineering III - ME 310 Coaching Research"
     },
     programmierungVerteilterSysteme: {
-        kurz: "ParProg",
+        kurz: "ParProg 3LP",
         kennung: [SAMT, OSIS, IST],
         lehrform: ["Vorlesung"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
