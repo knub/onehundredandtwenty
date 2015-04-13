@@ -425,7 +425,7 @@ var data = {
         kennung: [ITSE, HCT, SAMT],
         lehrform: ["Vorlesung"],
         modul: ["IT Systems Engineering", "Vertiefungsgebiete"],
-        semester: ss14,
+        semester: [ss14, ss15],
         benotet: true,
         cp: 6,
         dozent: ["Prof. Dr. Patrick Baudisch"],
@@ -491,7 +491,7 @@ var data = {
         kennung: [ITSE, HCT, SAMT],
         lehrform: ["Seminar", "Projekt"],
         modul: ["IT Systems Engineering", "Vertiefungsgebiete"],
-        semester: ss14,
+        semester: [ss14, ss15],
         benotet: true,
         cp: 6,
         dozent: ["Prof. Dr. Patrick Baudisch"],
@@ -507,6 +507,17 @@ var data = {
         cp: 6,
         dozent: ["Prof. Dr. Patrick Baudisch"],
         nameLV: "HCI Project Seminar Haptics, Personal Fabrication, and Virtual Reality"
+    },
+    hciProjectSeminarPISME: {
+        kurz: "HCI Projekt<br />3D-Printing",
+        kennung: [ITSE, HCT, SAMT],
+        lehrform: ["Seminar", "Projekt"],
+        modul: ["IT Systems Engineering", "Vertiefungsgebiete"],
+        semester: ss15,
+        benotet: true,
+        cp: 6,
+        dozent: ["Prof. Dr. Patrick Baudisch"],
+        nameLV: "HCI Project Seminar on 3D-Printing, Interactive Systems, and Mechanical Engineering"
     },
     hciResearch: {
         kurz: "HCI Research",
@@ -876,10 +887,10 @@ var data = {
         kennung: [ITSE, BPET, HCT],
         lehrform: ["Projekt", "Seminar"],
         modul: ["Vertiefungsgebiete", "IT-Systems Engineering"],
-        semester: [ss13, ss14],
+        semester: [ss13, ss14, ss15],
         benotet: true,
         cp: 6,
-        dozent: ["Dr. Matthias Uflacker", "Franziska Häger", "Thomas Kowark"],
+        dozent: ["Dr. Matthias Uflacker", "Franziska Häger", "Thomas Kowark", "Dr. Jens Krüger", "Cornelius Illi"],
         nameLV: "Global Team-Based Product Innovation & Engineering II -<br />ME 310"
     },
     productInnovationEngineeringI: {
