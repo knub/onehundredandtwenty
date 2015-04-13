@@ -355,13 +355,24 @@ var data = {
         nameLV: "Fachspezifisches Englisch (Level 3)"
     },
     eventprocessing: {
-        kurz: "Event Processing",
+        kurz: "Event Processing<br />6LP",
         kennung: [ITSE, OSIS],
         lehrform: ["Vorlesung"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ss14],
         benotet: true,
         cp: 6,
+        dozent: ["Dr. Anne Baumgraß", "Prof. Dr. Mathias Weske"],
+        nameLV: "Event Processing"
+    },
+    eventprocessing: {
+        kurz: "Event Processing<br />3LP",
+        kennung: [BPET, OSIS],
+        lehrform: ["Vorlesung"],
+        modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
+        semester: [ss15],
+        benotet: true,
+        cp: 3,
         dozent: ["Dr. Anne Baumgraß", "Prof. Dr. Mathias Weske"],
         nameLV: "Event Processing"
     },
