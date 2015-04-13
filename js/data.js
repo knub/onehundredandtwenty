@@ -937,6 +937,17 @@ var data = {
         dozent: ["Dr. Rolf Specht"],
         nameLV: "Personal Management Skills"
     },
+    practicalVideoAnalyses: {
+        kurz: "Practical Video<br />Analyses",
+        kennung: [ITSE, IST, OSIS],
+        lehrform: ["Seminar"],
+        modul: ["Vertiefungsgebiete", "IT-Systems Engineering"],
+        semester: [ss15],
+        benotet: true,
+        cp: 6,
+        dozent: ["Prof. Dr. Christoph Meinel", "Haojing Yang "],
+        nameLV: "Practical Video Analyses"
+    },
     privacyAndSecurityIPv6: {
         kurz: "Privacy&Sec<br />IPv6",
         kennung: [ITSE, IST, OSIS],
