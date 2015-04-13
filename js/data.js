@@ -398,6 +398,17 @@ var data = {
         dozent: ["Prof. Dr. Jan Mendling"],
         nameLV: "Event Processing Technologies"
     },
+    fehlerinjektion: {
+        kurz: "Fehlerinjektion",
+        kennung: [OSIS, IST, SAMT],
+        lehrform: ["Seminar"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ss15],
+        benotet: true,
+        cp: 3,
+        dozent: ["Prof. Dr. Andreas Polze", "Lena Herscheid", "Daniel Richter"],
+        nameLV: "Fehlerinjektion"
+    },
     fuehrungskompetenz: {
         kurz: "Führungs-<br />kompetenz",
         kennung: [SSKMA],
