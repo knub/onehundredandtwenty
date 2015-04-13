@@ -200,8 +200,8 @@ var data = {
         dozent: ["Prof. Dr. Christoph Meinel", "Maxim Schnjakin"],
         nameLV: "Cloud und Virtualisierung"
     },
-    constraintbasedprogramming: {
-        kurz: "Constraint-based<br />Programming",
+    constraintbasedprogramming3LP: {
+        kurz: "Constraint-based<br />Programming 3LP",
         kennung: [ITSE, OSIS, SAMT],
         lehrform: ["Seminar"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
@@ -209,6 +209,17 @@ var data = {
         benotet: true,
         cp: 3,
         dozent: ["Prof. Dr. Robert Hirschfeld", "Tim Felgentreff"],
+        nameLV: "Constraint-based Programming"
+    },
+    constraintbasedprogramming6LP: {
+        kurz: "Constraint-based<br />Programming 6LP",
+        kennung: [ITSE, OSIS, SAMT],
+        lehrform: ["Seminar"],
+        modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
+        semester: [ss15],
+        benotet: true,
+        cp: 6,
+        dozent: ["Prof. Dr. Robert Hirschfeld", "Tim Felgentreff", "Jens Lincke"],
         nameLV: "Constraint-based Programming"
     },
     compilerbau: {
