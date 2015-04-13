@@ -1058,6 +1058,17 @@ var data = {
         dozent: ["Dr. Ralf Krestel"],
         nameLV: "Search Engine Implementation"
     },
+    securityIoT: {
+        kurz: "Security for IoT",
+        kennung: [ITSE, IST, OSIS],
+        lehrform: ["Seminar"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ss15],
+        benotet: true,
+        cp: 6,
+        dozent: ["Prof. Dr. Christoph Meinel", "Konrad-Felix Krentz"],
+        nameLV: "Security for the Internet of Things "
+    },
     selbstorganisation: {
         kurz: "StubS",
         kennung: [SSKSK],
@@ -1084,7 +1095,7 @@ var data = {
         kennung: [IST, OSIS, HCT],
         lehrform: ["Seminar"],
         modul: ["Vertiefungsgebiete"],
-        semester: [ss13],
+        semester: [ss13, ss15],
         benotet: true,
         cp: 6,
         dozent: ["Dr. rer. nat. Harald Sack", "Jörg Waitelonis", "Nadine Steinmetz", "Magnus Knuth"],
