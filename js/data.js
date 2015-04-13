@@ -641,7 +641,7 @@ var data = {
         nameLV: "Kontextorientiertes Programmieren"
     },
     konzepteParallelerProgrammierung: {
-        kurz: "Parallel<br />Programming",
+        kurz: "ParProg 6LP",
         kennung: [ITSE, OSIS],
         lehrform: ["Vorlesung"],
         modul: ["Vertiefungsgebiete"],
