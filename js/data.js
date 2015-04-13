@@ -1326,7 +1326,7 @@ var data = {
         kennung: [SSKSK],
         lehrform: [""],
         modul: ["Softskills"],
-        semester: [ss13, ws13_14, ss14, ws14_15],
+        semester: [ss13, ws13_14, ss14, ws14_15, ss15],
         benotet: false,
         cp: 6,
         dozent: [""],

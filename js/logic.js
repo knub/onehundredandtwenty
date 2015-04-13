@@ -20,8 +20,8 @@ var semesterManager = {
 	],
 	numberDisplayed: 4,
 	current: "SS15",
-	lastSummerSemester: "SS15",
-	lastWinterSemester: "WS14/15",
+	lastSummerSemester: "SS13",
+	lastWinterSemester: "WS13/14",
 	/* the semester that is the first semester when you first start the application */
 	startswith: "WS14/15",
 	updateSemester: function(semester_number, semester_string) {
