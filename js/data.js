@@ -651,6 +651,17 @@ var data = {
         dozent: ["Dr. Claudia Nicolai", "Prof. Ulrich Weinberg"],
         nameLV: "Introduction of Design Thinking"
     },
+    introductionVisualization: {
+        kurz: "Introduction to<br />Visualization",
+        kennung: [IST, HCT],
+        lehrform: ["Vorlesung", "Übung"],
+        modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
+        semester: [ss15],
+        benotet: true,
+        cp: 6,
+        dozent: ["Dr. Matthias Trapp", "Amir Semmo", "Sebastian Pasewaldt"],
+        nameLV: "Interactive Representations of Data Structures and Algorithms"
+    },
     itEntrepreneurship: {
         kurz: "Entrepreneurship",
         kennung: [SSKMA, SSKRE, SSKKO],
