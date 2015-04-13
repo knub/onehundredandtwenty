@@ -249,10 +249,10 @@ var data = {
         kennung: [OSIS, SAMT],
         lehrform: ["Vorlesung", "Übung"],
         modul: ["Vertiefungsgebiete"],
-        semester: [ws13_14],
+        semester: [ws13_14, ss15],
         benotet: true,
         cp: 6,
-        dozent: ["Dr. Gjergji Kasneci"],
+        dozent: ["Dr. Gjergji Kasneci", "Dr. Ralf Krestel", "Maximilian Jenders"],
         nameLV: "Data Mining and Probabilistic Reasoning"
     },
     dataProfilingAndCleansing: {
@@ -265,6 +265,17 @@ var data = {
         cp: 6,
         dozent: ["Prof. Dr. Felix Naumann" , "Thorsten Papenbrock"],
         nameLV: "Data Profiling and Data Cleansing"
+    },
+    decisionManagement: {
+        kurz: "Decision<br />Management",
+        kennung: [BPET, OSIS],
+        lehrform: ["Seminar"],
+        modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
+        semester: [ss15],
+        benotet: true,
+        cp: 6,
+        dozent: ["Prof. Dr. Mathias Weske", "Ekaterina Bazhenova"],
+        nameLV: "Decision Management"
     },
     dependableSystems: {
         kurz: "Dependable<br />Systems",
