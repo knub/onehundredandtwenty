@@ -1082,9 +1082,9 @@ var data = {
     selfadaptivesystems: {
         kurz: "Self-Adaptive<br />Systems",
         kennung: [ITSE, SAMT],
-        lehrform: ["Vorlesung", "Projekt"],
+        lehrform: ["Vorlesung", "Übung", "Projekt"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
-        semester: [ss14],
+        semester: [ss14, ss15],
         benotet: true,
         cp: 6,
         dozent: ["Prof. Dr. Holger Giese", "Thomas Vogel"],
@@ -1095,10 +1095,21 @@ var data = {
         kennung: [IST, OSIS, HCT],
         lehrform: ["Seminar"],
         modul: ["Vertiefungsgebiete"],
-        semester: [ss13, ss15],
+        semester: [ss13],
         benotet: true,
         cp: 6,
         dozent: ["Dr. rer. nat. Harald Sack", "Jörg Waitelonis", "Nadine Steinmetz", "Magnus Knuth"],
+        nameLV: "Semantic Multimedia"
+    },
+    semanticMultimedia2: {
+        kurz: "Semantic Multimedia<br />(BPET)",
+        kennung: [IST, OSIS, BPET],
+        lehrform: ["Seminar"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ss15],
+        benotet: true,
+        cp: 6,
+        dozent: ["Dr. rer. nat. Harald Sack"],
         nameLV: "Semantic Multimedia"
     },
     semanticWebTechnologien: {
@@ -1117,7 +1128,7 @@ var data = {
         kennung: [BPET, HCT, IST, OSIS, SAMT],
         lehrform: ["Seminar"],
         modul: ["Vertiefungsgebiete"],
-        semester: [ss13, ws13_14, ss14, ws14_15],
+        semester: [ss13, ws13_14, ss14, ws14_15, ss15],
         benotet: false,
         cp: 3,
         dozent: ["Prof. Dr. Andreas Polze", "Prof. Dr. Robert Hirschfeld"],
