@@ -486,12 +486,23 @@ var data = {
         dozent: ["Prof. Dr. Patrick Baudisch"],
         nameLV: "HCI Project Seminar on Crowd Interaction, Physical Computing and Digital Fabrication"
     },
+    hciProjectSeminarBIVRG: {
+        kurz: "HCI Projekt<br />IVR Games",
+        kennung: [ITSE, HCT, SAMT],
+        lehrform: ["Seminar", "Projekt"],
+        modul: ["IT Systems Engineering", "Vertiefungsgebiete"],
+        semester: [ss15],
+        benotet: true,
+        cp: 6,
+        dozent: ["Prof. Dr. Patrick Baudisch"],
+        nameLV: "HCI Project Seminar on Building Immersive Virtual Reality Games"
+    },
     hciProjectSeminarVRG: {
         kurz: "HCI Projekt<br />VR Gaming",
         kennung: [ITSE, HCT, SAMT],
         lehrform: ["Seminar", "Projekt"],
         modul: ["IT Systems Engineering", "Vertiefungsgebiete"],
-        semester: [ss14, ss15],
+        semester: [ss14],
         benotet: true,
         cp: 6,
         dozent: ["Prof. Dr. Patrick Baudisch"],
@@ -601,7 +612,7 @@ var data = {
         kennung: [ITSE, BPET, OSIS],
         lehrform: ["Seminar"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
-        semester: [ss13],
+        semester: [ss15],
         benotet: true,
         cp: 6,
         dozent: ["Dr. Matthias Uflacker", "Dr. Matthieu Schapranow", "Dr. Mariana Neves", "Cindy Fähnrich"],
