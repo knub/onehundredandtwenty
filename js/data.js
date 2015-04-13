@@ -421,7 +421,7 @@ var data = {
         nameLV: "Führungskompetenz"
     },
     futureinteractivetechnology: {
-        kurz: "Future Interactive<br>Technology",
+        kurz: "FIT",
         kennung: [ITSE, HCT, SAMT],
         lehrform: ["Vorlesung"],
         modul: ["IT Systems Engineering", "Vertiefungsgebiete"],
@@ -529,6 +529,17 @@ var data = {
         cp: 6,
         dozent: ["Prof. Dr. Patrick Baudisch"],
         nameLV: "Human Computer Interaction Research"
+    },
+    heuristicOptimization: {
+        kurz: "Heuristic<br />Optimization",
+        kennung: [IST, OSIS, SAMT],
+        lehrform: ["Seminar"],
+        modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
+        semester: [ss15],
+        benotet: true,
+        cp: 3,
+        dozent: ["Prof. Dr. Tobias Friedrich", "Dr. Timo Kötzing", "Dr. Andrew Sutton"],
+        nameLV: "Heuristic Optimization"
     },
     informationretrieval: {
         kurz: "Information<br /> Retrieval",
