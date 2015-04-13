@@ -19,7 +19,7 @@ var semesterManager = {
 		*/
 	],
 	numberDisplayed: 4,
-	current: "WS14/15",
+	current: "SS15",
 	lastSummerSemester: "SS14",
 	lastWinterSemester: "WS14/15",
 	/* the semester that is the first semester when you first start the application */
