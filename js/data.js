@@ -1046,6 +1046,17 @@ var data = {
         dozent: ["Prof. Dr. Christoph Meinel", "Eyad Saleh"],
         nameLV: "Software-as-a-Service and Multi-tenancy"
     },
+    advancedSEFES: {
+        kurz: "Advanced<br />SEFES",
+        kennung: [ITSE, SAMT],
+        lehrform: ["Seminar"],
+        modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
+        semester: [ss15],
+        benotet: true,
+        cp: 3,
+        dozent: ["Prof. Dr. Holger Giese", "Sebastian Wätzoldt", "Dr. Dominique Blouin"],
+        nameLV: "Advanced Software Engineering for Embedded Systems"
+    },
     softwareEngineeringEmbeddedSystems: {
         kurz: "SE for<br />Embedded Systems",
         kennung: [ITSE, SAMT],
