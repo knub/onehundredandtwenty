@@ -200,7 +200,7 @@ var data = {
         dozent: ["Prof. Dr. Christoph Meinel", "Maxim Schnjakin"],
         nameLV: "Cloud und Virtualisierung"
     },
-    constraintbasedprogramming3LP: {
+    constraintbasedprogramming: {
         kurz: "Constraint-based<br />Programming 3LP",
         kennung: [ITSE, OSIS, SAMT],
         lehrform: ["Seminar"],
@@ -365,7 +365,7 @@ var data = {
         dozent: ["Dr. Anne Baumgraß", "Prof. Dr. Mathias Weske"],
         nameLV: "Event Processing"
     },
-    eventprocessing: {
+    eventprocessing3LP: {
         kurz: "Event Processing<br />3LP",
         kennung: [BPET, OSIS],
         lehrform: ["Vorlesung"],
