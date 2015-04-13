@@ -871,8 +871,8 @@ var data = {
         dozent: ["Prof. Dr. Andreas Polze"],
         nameLV: "Non-Uniform Memory Access (NUMA) - Herausforderungen paralleler Systeme "
     },
-    openHPI: {
-        kurz: "openHPI",
+    openHPIVirtualization: {
+        kurz: "openHPI:<br />Virtualization",
         kennung: [ITSE, IST, OSIS],
         lehrform: ["Seminar"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
