@@ -1167,6 +1167,17 @@ var data = {
         dozent: ["Prof. Dr. Jürgen Döllner", "Rico Richter", "Amir Semmo"],
         nameLV: "Seminar Geovisualisierung"
     },
+    seminarOnSelfSustainingSystems: {
+        kurz: "Self-Sustaining Systems",
+        kennung: [ITSE, OSIS, SAMT],
+        lehrform: ["Seminar", "Projekt"],
+        modul: ["Vertiefungsgebiete", "IT-Systems Engineering"],
+        semester: [ss14],
+        benotet: true,
+        cp: 6,
+        dozent: ["Prof. Dr. Robert Hirschfeld", "Jens Lincke", "Marcel Taeumel"],
+        nameLV: "Seminar on Self-Sustaining Systems"
+    },
     servicebasedvisualization: {
         kurz: "Service-based<br />Visualization",
         kennung: [HCT, IST],
