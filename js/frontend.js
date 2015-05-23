@@ -6,6 +6,21 @@
 $("header img").click(function() {
 });
 
+function togglePossibilties() {
+	var t1 = document.getElementById("possibilities");
+	var t2 = document.getElementById("possibilitiesfull");
+	var link = document.getElementById("detailslink");
+	if(t1.style.display == 'block') {
+		t1.style.display = 'none';
+		t2.style.display = 'block';
+		link.innerHTML = "Einfache Ansicht";
+	} else {
+		t1.style.display = 'block';
+		t2.style.display = 'none';
+		link.innerHTML = "Mehr Details";
+	}
+}
+
 var frontend = {
 	/* filterManager controls the possibility to filter the courses-pool */
 	filterManager: {
@@ -188,8 +203,8 @@ var frontend = {
 		return course.replace(/–<br \/>/g, "–").replace(/-<br \/>/g, "&shy;").replace(/<br \/>/g, " ");
 	},
 	/* used to display information about possible Vertiefungsgebiete */
-	makeCombinationsTable: function(possibilities) {
-		var table = "<table class='combinations'>";
+	makeCombinationsTable: function(possibilities, fullpossibilities) {
+		var table = "<table class='combinations' id='possibilities' style='display: block;'>";
 		table += "<tr><td></td><td>Vertiefungs&shy;gebiet I</td><td>Vertiefungs&shy;gebiet II</td></tr>";
 		for (var i = 0; i < possibilities.length; i += 1) {
 			var possibility = possibilities[i];
@@ -197,11 +212,54 @@ var frontend = {
 			table += "<tr><td class=\"variante\">Variante " + (i + 1).toString() + "</td>";
 
 			// now display first Vertiefungsgebiet
-			table += "<td>" + possibility[0];
+			table += "<td>" + possibility[0] + "</td>";
 
 			// now display second Vertiefungsgebiet
 			table += "<td>" + possibility[1] + "</td>";
 
+			table += "</tr>";
+		}
+		table += "</table>";	
+		
+		table += "<a href='#' id='detailslink' onclick='togglePossibilties()'>Mehr Details</a>";
+		
+		table += "<table class='combinations' id='possibilitiesfull' style='display: none;'>";
+		table += "<tr><td></td><td>ITSE</td><td>Vertiefungs&shy;gebiet I</td><td>Vertiefungs&shy;gebiet II</td></tr>";
+		var makeListCell = function(possibility, module) {
+			var out = "<td><ul>";
+			for (var i = 0; i < possibility[module].length; i += 1) {
+				out += "<li>" + data[possibility[module][i]].kurz + "</li>";
+			}
+			out += "</ul></td>";
+			return out;
+		}
+		var makeSumCell = function(possibility, module) {
+			var out = "<td>";
+			var sum = 0;
+			for (var i = 0; i < possibility[module].length; i += 1) {
+				sum += data[possibility[module][i]].cp;
+			}
+			out += sum + "</td>";
+			return out;
+		}
+		for (var i = 0; i < fullpossibilities.length; i += 1) {
+			var possibility = fullpossibilities[i];
+
+			table += "<tr><td class='variante' rowspan='3'>Variante " + (i + 1).toString() + "</td>";
+
+			table += "<td>ITSE</td>";
+			table += "<td>" + possibility[0] + "</td>";
+			table += "<td>" + possibility[1] + "</td>";
+			table += "</tr><tr>";
+			
+			table += makeListCell(possibility, "ITSE");
+			table += makeListCell(possibility, possibility[0]);
+			table += makeListCell(possibility, possibility[1]);
+			table += "</tr><tr>";
+			
+			table += makeSumCell(possibility, "ITSE");
+			table += makeSumCell(possibility, possibility[0]);
+			table += makeSumCell(possibility, possibility[1]);
 			table += "</tr>";
 		}
 		table += "</table>";
@@ -229,8 +287,8 @@ var frontend = {
 				var extra = '';
 				if (rules[rule].type === 'modulesRule') {
 					var possibilities = rules[rule].combinations;
-					extra += '<div class="extra-inf">Folgende Kombinationen von Vertiefungsgebieten sind gültig im Sinne der Studienordnung:';
-					extra += f.makeCombinationsTable(possibilities);
+					extra += '<div class="extra-inf">Folgende Kombinationen von Vertiefungsgebieten sind gültig im Sinne der Studienordnung:<br \>';
+					extra += f.makeCombinationsTable(possibilities, rules[rule].combinationsfull);
 					extra += "</div>";
 					messageUl.append("<li>" + extra + "</li>");
 				}
