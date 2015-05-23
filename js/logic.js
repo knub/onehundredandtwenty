@@ -394,7 +394,7 @@ var modulesRule = {
 		
 		// now we have all interesting combinations, copy valid ones 
 		// note the format is different now: for the frontend, all we need to know is VT1,VT2
-		// in what exact combinations this is reached does not matter (is too much to be printed)
+		// we still build validcombinationsfull which can be displayed by the frontend upon request
 		var validcombinationsfull = [];
 		var validcombinations = [];
 		var validcombinationsstr = [];
