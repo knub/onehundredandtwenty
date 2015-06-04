@@ -197,15 +197,67 @@ var frontend = {
 			table += "<tr><td class=\"variante\">Variante " + (i + 1).toString() + "</td>";
 
 			// now display first Vertiefungsgebiet
-			table += "<td>" + possibility[0];
+			table += "<td>" + possibility[0] + "</td>";
 
 			// now display second Vertiefungsgebiet
 			table += "<td>" + possibility[1] + "</td>";
 
 			table += "</tr>";
 		}
-		table += "</table>";
+		table += "</table>";	
+		
+		table += "<div id='combinationsfull'><a href='#' onclick='frontend.makeFullCombinationsTable()'>Vollständige Liste</a></div>";
 		return table;
+	},
+	makeFullCombinationsTable: function() {
+		if (this.fullpossibilities.length > 500) {
+			if (!confirm("Es gibt mehr als 500 Kombinationen.\n" +
+				"Das erzeugen der vollen Tabelle kann sehr lange dauern und deinen Browser einfrieren.\n" +
+				"Wirklich die ganze Tabelle anzeigen?"))
+				return;
+		}
+		
+		var table = "<table class='combinations'>";
+		table += "<tr><td></td><td>ITSE</td><td>Vertiefungs&shy;gebiet I</td><td>Vertiefungs&shy;gebiet II</td></tr>";
+		var makeListCell = function(possibility, module) {
+			var out = "<td><ul>";
+			for (var i = 0; i < possibility[module].length; i += 1) {
+				out += "<li>" + data[possibility[module][i]].kurz + "</li>";
+			}
+			out += "</ul></td>";
+			return out;
+		}
+		var makeSumCell = function(possibility, module) {
+			var out = "<td>";
+			var sum = 0;
+			for (var i = 0; i < possibility[module].length; i += 1) {
+				sum += data[possibility[module][i]].cp;
+			}
+			out += sum + "</td>";
+			return out;
+		}
+		for (var i = 0; i < this.fullpossibilities.length; i += 1) {
+			var possibility = this.fullpossibilities[i];
+
+			table += "<tr><td class='variante' rowspan='3'>Variante " + (i + 1).toString() + "</td>";
+
+			table += "<td>ITSE</td>";
+			table += "<td>" + possibility[0] + "</td>";
+			table += "<td>" + possibility[1] + "</td>";
+			table += "</tr><tr>";
+			
+			table += makeListCell(possibility, "ITSE");
+			table += makeListCell(possibility, possibility[0]);
+			table += makeListCell(possibility, possibility[1]);
+			table += "</tr><tr>";
+			
+			table += makeSumCell(possibility, "ITSE");
+			table += makeSumCell(possibility, possibility[0]);
+			table += makeSumCell(possibility, possibility[1]);
+			table += "</tr>";
+		}
+		table += "</table>";
+		document.getElementById("combinationsfull").innerHTML = table;
 	},
 	/* used to check all rules and display them in div#messages */
 	checkRules: function() {
@@ -229,10 +281,11 @@ var frontend = {
 				var extra = '';
 				if (rules[rule].type === 'modulesRule') {
 					var possibilities = rules[rule].combinations;
-					extra += '<div class="extra-inf">Folgende Kombinationen von Vertiefungsgebieten sind gültig im Sinne der Studienordnung:';
+					extra += '<div class="extra-inf">Folgende Kombinationen von Vertiefungsgebieten sind gültig im Sinne der Studienordnung:<br \>';
 					extra += f.makeCombinationsTable(possibilities);
 					extra += "</div>";
 					messageUl.append("<li>" + extra + "</li>");
+					this.fullpossibilities = rules[rule].combinationsfull;
 				}
 			}
 			f.messageDiv.animate({
