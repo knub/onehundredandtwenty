@@ -31,7 +31,8 @@
     ws13_14 = "WS13/14",
     ss14 = "SS14",
     ws14_15 = "WS14/15",
-    ss15 = "SS15";
+    ss15 = "SS15",
+    ws15_16 = "WS15/16";
 
 var BPET = "BPET",
     SAMT = "SAMT",
@@ -552,6 +553,17 @@ var data = {
         dozent: ["Prof. Dr. Tobias Friedrich", "Dr. Timo Kötzing", "Dr. Andrew Sutton"],
         nameLV: "Heuristic Optimization"
     },
+    informationIntegration: {
+        kurz: "Information<br /> Integration",
+        kennung: [OSIS, SAMT],
+        lehrform: ["Vorlesung", "Übung"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ws15_16],
+        benotet: true,
+        cp: 6,
+        dozent: ["Prof. Dr. Felix Naumann"],
+        nameLV: "Information Integration"
+    },
     informationretrieval: {
         kurz: "Information<br /> Retrieval",
         kennung: [OSIS, IST],
@@ -562,6 +574,17 @@ var data = {
         cp: 3,
         dozent: ["Prof. Dr. Felix Naumann"],
         nameLV: "Information Retrieval"
+    },
+    informationretrieval6LP: {
+        kurz: "Information<br /> Retrieval 6LP",
+        kennung: [OSIS, IST],
+        lehrform: ["Vorlesung", "Übung"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ws15_16],
+        benotet: true,
+        cp: 6,
+        dozent: ["Dr. Ralf Krestel"],
+        nameLV: "Information Retrieval 6LP"
     },
     informationssicherheit: {
         kurz: "Information<br />Security",
@@ -794,6 +817,17 @@ var data = {
         dozent: ["Dr. rer. nat. Harad Sack"],
         nameLV: "A LOD of Movies - Linked Open Data Knowledge Mining"
     },
+    machineTranslation: {
+        kurz: "Machine Translation",
+        kennung: [ITSE, BPET],
+        lehrform: ["Vorlesung"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ws15_16],
+        benotet: true,
+        cp: 3,
+        dozent: ["Dr. Mariana Neves"],
+        nameLV: "Machine Translation"
+    },
     managementEssentials: {
         kurz: "Management Essentials",
         kennung: [SSKMA],
@@ -959,6 +993,17 @@ var data = {
         dozent: ["Dr. Rolf Specht"],
         nameLV: "Personal Leadership Skills"
     },
+    practicalApplicationsOfMultimediaRetrieval: {
+        kurz: "Practical Applications of <br /> Multimedia Retrieval",
+        kennung: [ITSE, IST, OSIS],
+        lehrform: ["Seminar"],
+        modul: ["Vertiefungsgebiete", "IT-Systems Engineering"],
+        semester: [ws15_16],
+        benotet: true,
+        cp: 6,
+        dozent: ["Prof. Dr. Christoph Meinel", "Haojin Yang "],
+        nameLV: "Practical Applications of Multimedia Retrieval"
+    },
     practicalVideoAnalyses: {
         kurz: "Practical Video<br />Analyses",
         kennung: [ITSE, IST, OSIS],
@@ -967,7 +1012,7 @@ var data = {
         semester: [ss15],
         benotet: true,
         cp: 6,
-        dozent: ["Prof. Dr. Christoph Meinel", "Haojing Yang "],
+        dozent: ["Prof. Dr. Christoph Meinel", "Haojin Yang "],
         nameLV: "Practical Video Analyses"
     },
     privacyAndSecurityIPv6: {
@@ -1139,7 +1184,7 @@ var data = {
         kennung: [ITSE, BPET, IST],
         lehrform: ["Vorlesung", "Übung"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
-        semester: [ws13_14, ws14_15],
+        semester: [ws13_14, ws14_15, ws15_16],
         benotet: true,
         cp: 6,
         dozent: ["Dr. rer. nat. Harald Sack"],
@@ -1277,6 +1322,17 @@ var data = {
         dozent: ["Prof. Dr. Holger Giese", "Sebastian Wätzoldt", "Dr. Dominique Blouin"],
         nameLV: "Advanced Software Engineering for Embedded Systems"
     },
+    softwareDesign: {
+        kurz: "Software <br /> Design",
+        kennung: [OSIS, SAMT],
+        lehrform: ["Seminar", "Projekt"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ws15_16],
+        benotet: true,
+        cp: 6,
+        dozent: ["Prof. Dr. Robert Hirschfeld"],
+        nameLV: "Software Design"
+    },
     softwareEngineeringEmbeddedSystems: {
         kurz: "SE for<br />Embedded Systems",
         kennung: [ITSE, SAMT],
@@ -1386,6 +1442,17 @@ var data = {
         cp: 3,
         dozent: ["Prof. Dr. Hasso Plattner"],
         nameLV: "Trends and Concepts in the Software Industry II: Development of Enterprise Software"
+    },
+    toc26LP: {
+        kurz: "TuK II 6LP",
+        kennung: [ITSE, BPET, HCT],
+        lehrform: ["Seminar"],
+        modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
+        semester: [ws15_16],
+        benotet: true,
+        cp: 3,
+        dozent: ["Prof. Dr. Hasso Plattner"],
+        nameLV: "Trends and Concepts in the Software Industry II: Development of Enterprise Software 6LP"
     },
     unternehmensarchitektur: {
         kurz: "IT-Unternehmens-<br />architektur",
