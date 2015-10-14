@@ -389,8 +389,8 @@ var data = {
         nameLV: "Eingebettete Betriebssysteme"
     },
     eingebetteteBetriebssystemeWithITSE: {
-        kurz: "Embedded<br />Systems (mit ITSE)",
-        kennung: [IST, OSIS, SAMT, ITSE],
+        kurz: "Embedded<br />Systems (WS15/16)",
+        kennung: [IST, OSIS, ITSE],
         lehrform: ["Vorlesung", "Projekt"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ws15_16],
@@ -1063,7 +1063,7 @@ var data = {
         kurz: "Point Cloud<br />Analytics",
         kennung: [ITSE, HCT, IST],
         lehrform: ["Seminar"],
-        modul: ["Softskills"],
+        modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
         semester: [ws15_16],
         benotet: true,
         cp: 6,
@@ -1119,10 +1119,10 @@ var data = {
         kennung: [ITSE, BPET],
         lehrform: ["Seminar", "Projekt"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
-        semester: [ws13_14, ws14_15],
+        semester: [ws13_14, ws14_15, ws15_16],
         benotet: true,
         cp: 6,
-        dozent: ["Dr. Matthias Uflacker", "Dipl.-Kfm. Jens Krüger", "Thomas Kowark", "Franziska Häger"],
+        dozent: ["Dr. Matthias Uflacker", "Dipl.-Kfm. Jens Krüger", "Thomas Kowark", "Franziska Häger", "Keven Richly"],
         nameLV: "Global Team-Based Product Innovation & Engineering I - ME 310"
     },
     productInnovationEngineeringI_HCT: {
@@ -1130,7 +1130,7 @@ var data = {
         kennung: [ITSE, BPET, HCT],
         lehrform: ["Seminar", "Projekt"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
-        semester: [ws15_16],
+        semester: [], // another document listed it with HCT for ws15_16
         benotet: true,
         cp: 6,
         dozent: ["Dr. Matthias Uflacker", "Thomas Kowark", "Franziska Häger", "Keven Richly"],
@@ -1551,7 +1551,7 @@ var data = {
         benotet: true,
         cp: 3,
         dozent: ["Dr. Matthias Uflacker"],
-        nameLV: "Trends in Betriebssystemen (Forschungsseminar)"
+        nameLV: "Trends in Bioinformatics"
     },
     trendsInMiddlewareAndDistributedSystems: {
         kurz: "Trends Middleware,<br />Distributed Systems",
