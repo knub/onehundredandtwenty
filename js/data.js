@@ -949,7 +949,7 @@ var data = {
     },
     personalManagementSkills: {
         kurz: "Personal<br />Management",
-        kennung: [SSKMA],
+        kennung: [SSKMA, SSKKO],
         lehrform: ["Seminar"],
         modul: ["Softskills"],
         semester: [ws13_14, ws14_15, ws15_16],
