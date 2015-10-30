@@ -949,7 +949,7 @@ var data = {
     },
     personalManagementSkills: {
         kurz: "Personal<br />Management",
-        kennung: [SSKMA],
+        kennung: [SSKMA, SSKKO],
         lehrform: ["Seminar"],
         modul: ["Softskills"],
         semester: [ws13_14, ws14_15, ws15_16],
@@ -1282,10 +1282,20 @@ var data = {
         kennung: [ITSE, HCT, SAMT],
         lehrform: ["Seminar"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
-        semester: [ws13_14, ws14_15, ws15_16],
+        semester: [ws13_14, ws14_15],
         cp: 6,
         dozent: ["Prof. Dr. Jürgen Döllner", "Sebastian Schmechel", "Sebastian Kay Belle", "Jonas Trümper", "Daniel Limberger"],
         nameLV: "Software Analytics"
+    },
+    softwareAnalytics2: {
+        kurz: "Software<br />Analytics 2",
+        kennung: [ITSE, HCT, SAMT],
+        lehrform: ["Seminar"],
+        modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
+        semester: [ws15_16],
+        cp: 6,
+        dozent: ["Prof. Dr. Jürgen Döllner", "Stefan Buschmann", "Sebastian Hahn", "Daniel Limberger", "Dr. Matthias Trapp", "Willy Scheibel"],
+        nameLV: "Software Engineering for Software Analytics"
     },
     softwareAsAService: {
         kurz: "Software as a Service",
