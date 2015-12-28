@@ -387,7 +387,9 @@ var modulesRule = {
 					}
 				});
 			}
-			combinations = newcombinations;
+			if (newcombinations.length > 0) {
+				combinations = newcombinations;
+			}
 		}
 		
 		//console.log(combinations.length);
