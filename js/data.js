@@ -1452,7 +1452,7 @@ var data = {
         kennung: [ITSE, BPET, OSIS, SAMT],
         lehrform: ["Vorlesung"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
-        semester: [ws13_14, ws14_15],
+        semester: [ws13_14],
         cp: 3,
         dozent: ["Prof. Dr. Hasso Plattner"],
         nameLV: "Trends and Concepts in the Software Industry II: Development of Enterprise Software"
@@ -1462,7 +1462,7 @@ var data = {
         kennung: [ITSE, BPET, HCT],
         lehrform: ["Seminar"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
-        semester: [ws15_16],
+        semester: [ws14_15, ws15_16],
         cp: 6,
         dozent: ["Prof. Dr. Hasso Plattner"],
         nameLV: "Trends and Concepts in the Software Industry II: Development of Enterprise Software 6LP"
