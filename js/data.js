@@ -32,7 +32,8 @@
     ss14 = "SS14",
     ws14_15 = "WS14/15",
     ss15 = "SS15",
-    ws15_16 = "WS15/16";
+    ws15_16 = "WS15/16",
+    ss16 = "SS16";
 
 var BPET = "BPET",
     SAMT = "SAMT",
@@ -47,6 +48,16 @@ var BPET = "BPET",
     SSKKO = "SSK-KO";
 
 var data = {
+    advancedCompetitiveProgramming: {
+        kurz: "Advanced <br /> Competitive Programming",
+        kennung: [IST, SAMT],
+        lehrform: ["Seminar", "Projekt"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ss16],
+        cp: 3,
+        dozent: ["Prof. Dr. Tobias Friedrich", "Dr. Pascal Lenzner"],
+        nameLV: "Advanced Competitive Programming"
+    },
     advancedDataProfiling: {
         kurz: "Adv. Data<br />Profiling",
         kennung: [BPET, OSIS],
@@ -116,6 +127,16 @@ var data = {
         cp: 6,
         dozent: ["Prof. Dr. Jürgen Döllner", "Rico Richter", "Stefan Buschmann"],
         nameLV: "Algorithmen und Techniken der Geovisualisierung (ehem.: Geovisualisierungsverfahren)"
+    },
+    algorithmicGems: {
+        kurz: "Algorithmic<br />Gems",
+        kennung: [IST, SAMT],
+        lehrform: ["Seminar"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ss16],
+        cp: 3,
+        dozent: ["Prof. Dr. Tobias Friedrich"],
+        nameLV: "Algorithmic Gems"
     },
     algorithmix: {
         kurz: "Algorithmix",
@@ -367,6 +388,16 @@ var data = {
         dozent: ["Prof. Dr. Andreas Polze", "Frank Feinbube", "Max Plauth", "Daniel Richter"],
         nameLV: "Eingebettete Betriebssysteme"
     },
+    endUserProgramming: {
+        kurz: "End-user<br />Programming",
+        kennung: [OSIS, SAMT],
+        lehrform: ["Seminar", "Projekt"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ss16],
+        cp: 6,
+        dozent: ["Prof. Robert Hirschfeld"],
+        nameLV: "End-user Programming"
+    },
     englisch3: {
         kurz: "Fachenglisch<br />Level 3",
         kennung: [SSKSK, SSKKO],
@@ -442,17 +473,37 @@ var data = {
         kennung: [ITSE, HCT, SAMT],
         lehrform: ["Vorlesung"],
         modul: ["IT Systems Engineering", "Vertiefungsgebiete"],
-        semester: [ss14, ss15],
+        semester: [ss14, ss15, ss16],
         cp: 6,
         dozent: ["Prof. Dr. Patrick Baudisch"],
         nameLV: "Future Interactive Technology"
+    },
+    graphenAlgorithmen: {
+        kurz: "Graphenalgorithmen",
+        kennung: [ITSE, IST],
+        lehrform: ["Vorlesung", "Übung"],
+        modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
+        semester: [ss16],
+        cp: 6,
+        dozent: ["Prof. Dr. Friedrich", "Dr. Pascal Lenzner", "Dr. Thomas Bläsius"],
+        nameLV: "Graphenalgorithmen"
+    },
+    graphDatenbanken: {
+        kurz: "Graphdatenbanken",
+        kennung: [ITSE, SAMT],
+        lehrform: ["Seminar"],
+        modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
+        semester: [ss16],
+        cp: 3,
+        dozent: ["Dr. Leen Lambers"],
+        nameLV: "Graphdatenbanken"
     },
     geoinformationstechnologien: {
         kurz: "Geoinformations-<br />technologien",
         kennung: [ITSE, HCT, IST],
         lehrform: ["Vorlesung"],
         modul: ["Vertiefungsgebiete"],
-        semester: [ws14_15],
+        semester: [ws14_15, ss16],
         cp: 3,
         dozent: ["Dr. Markus Jobst"],
         nameLV: "Geoinformationstechnologien"
@@ -507,6 +558,26 @@ var data = {
         dozent: ["Prof. Dr. Patrick Baudisch"],
         nameLV: "HCI Project Seminar on Building Immersive Virtual Reality Games"
     },
+    hciProjectSeminarIM: {
+        kurz: "HCI Projekt<br /> Interactive Machines",
+        kennung: [ITSE, HCT, SAMT],
+        lehrform: ["Seminar", "Projekt"],
+        modul: ["IT Systems Engineering", "Vertiefungsgebiete"],
+        semester: [ss16],
+        cp: 6,
+        dozent: ["Prof. Dr. Patrick Baudisch"],
+        nameLV: "HCI Project Seminar on Interactive Machines"
+    },
+    hciProjectSeminarBIVM: {
+        kurz: "HCI Projekt<br /> Imersive VR",
+        kennung: [ITSE, HCT, SAMT],
+        lehrform: ["Seminar", "Projekt"],
+        modul: ["IT Systems Engineering", "Vertiefungsgebiete"],
+        semester: [ss16],
+        cp: 6,
+        dozent: ["Prof. Dr. Patrick Baudisch"],
+        nameLV: "HCI Project Seminar on Building Immersive Virtual Realities"
+    },
     hciProjectSeminarVRG: {
         kurz: "HCI Projekt<br />VR Gaming",
         kennung: [ITSE, HCT, SAMT],
@@ -560,12 +631,32 @@ var data = {
     heuristicOptimization: {
         kurz: "Heuristic<br />Optimization",
         kennung: [IST, OSIS, SAMT],
-        lehrform: ["Seminar"],
-        modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
-        semester: [ss15],
+        lehrform: ["Seminar", "Projekt"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ss15, ss16],
         cp: 3,
         dozent: ["Prof. Dr. Tobias Friedrich", "Dr. Timo Kötzing", "Dr. Andrew Sutton"],
         nameLV: "Heuristic Optimization"
+    },
+    imageProcessing: {
+        kurz: "Image<br /> Processing",
+        kennung: [HCT, IST],
+        lehrform: ["Seminar"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ss16],
+        cp: 6,
+        dozent: ["Dr. Matthias Trapp", "Amir Semmo", "Sebastian Pasewaldt"],
+        nameLV: "Image Processing - Concepts and Techniqu"
+    },
+    indexingStructures: {
+        kurz: "Indexing<br /> Structures",
+        kennung: [BPET, OSIS],
+        lehrform: ["Vorlesung"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ss16],
+        cp: 3,
+        dozent: ["Prof. Dr. Emmanuel Müller"],
+        nameLV: "Indexing Structures for Efficient Database Access"
     },
     informationIntegration: {
         kurz: "Information<br /> Integration",
@@ -837,6 +928,16 @@ var data = {
         dozent: ["Dr. techn. Markus Jobst"],
         nameLV: "Methodik der Geoinformationstechnik"
     },
+    methodsSoftVis: {
+        kurz: "Methods <br />Software Visualization",
+        kennung: [ITSE, HCT, SAMT],
+        lehrform: ["Seminar"],
+        modul: ["IT-Systems Engineering","Vertiefungsgebiete"],
+        semester: [ss16],
+        cp: 6,
+        dozent: ["Prof. Dr. Jürgen Döllner", "Daniel Limberger", "Stefan Buschman", "Sebastian Hahn", "Willy Scheibel"],
+        nameLV: "Methods and Techniques of Software Visualization"
+    },
     middleware: {
         kurz: "Komponenten<br />& Middleware",
         kennung: [OSIS, SAMT],
@@ -852,10 +953,20 @@ var data = {
         kennung: [ITSE, SAMT],
         lehrform: ["Vorlesung", "Projekt"],
         modul: ["Vertiefungsgebiete"],
-        semester: [ws14_15],
+        semester: [ws14_15, ss16],
         cp: 6,
-        dozent: ["Prof. Dr. Holger Giese", "Thomas Vogel"],
+        dozent: ["Prof. Dr. Holger Giese", "Thomas Vogel", "Dr. Dominique Blouin"],
         nameLV: "Modellgetriebene Softwareentwicklung"
+    },
+    modellgetriebeneValidierungVerifikation: {
+        kurz: "Modellgetriebene Validierung",
+        kennung: [ITSE, SAMT],
+        lehrform: ["Seminar"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ss16],
+        cp: 3,
+        dozent: ["Dr. Leen Lambers"],
+        nameLV: "Modellgetriebene Validierung und Verifikation von Software"
     },
     modulsysteme: {
         kurz: "Modulsysteme",
@@ -1076,6 +1187,16 @@ var data = {
         cp: 3,
         dozent: ["Prof. Dr. Andreas Polze", "Frank Feinbube", "Felix Eberhardt ", "Max Plauth"],
         nameLV: "Projektseminar: Parallele und verteilte Systeme"
+    },
+    randomisierteAlgorithmen: {
+        kurz: "Randomisierte<br />Algorithmen",
+        kennung: [ITSE, IST],
+        lehrform: ["Vorlesung", "Übung"],
+        modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
+        semester: [ss16],
+        cp: 6,
+        dozent: ["Prof. Dr. Friedrich", "Dr. Timo Kötzing"],
+        nameLV: "Randomisierte Algorithmen"
     },
     recommenderSystems: {
         kurz: "Recommender<br />Systems",
@@ -1362,7 +1483,7 @@ var data = {
         kennung: [ITSE, BPET],
         lehrform: ["Vorlesung"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
-        semester: [ws13_14],
+        semester: [ws13_14, ss16],
         cp: 6,
         dozent: ["Prof. Dr. Hannelore Liero"],
         nameLV: "Statistische Datenanalyse"
@@ -1436,6 +1557,16 @@ var data = {
         cp: 3,
         dozent: ["Prof. Dr. Andreas Polze"],
         nameLV: "Trends in Middleware & Distributed Systems (Forschungsseminar)"
+    },
+    trendsSoftwareEngineeringSelfAdaptiveSoftware: {
+        kurz: "Trends Self-Adaptive <br /> Software",
+        kennung: [ ITSE, SAMT],
+        lehrform: ["Seminar"],
+        modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
+        semester: [ss16],
+        cp: 3,
+        dozent: ["Prof. Dr. Holger Giese,"],
+        nameLV: "Trends in Software Engineering for Self-Adaptive Software"
     },
     toc1: {
         kurz: "TuK I",
@@ -1526,5 +1657,15 @@ var data = {
         cp: 6,
         dozent: ["Prof. Dr. Jürgen Döllner", "Willy Scheibel", "Sebastian Hahn"],
         nameLV: "Visual Software Analytics"
+    },
+    webbasedDevelopmentEnvironments: {
+        kurz: "Webbased Development<br />Environments",
+        kennung: [OSIS, IST],
+        lehrform: ["Seminar", Projekt],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ss16],
+        cp: 6,
+        dozent: ["Prof. Robert Hirschfeld"],
+        nameLV: "Web-based Development Environments"
     }
 }
