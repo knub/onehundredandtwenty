@@ -78,7 +78,7 @@ var data = {
         dozent: ["Dr. Claudia Nicolai", "Prof. Ulrich Weinberg"],
         nameLV: "Advanced Design Thinking (D-School Advanced Track)"
     },
-    advancedDesignThinking:9CP {
+    advancedDesignThinking9CP: {
         kurz: "D-School<br />Advanced Track 9CP",
         kennung: [SSKDT],
         lehrform: ["Seminar", "Projekt"],
@@ -213,7 +213,7 @@ var data = {
         kennung: [SSKSK, SSKKO],
         lehrform: ["Seminar"],
         modul: ["Softskills"],
-        semester: [ss13, ws13_14, ss14, ws14_15, ss15, ws15_16], ss16,
+        semester: [ss13, ws13_14, ss14, ws14_15, ss15, ws15_16, ss16],
         cp: 3,
         dozent: ["Dr. Timm Krohn", "Imme Vogelsang"],
         nameLV: "Business Etikette-<br />HPI Charm School"
