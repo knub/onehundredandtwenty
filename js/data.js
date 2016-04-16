@@ -700,7 +700,7 @@ var data = {
     },
     identityManagement: {
         kurz: "Identity<br />Management",
-        kennung: [ITSE; IST, OSIS],
+        kennung: [ITSE, IST, OSIS],
         lehrform: ["Seminar"],
         modul: ["IT-Systems Engineering","Vertiefungsgebiete"],
         semester: [ss16],
@@ -1801,7 +1801,7 @@ var data = {
     webbasedDevelopmentEnvironments: {
         kurz: "Webbased Development<br />Environments",
         kennung: [OSIS, IST],
-        lehrform: ["Seminar", Projekt],
+        lehrform: ["Seminar", "Projekt"],
         modul: ["Vertiefungsgebiete"],
         semester: [ss16],
         cp: 6,
