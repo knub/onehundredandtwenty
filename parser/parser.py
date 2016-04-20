@@ -1,268 +1,263 @@
-#!/usr/bin/env python2.7
 # -*- coding: utf-8 -*-
 
-import urllib2
+import urllib
 import sys
 import json
 import re
+import codecs
 
-attributepattern = re.compile(r"\<p\>(.*?)\</p\>")
+lehrformStrings = {
+    "PS"    : [u"Projekt", u"Seminar"],
+    "V"     : [u"Vorlesung"],
+    "S"     : [u"Seminar"],
+    "BS"    : [u"Seminar"],
+    "SP"    : [u"Seminar", u"Projekt"],
+    "VU"    : [u"Vorlesung", u"Übung"],
+    "VP"    : [u"Vorlesung", u"Projekt"],
+    "MP"    : False
+    #more?
+}
+
+sskStrings = {
+    "Kommunikation"         : u"SSKKO",
+    "Schlüsselkompetenzen"  : u"SSKSK",
+    "Management"            : u"SSKMA",
+    "Recht"                 : u"SSKRE",
+    "Design Thinking"       : u"SSKDT"
+}
+
+vertiefungStrings = {
+    "Internet &amp; Security Technology"                            : u"IST",
+    "Software Architecture &amp; Modeling Technology"               : u"SAMT",
+    "Operating Systems &amp; Information Systems Technology"        : u"OSIS",
+    "Business Process &amp; Enterprise Technology"                  : u"BPET",
+    "Human Computer Interaction &amp; Computer Graphics Technology" : u"HCT"
+}
+
+itseStrings = {
+    "IT-Systems Engineering A" : u"ITSE",
+    "IT-Systems Engineering B" : u"ITSE",
+    "IT-Systems Engineering C" : u"ITSE",
+    "IT-Systems Engineering D" : u"ITSE"
+}
 
 def URLForSemester(semester):
-	"""gibt für ein gewünschtes Semester die entsprechende Liste der Lehrveranstaltungen zurück"""
-	if semester == "now":
-		url = "http://www.hpi.uni-potsdam.de/studium/lehrangebot/itse.html"
-	else:
-		year = int(semester.lstrip("wWsS"))
-		if year > 99:
-			print "You have been using this program far too long. Please start coding a new one."
-		else:
-			if semester.startswith("SS"):
-				url = "http://www.hpi.uni-potsdam.de/studium/lehrangebot/lehrangebotsarchiv/lehrangebotsarchiv_ss_20" + (str(year) if year >= 10 else "0" + str(year)) + ".html"
-			else:
-				if (year < 9):
-					url = "http://www.hpi.uni-potsdam.de/studium/lehrangebot/lehrangebotsarchiv/lehrangebotsarchiv_ws_0" + str(year) + "0" + str(year+1) + ".html"
-				elif (year == 9):
-					url = "http://www.hpi.uni-potsdam.de/studium/lehrangebot/lehrangebotsarchiv/lehrangebotsarchiv_ws_0" + str(year) + str(year+1) + ".html"
-				else:
-					url = "http://www.hpi.uni-potsdam.de/studium/lehrangebot/lehrangebotsarchiv/lehrangebotsarchiv_ws_" + str(year) + str(year+1) + ".html"
-	print url
-	return url
+    # returns list of courses for semester
+    if semester == "now":
+        url = "http://hpi.de/studium/lehrveranstaltungen/it-systems-engineering.html"
+    else:
+        year = int(semester.lstrip("wWsS"))
+        if year > 99:
+            print "You have been using this program far too long. Please start coding a new one."
+        else:
+            if semester.startswith("SS"):
+                url = "http://hpi.de/studium/lehrveranstaltungen/archiv/sommersemester-20" + (str(year) if year >= 10 else "0" + str(year)) + ".html"
+            else:
+                if (year < 9):
+                    url = "http://hpi.de/studium/lehrveranstaltungen/archiv/wintersemester-200" + str(year) + "0" + str(year+1) + ".html"
+                elif (year == 9):
+                    url = "http://hpi.de/studium/lehrveranstaltungen/archiv/wintersemester-200" + str(year) + str(year+1) + ".html"
+                else:
+                    url = "http://hpi.de/studium/lehrveranstaltungen/archiv/wintersemester-20" + str(year) + str(year+1) + ".html"
+    return url
 
 
 def URLsPerSemester(url):
-	"""Gibt die URLs der LVs für ein Semester zurück"""
-	site = urllib2.urlopen(url)
+    # return urls for courses
+    site = urllib.urlopen(url)
 
-	for line in site:
-		if (line.strip().startswith("</div><h1>Bachelorstudium IT-Systems Engineering</h1>")):
-			break
+    for line in site:
+        if (line.strip().startswith("<h1>IT-Systems Engineering MA</h1>")):
+            break
+    pattern = re.compile(r"studium/lehrveranstaltungen/it\-systems\-engineering/lehrveranstaltung.*?\.html")
+    urls = []
+    for line in site:
+        if (line.strip().startswith('<a class="courselink" href="')):
+            urls += re.findall(pattern, line)
 
-	for line in site:
-		if (line.strip().startswith('<td style="width: 300px; paddi')):
-			break
-
-	line = str(site.next())
-
-#	rows = line.split("<tr>")
-
-#	urls = []
-
-	pattern = re.compile(r"studium/lehrangebot.*?\.html")
-	
-	urls = re.findall(pattern, line)
-	
-	
-	return urls
-	
+    return urls
+    
 def listOfLVs(urls):
-	"""baut aus den URLs der LVs eine Liste von lv-Objekten"""
-	lvs = {}
-	i = 0
-	for url in urls:
-		lvDict = parseLVPage("http://www.hpi.uni-potsdam.de/" + url)
-		lvs[lvDict['nameLV']] = lvDict
-		i+=1
-		print "\rBisher wurden " + str(i) + " LVs gefunden."
-	return lvs
+    # returns dictionary of all courses
+    lvs = {}
+    i = 0
+    for url in urls:
+        lvDict = parseLVPage("http://www.hpi.de/" + url)
+        if not (lvDict):
+            continue
+        lvs[lvDict['nameLV']] = lvDict
+        i+=1
+        print "Bisher wurden " + str(i) + " LVs gefunden."
+    return lvs
 
 def parseLVPage(url):
-	"""parsed aus der Seite einer LV die gewünschten Informationen"""
-	headerpattern = re.compile(r"""	(?x)				#Ignoriere Leerzeichen, wenn sie nicht escaped sind
-									(?<=\<h1\>)			#Der Header startet natürlich mit dem entsprechenden Überschriftstag (lookbehind weil wir den nicht brauchen)
-									(.*?)				#Daran schließen sich einige freie Zeichen an
-									\(					#Dann eine Klammer, die das Semester einschließt
-									((
-									  (
-									   WS\d{4}/\d{4}	#entweder z.B. 'WS2006/2007'
-									  )
-									  |					#oder
-									  (
-									   SS\d{4}			#z.B. 'SS2009'
-									  )
-									))
-									\)					#Klammer, die das Semester einschließt
-									(?=\</h1\>)			#und der Überschriftstag wird abgeschlossen""")
-
-	numberpattern = re.compile(r"\d+")
-	
-	klammerpattern = re.compile(r"\((.*?)\)")
-	page = urllib2.urlopen(url)
-	
-	for line in page:
-		if (line.strip().startswith('<div class="tx-jshuniversity-pi1-singleVi')): #kennzeichnet die entsprechenden Informationen
-			break
-
+    # returns dictionary containing information about the course
+    
+    page = urllib.urlopen(url)
+    for line in page:
+        if (line.strip().startswith('<div class="tx-ciuniversity-course">')): #kennzeichnet die entsprechenden Informationen
+            break
+    
 ################################################################################
 ##                                                                            ##
-##                                                                            ##
-##                    Erkennen von Name, Dozent und Semester                  ##
-##                                                                            ##
+##                    Detection of name and semester                          ##
 ##                                                                            ##
 ################################################################################
 
-	line = str(page.next())
-	headerfind = re.search(headerpattern, line)
-	nameofLV = headerfind.group(1)
-	nameofLV = nameofLV.strip()
-	semester = headerfind.group(2)
-	semester = semester.strip()
-	dozents = dozenten(line)
-	
+    line = page.next()
+
+    headerPattern = re.compile("""w*(?<=\<h1\>)(.*?) \((Sommersemester) \d{2}(\d{2})|(Wintersemester) \d{2}(\d{2})/\d{2}(\d{2})\)(?=\<\/h1\>)""")
+    headerfind = re.search(headerPattern, line)
+    nameofLV = unicode(headerfind.group(1), encoding="utf-8")
+    
+    if (headerfind.group(2) == "Sommersemester"):
+        semester = "ss" + headerfind.group(3)
+    else:
+        semester = "ws" + headerfind.group(3) + u"_" + headerfind.group(4)    
+   
 ################################################################################
 ##                                                                            ##
-##                                                                            ##
-##                    Erkennen der entsprechenden Kennung                     ##
-##                                                                            ##
+##                    Detection of Dozents                                    ##
 ##                                                                            ##
 ################################################################################
 
-	for line in page:
-		if (line.strip().endswith("Kennung:</p></td>")):
-			break
-	kennung = attributeAsList(page.next()) #hier hab ich versucht, so unverständlich wie möglich zu sein
-	
+    line = page.next()
+   
+    dozentenPattern = re.compile("""w*.*?\<i\>\<a.*?\>(.*?)\</a\>""")
+    dozents = []
+    while (line):
+        if (line.strip().startswith("<br />")):
+            break
+        else:
+            dozent = re.search(dozentenPattern, line)
+            if (dozent):
+                dozents.append(unicode(dozent.group(1), encoding="utf-8"))
+        line = page.next()
+    
 ################################################################################
 ##                                                                            ##
-##                                                                            ##
-##                Erkennen der entsprechenden CPs und ob benotet              ##
-##                                                                            ##
+##                    Detection of ECTS Points                                ##
 ##                                                                            ##
 ################################################################################
-	
-	for line in page:
-		if (line.strip().endswith("ECTS Credit Points:</p></td>")):
-			break
-	line = page.next()
-	cpfound = re.search(numberpattern, (re.search(attributepattern, line)).group(1))
-	if (cpfound != None):
-		cp = int(cpfound.group()) #ebenso hier
-	else:
-		cp = 0
-	
+    
+    line = page.next()
+    
+    ectsPattern = re.compile("""w*\<li\>ECTS.*?(\d*?)\</li\>""")
+    while (line):
+        if (line.strip().startswith("<li>ECTS")):
+            break
+        line = page.next()
+    ects = int(re.search(ectsPattern, line).group(1))
+        
 ################################################################################
 ##                                                                            ##
-##                                                                            ##
-##                    Erkennen, ob benotet oder nicht                         ##
-##                                                                            ##
-##                                                                            ##
-################################################################################
-
-	benotetfind = (re.search(klammerpattern, line)).group(1)
-	benotet = (benotetfind == "benotet")
-
-################################################################################
-##                                                                            ##
-##                                                                            ##
-##                    Erkennen des Themenmoduls                               ##
-##                                                                            ##
+##                    Detection if benotet or not                             ##
 ##                                                                            ##
 ################################################################################
 
-	for line in page:
-		if (line.strip().endswith("Themenmodul:</p></td>")):
-			break
-	modul = attributeAsList(page.next()) #hier hab ich versucht, so unverständlich wie möglich zu sein
+    begin = False
+    while (line):
+        if not (begin):
+            begin = line.strip().startswith("<li>Benotet")
+        elif (line.strip()):
+            benotet = (line.strip() == "Ja")
+            break
+        line = page.next()
 
 ################################################################################
 ##                                                                            ##
-##                                                                            ##
-##                    Erkennen der Lehrformen                                 ##
-##                                                                            ##
+##                    Detection of Lehrform                                   ##
 ##                                                                            ##
 ################################################################################
 
-	for line in page:
-		if (line.strip().endswith("Lehrform:</p></td>")):
-			break
-	lehrform = attributeAsList(page.next()) #hier hab ich versucht, so unverständlich wie möglich zu sein
-	
-################################################################################
-##                                                                            ##
-##                                                                            ##
-##                    Erkennen des Themenkomplexes                            ##
-##                                                                            ##
-##                                                                            ##
-################################################################################
+    lehrformPattern = re.compile("""w*\<li\>Lehrform : (.*?)\</li\>""")
+    while (line):
+        lehrform = re.search(lehrformPattern, line)
+        if (lehrform):
+            lehrform = lehrformStrings[lehrform.group(1)]
+            break
+        line = page.next()
+    
+    if not (lehrform):
+        return # Masterprojects are not included
 
-	for line in page:
-		if (line.strip().endswith("Themenkomplex:</p></td>")):
-			break
-	themenkomplex = attributeAsList(page.next()) #hier hab ich versucht, so unverständlich wie möglich zu sein
-	
 ################################################################################
 ##                                                                            ##
-##                                                                            ##
-##                    Erkennen des Vertiefungsgebiets                         ##
-##                                                                            ##
+##                    Detection of Modules & Kennung                          ##
 ##                                                                            ##
 ################################################################################
 
-	for line in page:
-		if (line.strip().endswith("Vertiefungsgebiet:</p></td>")):
-			break
-	vertiefung = attributeAsList(page.next()) #hier hab ich versucht, so unverständlich wie möglich zu sein
+    modulpattern = re.compile("""w*\<li\>(.*?)\</li\>""")
+    begin = False
+    modules = []
+    while (line):
+        if not (begin):
+            begin = line.strip().startswith("<h2>Module</h2>")  # begin
+        elif (line.strip()):
+            module = re.search(modulpattern, line)
+            if (module):
+                modules.append(module.group(1))
+            elif (line.strip() == "</ul>"):                     # end
+                break
+        line = page.next()
+    
+    kennung = set()
+    modul = set()
+    for module in modules:
+        if (sskStrings.get(module)):
+            kennung.add(sskStrings.get(module))
+            modul.add("Softskills")
+        elif (vertiefungStrings.get(module)):
+            kennung.add(vertiefungStrings.get(module))
+            modul.add("Vertiefungsgebiet")
+        elif (itseStrings.get(module)):
+            kennung.add(itseStrings.get(module))
+            modul.add("IT-Systems Engineering")
+    modul = list(modul)
+    kennung = list(kennung)
 
-	# lv wird als dictionary zurückgegeben, damit es einfacher jsonifizierbar ist
-	lv = {}
-	lv['nameLV'] = nameofLV
-	lv['semester'] = semester
-	lv['dozent'] = dozents
-	lv['kennung'] = kennung
-	lv['cp'] = cp
-	lv['benotet'] = benotet
-	lv['modul'] = modul
-	lv['lehrform'] = lehrform
-	lv['themenkomplex'] = themenkomplex
-	lv['vertiefung'] = vertiefung
-	return lv
-	
-def attributeAsList(line):
-	found = re.search(attributepattern, line)
-	result = found.group(1)
-	result = result.split(",")
-	for element in result:
-		element = element.strip()
-	return result
+################################################################################
+##                                                                            ##
+##                    Try to find good kurz                                   ##
+##                                                                            ##
+################################################################################
 
-def extractCPandBenotet(line):
-	pattern = re.compile(r"(\d+) \((.*?)\)")
-	found = re.search(pattern, line)
-	cp = int(found.group(1))
-	benotet = (found.group(2) == "benotet")
+    maxLineLength = 20
+    relevantWords = [x[:maxLineLength] for x in nameofLV.split(" ") if len(x) > 3 or x.upper() == x]
+    kurz = ""
+    i = 0
+    while(i < 2):
+        charCount = 0
+        while (len(relevantWords) > 0):
+            kurzWort = relevantWords.pop(0)
+            if (len(kurzWort) <= maxLineLength - charCount):
+                charCount += len(kurzWort)
+                kurz += kurzWort + " "
+            else:
+                if(i == 0):
+                    relevantWords = [kurzWort] + relevantWords
+                    kurz += "<br />"
+                break
+        i += 1    
 
-def dozenten(line):
-	dozentenpattern = re.compile(r'''	(?x)				#ignoriere Leerzeichen
-										(?<=Dozent:\ <i>)	#Anfangs steht genau das
-										.*?					#Dann die freien Zeichen (Dozenten)
-										(?=
-											((\(.*?\))		#Entweder Klammern
-											|				#oder
-											(\<br\ /\>)))	#ein Zeilenumbruch''')
-	dozentenfind = re.search(dozentenpattern, line)
-	dozents = dozentenfind.group()
-	dozents = dozents.split(", ")
-	dozentpattern = re.compile(r"(?<=>).*?(?=<)") #Einzelne Dozenten sind verlinkt
-	
-	result = []
-	for dozent in dozents:
-		if dozent.startswith("<"):
-			dozentfind = re.search(dozentpattern, dozent)
-			result.append((dozentfind.group()).strip())
-		else:
-			result.append(dozent.strip())
-	
-	return result
+    # create dictionary for json serialization
+    lv = {}
+    lv['kurz'] = kurz
+    lv['nameLV'] = nameofLV
+    lv['semester'] = semester
+    lv['dozent'] = dozents
+    lv['kennung'] = kennung
+    lv['cp'] = ects
+    lv['benotet'] = benotet
+    lv['modul'] = modul
+    lv['lehrform'] = lehrform
+    return lv
 
 semester = raw_input("Please input the wanted semester: now OR (SS|WS)[0-9]{2}: ")
-
 place = raw_input("Please input the name of the local file that the JSON dump should be written to: ")
+dumpfile = codecs.open("./" + place, "w", encoding='utf-8')
 
-dumpfile = open("./" + place, "w")
-
-#lvs ist ein array von dictionarys; in jedem dictionary stehen die infos für eine lv
 lvs = listOfLVs(URLsPerSemester(URLForSemester(semester)))
-
-dumpfile.write(json.dumps(lvs, indent=4))
+dumpfile.write(json.dumps(lvs, ensure_ascii=False, indent=4))
 
 dumpfile.close()
