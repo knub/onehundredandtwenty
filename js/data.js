@@ -698,6 +698,16 @@ var data = {
         dozent: ["Prof. Dr. Tobias Friedrich", "Dr. Timo Kötzing", "Dr. Andrew Sutton"],
         nameLV: "Heuristic Optimization"
     },
+    iBMPowerSystemsBlockkurs2016: {
+        kurz: "IBM Power Systems <br /> Blockkurs 2016",
+        kennung: [BPET, IST, OSIS],
+        lehrform: ["Seminar", "Vorlesung"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ss16],
+        cp: 3,
+        dozent: ["Prof. Dr. Andreas Polze", "Bernhard Rabe", "Felix Eberhardt"],
+        nameLV: "IBM Power Systems Blockkurs 2016"
+    },
     identityManagement: {
         kurz: "Identity<br />Management",
         kennung: [ITSE, IST, OSIS],
