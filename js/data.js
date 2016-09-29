@@ -33,7 +33,8 @@
     ws14_15 = "WS14/15",
     ss15 = "SS15",
     ws15_16 = "WS15/16",
-    ss16 = "SS16";
+    ss16 = "SS16",
+	ws16_17 = "WS16/17";
 
 var BPET = "BPET",
     SAMT = "SAMT",
@@ -48,6 +49,16 @@ var BPET = "BPET",
     SSKKO = "SSK-KO";
 
 var data = {
+	advancedAlgorithmicProblemSolving: {
+        kurz: "Advanced <br /> Algo. Problem Solving",
+        kennung: [IST, SAMT],
+        lehrform: ["Vorlesung", "Übung"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ws16_17],
+        cp: 3,
+        dozent: ["Prof. Dr. Tobias Friedrich", "Dr. Timo Kötzing", "Dr. Pascal Lenzner"],
+        nameLV: "Advanced Algorithmic Problem Solving"
+    },
     advancedCompetitiveProgramming: {
         kurz: "Advanced <br /> Competitive Programming",
         kennung: [IST, SAMT],
@@ -83,7 +94,7 @@ var data = {
         kennung: [SSKDT],
         lehrform: ["Seminar", "Projekt"],
         modul: ["Softskills"],
-        semester: [ws15_16, ss16],
+        semester: [ws15_16, ss16, ws16_17,
         cp: 9,
         dozent: ["Dr. Claudia Nicolai", "Prof. Ulrich Weinberg"],
         nameLV: "Advanced Design Thinking (D-School Advanced Track)"
@@ -97,6 +108,16 @@ var data = {
         cp: 6,
         dozent: ["Prof. Dr. Holger Giese", "M. Sc. Thomas Beyhl"],
         nameLV: "Advanced MDE: Model Management"
+    },
+	advancedProgrammingCPlusPlus: {
+        kurz: "Advanced <br /> Programming in C++",
+        kennung: [ITSE, HCT, SAMT],
+        lehrform: ["Vorlesung", "Übung"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ws16_17],
+        cp: 6,
+        dozent: ["Prof. Dr. Jürgen Döllner", "Willy Scheibel", "Daniel Limberger", "Stefan Buschmann"],
+        nameLV: "Advanced Programming in C++"
     },
     advancedRecommendationTechniques: {
         kurz: "Advanced<br />Recommendation",
@@ -148,6 +169,16 @@ var data = {
         dozent: ["Dr. Ralf Krestel"],
         nameLV: "Advanced Topic Modeling"
     },
+	aeProjectSeminarAnalysisComplexNetworks: {
+        kurz: "AE Prject <br /> Sem. Analysis Complex Networks",
+        kennung: [IST, SAMT],
+        lehrform: ["Projekt", "Seminar"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ws16_17],
+        cp: 6,
+        dozent: ["Prof. Dr. Tobias Friedrich", "Dr. Thomas Bläsius"],
+        nameLV: "AE Project Seminar on Analysis of Complex Networks"
+    },
     algorithmenGeovisualisierung: {
         kurz: "Algorithmen der<br />Geovisualisierung",
         kennung: [ITSE, HCT, IST],
@@ -168,12 +199,22 @@ var data = {
         dozent: ["Prof. Dr. Tobias Friedrich"],
         nameLV: "Algorithmic Gems"
     },
+	algorithmicHits80s90s: {
+        kurz: "Algorithmic<br /> Hits of the 80s and 90s",
+        kennung: [IST, SAMT],
+        lehrform: ["Seminar"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ws16_17],
+        cp: 3,
+        dozent: ["Prof. Dr. Tobias Friedrich", "Martin Schirneck"],
+        nameLV: "Algorithmic Hits of the 0s and 90s"
+    },
     algorithmix: {
         kurz: "Algorithmix",
         kennung: [IST, OSIS, SAMT],
-        lehrform: ["Vorlesung (flipped classroom)"],
+        lehrform: ["Vorlesung (flipped classroom)", "Übung"],
         modul: ["Vertiefungsgebiete"],
-        semester: [ws15_16],
+        semester: [ws15_16, ws16_17],
         cp: 6,
         dozent: ["Prof. Dr. Tobias Friedrich", "Dr. Timo Kötzing"],
         nameLV: "Algorithmix"
@@ -213,7 +254,7 @@ var data = {
         kennung: [SSKSK, SSKKO],
         lehrform: ["Seminar"],
         modul: ["Softskills"],
-        semester: [ss13, ws13_14, ss14, ws14_15, ss15, ws15_16, ss16],
+        semester: [ss13, ws13_14, ss14, ws14_15, ss15, ws15_16, ss16, ws16_17],
         cp: 3,
         dozent: ["Dr. Timm Krohn", "Imme Vogelsang"],
         nameLV: "Business Etikette-<br />HPI Charm School"
@@ -226,6 +267,16 @@ var data = {
         semester: [ws13_14, ws15_16],
         cp: 3,
         dozent: ["Prof. Dr. Mathias Weske", "Matthias Kunze"],
+        nameLV: "Business Process Compliance"
+    },
+	businessProcessCompliance2: {
+        kurz: "BPC",
+        kennung: [BPET, OSIS],
+        lehrform: ["Vorlesung"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ws16_17],
+        cp: 3,
+        dozent: ["Prof. Dr. Mathias Weske", "A. Nikaj"],
         nameLV: "Business Process Compliance"
     },
     currentTrendsInAlgorithmTheory: {
@@ -328,6 +379,16 @@ var data = {
         dozent: ["Dr. Gjergji Kasneci", "Dr. Ralf Krestel", "Maximilian Jenders"],
         nameLV: "Data Mining and Probabilistic Reasoning"
     },
+	dataMining2: {
+        kurz: "Data<br />Mining and Probabilistic Reasoning",
+        kennung: [OSIS, ITSE],
+        lehrform: ["Vorlesung", "Übung"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ws16_17],
+        cp: 6,
+        dozent: ["Dr. Ralf Krestel"],
+        nameLV: "Data Mining and Probabilistic Reasoning"
+	},
     dataProfilingAndCleansing: {
         kurz: "Data Profiling<br />and Cleansing",
         kennung: [BPET, OSIS],
@@ -337,6 +398,16 @@ var data = {
         cp: 6,
         dozent: ["Prof. Dr. Felix Naumann" , "Thorsten Papenbrock"],
         nameLV: "Data Profiling and Data Cleansing"
+    },
+	decisionAnalysisImplementation: {
+        kurz: "Decision<br />Analysis and Implementation",
+        kennung: [BPET, OSIS],
+        lehrform: ["Seminar"],
+        modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
+        semester: [ws16_17],
+        cp: 6,
+        dozent: ["Prof. Dr. Mathias Weske", "A. Nikaj"],
+        nameLV: "Decision Analysis and Implementation"
     },
     decisionManagement: {
         kurz: "Decision<br />Management",
@@ -383,10 +454,20 @@ var data = {
         kennung: [SSKDT],
         lehrform: ["Seminar", "Projekt"],
         modul: ["Softskills"],
-        semester: [ss13,ws13_14, ss14, ws14_15, ss15, ws15_16, ss16],
+        semester: [ss13,ws13_14, ss14, ws14_15, ss15, ws15_16, ss16, ws16_17],
         cp: 9,
         dozent: ["Dr. Claudia Nicolai", "Prof. Ulrich Weinberg"],
         nameLV: "Design Thinking Basics (D-School Basic Track)"
+    },
+	developYourOwnDatabase: {
+        kurz: "Develop your<br />own Database",
+        kennung: [BPET, OSIS, SAMT],
+        lehrform: ["Projekt", "Seminar"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ws16_17],
+        cp: 6,
+        dozent: ["Dr. Matthias Uflacker", "Markus Dreseler", "Jan Kossmann"],
+        nameLV: "Develop your own Database"
     },
     distributedBDA: {
         kurz: "Distributed BDA",
@@ -397,6 +478,16 @@ var data = {
         cp: 6,
         dozent: ["Prof. Dr. Felix Naumann", " Toni Grütze", "Sebastian Kruse"],
         nameLV: "Distributed Big Data Analytics"
+    },
+	distributedDuplicateDetection: {
+        kurz: "Distributed <br />Duplicate Detection",
+        kennung: [BPET, OSIS],
+        lehrform: ["Projekt", "Seminar"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ws16_17],
+        cp: 6,
+        dozent: ["Prof. Dr. Felix Naumann", "Ahmad Samiei", "John Koumarelas"],
+        nameLV: "Distributed Duplicate Detection"
     },
     duplicationDetection: {
         kurz: "Duplication Detection",
@@ -453,7 +544,7 @@ var data = {
         kennung: [SSKSK, SSKKO],
         lehrform: ["Seminar"],
         modul: ["Softskills"],
-        semester: [ss13, ws13_14, ss14, ws14_15, ss15, ws15_16, ss16],
+        semester: [ss13, ws13_14, ss14, ws14_15, ss15, ws15_16, ss16, ws16_17],
         cp: 3,
         dozent: ["David Meier", "Sharon Nemeth"],
         nameLV: "Fachspezifisches Englisch (Level 3)"
@@ -508,6 +599,16 @@ var data = {
         dozent: ["Prof. Dr. Andreas Polze", "Lena Herscheid", "Daniel Richter"],
         nameLV: "Fehlerinjektion"
     },
+	fehlertoleranteSysteme: {
+        kurz: "Fehlertolerante<br/>Systeme",
+        kennung: [OSIS],
+        lehrform: ["Vorlesung", "Seminar", "Projekt"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ws16_17],
+        cp: 6,
+        dozent: ["Prof. Dr. Andreas Polze", "Lena Feinbube", "Daniel Richter", "Andreas Grapentin"],
+        nameLV: "Fehlertolerante Systeme"
+    },
     fuehrungskompetenz: {
         kurz: "Führungs-<br />kompetenz",
         kennung: [SSKMA],
@@ -557,6 +658,16 @@ var data = {
         cp: 3,
         dozent: ["Dr. Leen Lambers"],
         nameLV: "Graphdatenbanken"
+    },
+	graphMining: {
+        kurz: "Graph Mining",
+        kennung: [BPET, OSIS],
+        lehrform: ["Vorlesung"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ws16_17],
+        cp: 3,
+        dozent: ["Prof. Dr. Emmanuel Müller", "Dr. Davide Mottin"],
+        nameLV: "Graph Mining"
     },
     geoinformationstechnologien: {
         kurz: "Geoinformations-<br />technologien",
@@ -618,6 +729,16 @@ var data = {
         dozent: ["Prof. Dr. Patrick Baudisch"],
         nameLV: "HCI Project Seminar on Building Immersive Virtual Reality Games"
     },
+	hciProjectSeminarRC3DP: {
+        kurz: "HCI Projekt<br /> Robotics, Code, 3D Printing",
+        kennung: [ITSE, HCT, SAMT],
+        lehrform: ["Seminar", "Projekt"],
+        modul: ["IT Systems Engineering", "Vertiefungsgebiete"],
+        semester: [ws16_17],
+        cp: 6,
+        dozent: ["Prof. Dr. Patrick Baudisch"],
+        nameLV: "HCI Project Seminar on Robotics, Code, and 3D Printing"
+    },
     hciProjectSeminarIM: {
         kurz: "HCI Projekt<br /> Interactive Machines",
         kennung: [ITSE, HCT, SAMT],
@@ -637,6 +758,16 @@ var data = {
         cp: 6,
         dozent: ["Prof. Dr. Patrick Baudisch"],
         nameLV: "HCI Project Seminar on Building Immersive Virtual Realities"
+    },
+	hciProjectSeminarVR: {
+        kurz: "HCI Projekt<br />VR",
+        kennung: [ITSE, HCT, SAMT],
+        lehrform: ["Seminar", "Projekt"],
+        modul: ["IT Systems Engineering", "Vertiefungsgebiete"],
+        semester: [ws16_17],
+        cp: 6,
+        dozent: ["Prof. Dr. Patrick Baudisch"],
+        nameLV: "HCI Project Seminar on Virtual Reality"
     },
     hciProjectSeminarVRG: {
         kurz: "HCI Projekt<br />VR Gaming",
@@ -893,7 +1024,7 @@ var data = {
         kennung: [SSKMA, SSKRE, SSKKO],
         lehrform: ["Seminar"],
         modul: ["Softskills"],
-        semester: [ws13_14, ws14_15, ws15_16],
+        semester: [ws13_14, ws14_15, ws15_16, ws16_17],
         cp: 6,
         dozent: ["Dr. Rouven Westphal", "Manuel Effenberg"],
         nameLV: "IT-Entrepreneurship"
@@ -923,7 +1054,7 @@ var data = {
         kennung: [SSKRE],
         lehrform: ["Vorlesung"],
         modul: ["Softskills"],
-        semester: [ws13_14, ws14_15, ws15_16],
+        semester: [ws13_14, ws14_15, ws15_16, ws16_17],
         cp: 3,
         dozent: ["Dr. Anselm Brandi-Dohrn", "Monika Menz"],
         nameLV: "IT-Recht"
@@ -953,7 +1084,7 @@ var data = {
         kennung: [SSKKO, SSKMA],
         lehrform: ["Seminar"],
         modul: ["Softskills"],
-        semester: [ss13,ws13_14, ss14, ws14_15, ss15, ws15_16, ss16],
+        semester: [ss13,ws13_14, ss14, ws14_15, ss15, ws15_16, ss16, ws16_17],
         cp: 3,
         dozent: ["Dr. Michaela Schumacher", "Eva Bilstein"],
         nameLV: "Konflikt-<br />und Kommunikationsmanagement"
@@ -1008,12 +1139,22 @@ var data = {
         dozent: ["Dr. rer. nat. Harad Sack"],
         nameLV: "A LOD of Movies - Linked Open Data Knowledge Mining"
     },
+	liveProgrammingSystems: {
+        kurz: "Live<br />Programming Systems",
+        kennung: [SAMT, OSIS],
+        lehrform: ["Seminar", "Projekt"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ws16_17],
+        cp: 6,
+        dozent: ["Prof. Dr. Robert Hirschfeld"],
+        nameLV: "Live Programming Systems"
+    },
     machineTranslation: {
         kurz: "Machine Translation",
         kennung: [ITSE, BPET],
         lehrform: ["Vorlesung"],
         modul: ["Vertiefungsgebiete"],
-        semester: [ws15_16],
+        semester: [ws15_16, ws16_17],
         cp: 3,
         dozent: ["Dr. Mariana Neves"],
         nameLV: "Machine Translation"
@@ -1023,7 +1164,7 @@ var data = {
         kennung: [SSKMA],
         lehrform: ["Vorlesung"],
         modul: ["Softskills"],
-        semester: [ss13, ss14, ws14_15, ss15, ws15_16, ss16],
+        semester: [ss13, ss14, ws14_15, ss15, ws15_16, ss16, ws16_17],
         cp: 3,
         dozent: ["Prof. Dr. Katharina Hölzle", "Prof. Dr. Eric Kearney"],
         nameLV: "Management Essentials"
@@ -1047,6 +1188,16 @@ var data = {
         cp: 6,
         dozent: ["Prof. Dr. Jürgen Döllner", "Daniel Limberger", "Stefan Buschman", "Sebastian Hahn", "Willy Scheibel"],
         nameLV: "Methods and Techniques of Software Visualization"
+    },
+	methodsInfoVis: {
+        kurz: "Methods <br />Information Visualization",
+        kennung: [ITSE, HCT, SAMT],
+        lehrform: ["Seminar", "Projekt"],
+        modul: ["IT-Systems Engineering","Vertiefungsgebiete"],
+        semester: [ws16_17],
+        cp: 6,
+        dozent: ["Prof. Dr. Jürgen Döllner", "Jan Klimke", "Benjamin Hagedorn", "Willy Scheibel"],
+        nameLV: "Methods and Techniques of Information Visualization"
     },
     middleware: {
         kurz: "Komponenten<br />& Middleware",
@@ -1103,7 +1254,7 @@ var data = {
         kennung: [ITSE, IST, OSIS],
         lehrform: ["Seminar", "Projekt"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
-        semester: [ws13_14, ws14_15, ws15_16],
+        semester: [ws13_14, ws14_15, ws15_16, ws16_17],
         cp: 6,
         dozent: ["Dr. Feng Cheng", "Prof. Dr. Christoph Meinel"],
         nameLV: "Network Security in Practice"
@@ -1158,6 +1309,16 @@ var data = {
         dozent: ["Dr. Matthias Uflacker", "Martin Faust", "David Schwalb", "Carsten Meyer", "Martin Boissier"],
         nameLV: "Parallel Programming and Algorithms for In-Memory Databases"
     },
+	parametrisierteAlgorithmen: {
+        kurz: "Parametrisierte<br />Algorithmen",
+        kennung: [IST, SAMT],
+        lehrform: ["Vorlesung", "Übung"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ws16_17],
+        cp: 6,
+        dozent: ["Prf. Dr. Tobias Friedrich", "Dr. Thomas Bläsius"],
+        nameLV: "Parametrisierte Algorithmen"
+    },
     pearlsComputerScience: {
         kurz: "Pearls of CS",
         kennung: [BPET, OSIS, SAMT],
@@ -1193,7 +1354,7 @@ var data = {
         kennung: [SSKKO, SSKMA],
         lehrform: ["Seminar"],
         modul: ["Vertiefungsgebiete"],
-        semester: [ss13, ws13_14, ss14, ws14_15, ss15, ws15_16, ss16],
+        semester: [ss13, ws13_14, ss14, ws14_15, ss15, ws15_16, ss16, ws16_17],
         cp: 3,
         dozent: ["Dr. Michaela Schumacher"],
         nameLV: "Persönlichkeit und Selbstmanagement"
@@ -1203,7 +1364,7 @@ var data = {
         kennung: [SSKMA, SSKKO],
         lehrform: ["Seminar"],
         modul: ["Softskills"],
-        semester: [ws13_14, ws14_15, ws15_16],
+        semester: [ws13_14, ws14_15, ws15_16, ws16_17],
         cp: 3,
         dozent: ["Dr. Rolf Specht"],
         nameLV: "Personal Management Skills"
@@ -1233,9 +1394,9 @@ var data = {
         kennung: [ITSE, IST, OSIS],
         lehrform: ["Seminar"],
         modul: ["Vertiefungsgebiete", "IT-Systems Engineering"],
-        semester: [ws15_16],
+        semester: [ws15_16, ws16_17],
         cp: 6,
-        dozent: ["Prof. Dr. Christoph Meinel", "Haojin Yang "],
+        dozent: ["Prof. Dr. Christoph Meinel", "Haojin Yang", "Xiaoyin Che", "Cheng Wang"],
         nameLV: "Practical Applications of Multimedia Retrieval"
     },
     practicalVideoAnalyses: {
@@ -1258,6 +1419,16 @@ var data = {
         dozent: ["Prof. Dr. Christoph Meinel", "Hosnieh Rafiee"],
         nameLV: "Privacy and Security in IPv6"
     },
+	processingVis3DGeodata: {
+        kurz: "Proc&Vis<br />of 3D Geodata",
+        kennung: [ITSE, HCT, IST],
+        lehrform: ["Projekt", "Seminar"],
+        modul: ["Vertiefungsgebiete", "IT-Systems Engineering"],
+        semester: [ws16_17],
+        cp: 6,
+        dozent: ["Prof. Dr. Jürgen Döllner", "Rico Richter", "Christoph Oehlke", "Dietmar Funck"],
+        nameLV: "Processing and Visualization of 3D Geodata"
+    },
     productInnovationAndEngineering: {
         kurz: "ME310 II",
         kennung: [ITSE, BPET, HCT],
@@ -1273,7 +1444,7 @@ var data = {
         kennung: [ITSE, BPET],
         lehrform: ["Seminar", "Projekt"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
-        semester: [ws13_14, ws14_15, ws15_16],
+        semester: [ws13_14, ws14_15, ws15_16, ws16_17],
         cp: 6,
         dozent: ["Dr. Matthias Uflacker", "Dipl.-Kfm. Jens Krüger", "Thomas Kowark", "Franziska Häger", "Keven Richly"],
         nameLV: "Global Team-Based Product Innovation & Engineering I - ME 310"
@@ -1293,7 +1464,7 @@ var data = {
         kennung: [ITSE, BPET],
         lehrform: ["Seminar", "Projekt"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
-        semester: [ws13_14, ws14_15, ws15_16],
+        semester: [ws13_14, ws14_15, ws15_16, ws16_17],
         cp: 3,
         dozent: ["Dr. Matthias Uflacker", "Dipl.-Kfm. Jens Krüger", "Thomas Kowark", "Franziska Häger"],
         nameLV: "Global Team-Based Product Innovation & Engineering III - ME 310 Coaching Research"
@@ -1338,6 +1509,16 @@ var data = {
         dozent: ["Prof. Dr. Friedrich", "Dr. Timo Kötzing"],
         nameLV: "Randomisierte Algorithmen"
     },
+	randomisierteAlgorithmen2: {
+        kurz: "Randomisierte<br />Algorithmen 2",
+        kennung: [IST, SAMT],
+        lehrform: ["Vorlesung", "Übung"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ws16_17],
+        cp: 6,
+        dozent: ["Prof. Dr. Friedrich", "Dr. Timo Kötzing"],
+        nameLV: "Randomisierte Algorithmen 2"
+    },
     recommenderSystems: {
         kurz: "Recommender<br />Systems",
         kennung: [SAMT, OSIS],
@@ -1347,6 +1528,16 @@ var data = {
         cp: 3,
         dozent: ["Prof. Dr. Felix Naumann", "Dr. Ralf Krestel"],
         nameLV: "Recommender Systems"
+    },
+	resourceManagementPower: {
+        kurz: "Resource<br />Management Power",
+        kennung: [OSIS],
+        lehrform: ["Seminar"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ws16_17],
+        cp: 3,
+        dozent: ["Prof. Dr. Andreas Polze", "Max Plauth", "Felix Eberhardt", "Frank Feinbube"],
+        nameLV: "Resource Management on Power"
     },
     reverseengineering: {
         kurz: "Reverse<br />Engineering",
@@ -1396,7 +1587,17 @@ var data = {
         semester: [ss15, ss16],
         cp: 6,
         dozent: ["Prof. Dr. Christoph Meinel", "Konrad-Felix Krentz"],
-        nameLV: "Security for the Internet of Things "
+        nameLV: "Security for the Internet of Things"
+    },
+	securingCloudStorages: {
+        kurz: "Securing Cloud<br /> Storages",
+        kennung: [ITSE, IST, OSIS],
+        lehrform: ["Seminar", "Projekt"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ws16_17],
+        cp: 6,
+        dozent: ["Prof. Dr. Christoph Meinel", "Hendrik Graupner", "Kennedy Torkura", "Aragats Amirkhanvan"],
+        nameLV: "Securing Cloud Storages"
     },
     selbstorganisation: {
         kurz: "StubS",
@@ -1523,7 +1724,7 @@ var data = {
         kennung: [ITSE, IST, OSIS],
         lehrform: ["Seminar", "Projekt"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
-        semester: [ws14_15, ws15_16],
+        semester: [ws14_15, ws15_16, ws16_17],
         cp: 6,
         dozent: ["Prof. Dr. Christoph Meinel", "Philipp Berger", "Patrick Hennig"],
         nameLV: "Social Media Mining"
@@ -1583,7 +1784,7 @@ var data = {
         kennung: [OSIS, SAMT],
         lehrform: ["Seminar", "Projekt"],
         modul: ["Vertiefungsgebiete"],
-        semester: [ws15_16],
+        semester: [ws15_16, ws16_17],
         cp: 6,
         dozent: ["Prof. Dr. Robert Hirschfeld"],
         nameLV: "Software Design"
@@ -1593,10 +1794,20 @@ var data = {
         kennung: [ITSE, SAMT],
         lehrform: ["Vorlesung", "Übung", "Projekt"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
-        semester: [ws13_14, ws14_15],
+        semester: [ws13_14, ws14_15, ws16_17],
         cp: 6,
         dozent: ["Prof. Dr. Holger Giese", "Sebastian Wätzoldt", "Joachim Hänsel"],
         nameLV: "Software Engineering for Embedded Systems"
+    },
+	softwareEngineeringSelfAdaptiveSystems: {
+        kurz: "SE for<br />Self-Adaptive Systems",
+        kennung: [ITSE, SAMT],
+        lehrform: ["Vorlesung", "Übung", "Projekt"],
+        modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
+        semester: [ws16_17],
+        cp: 6,
+        dozent: ["Prof. Dr. Holger Giese", "Sona Ghahremani"],
+        nameLV: "Software Engineering for Self-Adaptive Systems"
     },
     softwareProfiling: {
         kurz: "Software Profiling",
@@ -1653,7 +1864,7 @@ var data = {
         kennung: [OSIS, SAMT],
         lehrform: ["Vorlesung", "Projekt"],
         modul: ["Vertiefungsgebiete"],
-        semester: [ws15_16],
+        semester: [ws15_16, ws16_17],
         cp: 6,
         dozent: ["Dr. Leen Lambers"],
         nameLV: "Testen, Verifizieren und Analysieren von Software"
@@ -1673,7 +1884,7 @@ var data = {
         kennung: [IST, SAMT, OSIS],
         lehrform: ["Seminar"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
-        semester: [ws14_15, ss15],
+        semester: [ws14_15, ss15, ws16_17],
         cp: 3,
         dozent: ["Prof. Dr. Andreas Polze"],
         nameLV: "Trends in Betriebssystemen (Forschungsseminar)"
@@ -1683,9 +1894,9 @@ var data = {
         kennung: [ITSE, BPET, HCT],
         lehrform: ["Seminar"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
-        semester: [ws15_16],
+        semester: [ws15_16, ws16_17],
         cp: 3,
-        dozent: ["Dr. Matthias Uflacker"],
+        dozent: ["Dr. Matthias Uflacker", "Dr. Mariana Neves"],
         nameLV: "Trends in Bioinformatics"
     },
     trendsInBPMN: {
@@ -1713,7 +1924,7 @@ var data = {
         kennung: [ ITSE, SAMT],
         lehrform: ["Seminar"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
-        semester: [ss16],
+        semester: [ss16, ws16_17],
         cp: 3,
         dozent: ["Prof. Dr. Holger Giese,"],
         nameLV: "Trends in Software Engineering for Self-Adaptive Software"
@@ -1743,7 +1954,7 @@ var data = {
         kennung: [ITSE, BPET, HCT],
         lehrform: ["Seminar"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
-        semester: [ws14_15, ws15_16],
+        semester: [ws14_15, ws15_16, ws16_17],
         cp: 6,
         dozent: ["Prof. Dr. Hasso Plattner"],
         nameLV: "Trends and Concepts in the Software Industry II: Development of Enterprise Software 6LP"
@@ -1763,7 +1974,7 @@ var data = {
         kennung: [SSKKO],
         lehrform: ["Seminar"],
         modul: ["Softskills"],
-        semester: [ss13, ss14, ws13_14, ws14_15, ss15, ws15_16, ss16],
+        semester: [ss13, ss14, ws13_14, ws14_15, ss15, ws15_16, ss16, ws16_17],
         cp: 3,
         dozent: ["Dr. Werner Dieball"],
         nameLV: "Überzeugend präsentieren -<br />Noch besser auftreten!"
@@ -1793,7 +2004,7 @@ var data = {
         kennung: [OSIS, SAMT],
         lehrform: ["Projekt", "Seminar"],
         modul: ["Vertiefungsgebiete"],
-        semester: [ws13_14, ws14_15],
+        semester: [ws13_14, ws14_15, ws16_17],
         cp: 6,
         dozent: ["Prof. Dr. Robert Hirschfeld", "Tobias Pape", "Tim Felgentreff", "Bastian Steinert"],
         nameLV: "Virtuelle Maschinen und Ausführungsumgebungen"
