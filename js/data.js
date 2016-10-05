@@ -1017,7 +1017,7 @@ var data = {
         semester: [ss15],
         cp: 6,
         dozent: ["Dr. Matthias Trapp", "Amir Semmo", "Sebastian Pasewaldt"],
-        nameLV: "Interactive Representations of Data Structures and Algorithms"
+        nameLV: "Introduction to Visualization"
     },
     itEntrepreneurship: {
         kurz: "Entrepreneurship",
