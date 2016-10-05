@@ -34,7 +34,7 @@
     ss15 = "SS15",
     ws15_16 = "WS15/16",
     ss16 = "SS16",
-	ws16_17 = "WS16/17";
+    ws16_17 = "WS16/17";
 
 var BPET = "BPET",
     SAMT = "SAMT",
@@ -49,7 +49,7 @@ var BPET = "BPET",
     SSKKO = "SSK-KO";
 
 var data = {
-	advancedAlgorithmicProblemSolving: {
+    advancedAlgorithmicProblemSolving: {
         kurz: "Advanced <br /> Algo. Problem Solving",
         kennung: [IST, SAMT],
         lehrform: ["Vorlesung", "Übung"],
@@ -94,7 +94,7 @@ var data = {
         kennung: [SSKDT],
         lehrform: ["Seminar", "Projekt"],
         modul: ["Softskills"],
-        semester: [ws15_16, ss16, ws16_17,
+        semester: [ws15_16, ss16, ws16_17],
         cp: 9,
         dozent: ["Dr. Claudia Nicolai", "Prof. Ulrich Weinberg"],
         nameLV: "Advanced Design Thinking (D-School Advanced Track)"
@@ -109,7 +109,7 @@ var data = {
         dozent: ["Prof. Dr. Holger Giese", "M. Sc. Thomas Beyhl"],
         nameLV: "Advanced MDE: Model Management"
     },
-	advancedProgrammingCPlusPlus: {
+    advancedProgrammingCPlusPlus: {
         kurz: "Advanced <br /> Programming in C++",
         kennung: [ITSE, HCT, SAMT],
         lehrform: ["Vorlesung", "Übung"],
@@ -169,7 +169,7 @@ var data = {
         dozent: ["Dr. Ralf Krestel"],
         nameLV: "Advanced Topic Modeling"
     },
-	aeProjectSeminarAnalysisComplexNetworks: {
+    aeProjectSeminarAnalysisComplexNetworks: {
         kurz: "AE Prject <br /> Sem. Analysis Complex Networks",
         kennung: [IST, SAMT],
         lehrform: ["Projekt", "Seminar"],
@@ -199,7 +199,7 @@ var data = {
         dozent: ["Prof. Dr. Tobias Friedrich"],
         nameLV: "Algorithmic Gems"
     },
-	algorithmicHits80s90s: {
+    algorithmicHits80s90s: {
         kurz: "Algorithmic<br /> Hits of the 80s and 90s",
         kennung: [IST, SAMT],
         lehrform: ["Seminar"],
@@ -269,7 +269,7 @@ var data = {
         dozent: ["Prof. Dr. Mathias Weske", "Matthias Kunze"],
         nameLV: "Business Process Compliance"
     },
-	businessProcessCompliance2: {
+    businessProcessCompliance2: {
         kurz: "BPC",
         kennung: [BPET, OSIS],
         lehrform: ["Vorlesung"],
@@ -379,7 +379,7 @@ var data = {
         dozent: ["Dr. Gjergji Kasneci", "Dr. Ralf Krestel", "Maximilian Jenders"],
         nameLV: "Data Mining and Probabilistic Reasoning"
     },
-	dataMining2: {
+    dataMining2: {
         kurz: "Data<br />Mining and Probabilistic Reasoning",
         kennung: [OSIS, ITSE],
         lehrform: ["Vorlesung", "Übung"],
@@ -388,7 +388,7 @@ var data = {
         cp: 6,
         dozent: ["Dr. Ralf Krestel"],
         nameLV: "Data Mining and Probabilistic Reasoning"
-	},
+    },
     dataProfilingAndCleansing: {
         kurz: "Data Profiling<br />and Cleansing",
         kennung: [BPET, OSIS],
@@ -399,7 +399,7 @@ var data = {
         dozent: ["Prof. Dr. Felix Naumann" , "Thorsten Papenbrock"],
         nameLV: "Data Profiling and Data Cleansing"
     },
-	decisionAnalysisImplementation: {
+    decisionAnalysisImplementation: {
         kurz: "Decision<br />Analysis and Implementation",
         kennung: [BPET, OSIS],
         lehrform: ["Seminar"],
@@ -459,7 +459,7 @@ var data = {
         dozent: ["Dr. Claudia Nicolai", "Prof. Ulrich Weinberg"],
         nameLV: "Design Thinking Basics (D-School Basic Track)"
     },
-	developYourOwnDatabase: {
+    developYourOwnDatabase: {
         kurz: "Develop your<br />own Database",
         kennung: [BPET, OSIS, SAMT],
         lehrform: ["Projekt", "Seminar"],
@@ -479,7 +479,7 @@ var data = {
         dozent: ["Prof. Dr. Felix Naumann", " Toni Grütze", "Sebastian Kruse"],
         nameLV: "Distributed Big Data Analytics"
     },
-	distributedDuplicateDetection: {
+    distributedDuplicateDetection: {
         kurz: "Distributed <br />Duplicate Detection",
         kennung: [BPET, OSIS],
         lehrform: ["Projekt", "Seminar"],
@@ -599,7 +599,7 @@ var data = {
         dozent: ["Prof. Dr. Andreas Polze", "Lena Herscheid", "Daniel Richter"],
         nameLV: "Fehlerinjektion"
     },
-	fehlertoleranteSysteme: {
+    fehlertoleranteSysteme: {
         kurz: "Fehlertolerante<br/>Systeme",
         kennung: [OSIS],
         lehrform: ["Vorlesung", "Seminar", "Projekt"],
@@ -659,7 +659,7 @@ var data = {
         dozent: ["Dr. Leen Lambers"],
         nameLV: "Graphdatenbanken"
     },
-	graphMining: {
+    graphMining: {
         kurz: "Graph Mining",
         kennung: [BPET, OSIS],
         lehrform: ["Vorlesung"],
@@ -729,7 +729,7 @@ var data = {
         dozent: ["Prof. Dr. Patrick Baudisch"],
         nameLV: "HCI Project Seminar on Building Immersive Virtual Reality Games"
     },
-	hciProjectSeminarRC3DP: {
+    hciProjectSeminarRC3DP: {
         kurz: "HCI Projekt<br /> Robotics, Code, 3D Printing",
         kennung: [ITSE, HCT, SAMT],
         lehrform: ["Seminar", "Projekt"],
@@ -759,7 +759,7 @@ var data = {
         dozent: ["Prof. Dr. Patrick Baudisch"],
         nameLV: "HCI Project Seminar on Building Immersive Virtual Realities"
     },
-	hciProjectSeminarVR: {
+    hciProjectSeminarVR: {
         kurz: "HCI Projekt<br />VR",
         kennung: [ITSE, HCT, SAMT],
         lehrform: ["Seminar", "Projekt"],
@@ -1139,7 +1139,7 @@ var data = {
         dozent: ["Dr. rer. nat. Harad Sack"],
         nameLV: "A LOD of Movies - Linked Open Data Knowledge Mining"
     },
-	liveProgrammingSystems: {
+    liveProgrammingSystems: {
         kurz: "Live<br />Programming Systems",
         kennung: [SAMT, OSIS],
         lehrform: ["Seminar", "Projekt"],
@@ -1189,7 +1189,7 @@ var data = {
         dozent: ["Prof. Dr. Jürgen Döllner", "Daniel Limberger", "Stefan Buschman", "Sebastian Hahn", "Willy Scheibel"],
         nameLV: "Methods and Techniques of Software Visualization"
     },
-	methodsInfoVis: {
+    methodsInfoVis: {
         kurz: "Methods <br />Information Visualization",
         kennung: [ITSE, HCT, SAMT],
         lehrform: ["Seminar", "Projekt"],
@@ -1309,7 +1309,7 @@ var data = {
         dozent: ["Dr. Matthias Uflacker", "Martin Faust", "David Schwalb", "Carsten Meyer", "Martin Boissier"],
         nameLV: "Parallel Programming and Algorithms for In-Memory Databases"
     },
-	parametrisierteAlgorithmen: {
+    parametrisierteAlgorithmen: {
         kurz: "Parametrisierte<br />Algorithmen",
         kennung: [IST, SAMT],
         lehrform: ["Vorlesung", "Übung"],
@@ -1419,7 +1419,7 @@ var data = {
         dozent: ["Prof. Dr. Christoph Meinel", "Hosnieh Rafiee"],
         nameLV: "Privacy and Security in IPv6"
     },
-	processingVis3DGeodata: {
+    processingVis3DGeodata: {
         kurz: "Proc&Vis<br />of 3D Geodata",
         kennung: [ITSE, HCT, IST],
         lehrform: ["Projekt", "Seminar"],
@@ -1509,7 +1509,7 @@ var data = {
         dozent: ["Prof. Dr. Friedrich", "Dr. Timo Kötzing"],
         nameLV: "Randomisierte Algorithmen"
     },
-	randomisierteAlgorithmen2: {
+    randomisierteAlgorithmen2: {
         kurz: "Randomisierte<br />Algorithmen 2",
         kennung: [IST, SAMT],
         lehrform: ["Vorlesung", "Übung"],
@@ -1529,7 +1529,7 @@ var data = {
         dozent: ["Prof. Dr. Felix Naumann", "Dr. Ralf Krestel"],
         nameLV: "Recommender Systems"
     },
-	resourceManagementPower: {
+    resourceManagementPower: {
         kurz: "Resource<br />Management Power",
         kennung: [OSIS],
         lehrform: ["Seminar"],
@@ -1589,7 +1589,7 @@ var data = {
         dozent: ["Prof. Dr. Christoph Meinel", "Konrad-Felix Krentz"],
         nameLV: "Security for the Internet of Things"
     },
-	securingCloudStorages: {
+    securingCloudStorages: {
         kurz: "Securing Cloud<br /> Storages",
         kennung: [ITSE, IST, OSIS],
         lehrform: ["Seminar", "Projekt"],
@@ -1799,7 +1799,7 @@ var data = {
         dozent: ["Prof. Dr. Holger Giese", "Sebastian Wätzoldt", "Joachim Hänsel"],
         nameLV: "Software Engineering for Embedded Systems"
     },
-	softwareEngineeringSelfAdaptiveSystems: {
+    softwareEngineeringSelfAdaptiveSystems: {
         kurz: "SE for<br />Self-Adaptive Systems",
         kennung: [ITSE, SAMT],
         lehrform: ["Vorlesung", "Übung", "Projekt"],
