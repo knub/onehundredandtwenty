@@ -207,7 +207,7 @@ var data = {
         semester: [ws16_17],
         cp: 3,
         dozent: ["Prof. Dr. Tobias Friedrich", "Martin Schirneck"],
-        nameLV: "Algorithmic Hits of the 0s and 90s"
+        nameLV: "Algorithmic Hits of the 80s and 90s"
     },
     algorithmix: {
         kurz: "Algorithmix",
