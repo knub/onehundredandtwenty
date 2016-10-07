@@ -170,7 +170,7 @@ var data = {
         nameLV: "Advanced Topic Modeling"
     },
     aeProjectSeminarAnalysisComplexNetworks: {
-        kurz: "AE Prject <br /> Sem. Analysis Complex Networks",
+        kurz: "Analysis Complex<br />Networks",
         kennung: [IST, SAMT],
         lehrform: ["Projekt", "Seminar"],
         modul: ["Vertiefungsgebiete"],
@@ -380,7 +380,7 @@ var data = {
         nameLV: "Data Mining and Probabilistic Reasoning"
     },
     dataMining2: {
-        kurz: "Data<br />Mining and Probabilistic Reasoning",
+        kurz: "Data<br />Mining",
         kennung: [OSIS, ITSE],
         lehrform: ["Vorlesung", "Übung"],
         modul: ["Vertiefungsgebiete"],
@@ -1180,7 +1180,7 @@ var data = {
         nameLV: "Methodik der Geoinformationstechnik"
     },
     methodsSoftVis: {
-        kurz: "Methods <br />Software Visualization",
+        kurz: "Software<br />Visualization",
         kennung: [ITSE, HCT, SAMT],
         lehrform: ["Seminar"],
         modul: ["IT-Systems Engineering","Vertiefungsgebiete"],
@@ -1190,7 +1190,7 @@ var data = {
         nameLV: "Methods and Techniques of Software Visualization"
     },
     methodsInfoVis: {
-        kurz: "Methods <br />Information Visualization",
+        kurz: "Information<br />Visualization",
         kennung: [ITSE, HCT, SAMT],
         lehrform: ["Seminar", "Projekt"],
         modul: ["IT-Systems Engineering","Vertiefungsgebiete"],
