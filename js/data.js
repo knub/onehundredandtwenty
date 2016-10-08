@@ -214,7 +214,17 @@ var data = {
         kennung: [IST, OSIS, SAMT],
         lehrform: ["Vorlesung (flipped classroom)", "Übung"],
         modul: ["Vertiefungsgebiete"],
-        semester: [ws15_16, ws16_17],
+        semester: [ws15_16],
+        cp: 6,
+        dozent: ["Prof. Dr. Tobias Friedrich", "Dr. Timo Kötzing"],
+        nameLV: "Algorithmix"
+    },
+	algorithmix1617: {
+        kurz: "Algorithmix",
+        kennung: [IST, SAMT],
+        lehrform: ["Vorlesung", "Übung"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ws16_17],
         cp: 6,
         dozent: ["Prof. Dr. Tobias Friedrich", "Dr. Timo Kötzing"],
         nameLV: "Algorithmix"
@@ -314,7 +324,7 @@ var data = {
         kennung: [IST, OSIS, ITSE],
         lehrform: ["Seminar", "Projekt"],
         modul: ["Vertiefungsgebiete"],
-        semester: [ws14_15, ws15_16],
+        semester: [ws14_15, ws15_16, ws16_17],
         cp: 6,
         dozent: ["Prof. Dr. Christoph Meinel", "Hendrik Graupner", "Kennedy Torkura"],
         nameLV: "Securing Cloud Storages"
@@ -1059,7 +1069,7 @@ var data = {
         dozent: ["Dr. Anselm Brandi-Dohrn", "Monika Menz"],
         nameLV: "IT-Recht"
     },
-    komplexitaestheorie: {
+    komplexitaetstheorie: {
         kurz: "Komplexitätstheorie",
         kennung: [ITSE, IST, OSIS],
         lehrform: ["Vorlesung", "Übung"],
@@ -1086,7 +1096,7 @@ var data = {
         modul: ["Softskills"],
         semester: [ss13,ws13_14, ss14, ws14_15, ss15, ws15_16, ss16, ws16_17],
         cp: 3,
-        dozent: ["Dr. Michaela Schumacher", "Eva Bilstein"],
+        dozent: ["Eva Bilstein"],
         nameLV: "Konflikt-<br />und Kommunikationsmanagement"
     },
     kontextorientiertesProgrammieren: {
@@ -1316,7 +1326,7 @@ var data = {
         modul: ["Vertiefungsgebiete"],
         semester: [ws16_17],
         cp: 6,
-        dozent: ["Prf. Dr. Tobias Friedrich", "Dr. Thomas Bläsius"],
+        dozent: ["Prof. Dr. Tobias Friedrich", "Dr. Thomas Bläsius"],
         nameLV: "Parametrisierte Algorithmen"
     },
     pearlsComputerScience: {
@@ -1589,16 +1599,6 @@ var data = {
         dozent: ["Prof. Dr. Christoph Meinel", "Konrad-Felix Krentz"],
         nameLV: "Security for the Internet of Things"
     },
-    securingCloudStorages: {
-        kurz: "Securing Cloud<br /> Storages",
-        kennung: [ITSE, IST, OSIS],
-        lehrform: ["Seminar", "Projekt"],
-        modul: ["Vertiefungsgebiete"],
-        semester: [ws16_17],
-        cp: 6,
-        dozent: ["Prof. Dr. Christoph Meinel", "Hendrik Graupner", "Kennedy Torkura", "Aragats Amirkhanvan"],
-        nameLV: "Securing Cloud Storages"
-    },
     selbstorganisation: {
         kurz: "StubS",
         kennung: [SSKSK],
@@ -1614,7 +1614,7 @@ var data = {
         kennung: [ITSE, SAMT],
         lehrform: ["Vorlesung", "Übung", "Projekt"],
         modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
-        semester: [ss14, ss15],
+        semester: [ss14, ss15, ws16_17],
         cp: 6,
         dozent: ["Prof. Dr. Holger Giese", "Thomas Vogel"],
         nameLV: "Software Engineering for Self-adaptive Systems"
@@ -1798,16 +1798,6 @@ var data = {
         cp: 6,
         dozent: ["Prof. Dr. Holger Giese", "Sebastian Wätzoldt", "Joachim Hänsel"],
         nameLV: "Software Engineering for Embedded Systems"
-    },
-    softwareEngineeringSelfAdaptiveSystems: {
-        kurz: "SE for<br />Self-Adaptive Systems",
-        kennung: [ITSE, SAMT],
-        lehrform: ["Vorlesung", "Übung", "Projekt"],
-        modul: ["IT-Systems Engineering", "Vertiefungsgebiete"],
-        semester: [ws16_17],
-        cp: 6,
-        dozent: ["Prof. Dr. Holger Giese", "Sona Ghahremani"],
-        nameLV: "Software Engineering for Self-Adaptive Systems"
     },
     softwareProfiling: {
         kurz: "Software Profiling",
