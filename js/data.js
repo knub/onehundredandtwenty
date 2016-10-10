@@ -210,7 +210,7 @@ var data = {
         nameLV: "Algorithmic Hits of the 80s and 90s"
     },
     algorithmix: {
-        kurz: "Algorithmix",
+        kurz: "Algorithmix<br />WS15/16",
         kennung: [IST, OSIS, SAMT],
         lehrform: ["Vorlesung (flipped classroom)", "Übung"],
         modul: ["Vertiefungsgebiete"],
@@ -1069,7 +1069,7 @@ var data = {
         dozent: ["Dr. Anselm Brandi-Dohrn", "Monika Menz"],
         nameLV: "IT-Recht"
     },
-    komplexitaetstheorie: {
+    komplexitaestheorie: {
         kurz: "Komplexitätstheorie",
         kennung: [ITSE, IST, OSIS],
         lehrform: ["Vorlesung", "Übung"],
