@@ -1601,7 +1601,7 @@ var data = {
         kennung: [SSKSK],
         lehrform: ["Seminarleitung"],
         modul: [SOFTSKILLS],
-        semester: [ws14_15, ws15_16],
+        semester: [ws14_15, ws15_16, ws16_17],
         cp: 3,
         dozent: ["Dr. Ralf Wollowski"],
         nameLV: "Betreuung des Studienbegleitenden Seminars für die Erstis"
