@@ -216,7 +216,7 @@ var data = {
         dozent: ["Prof. Dr. Tobias Friedrich", "Dr. Timo Kötzing"],
         nameLV: "Algorithmix"
     },
-	algorithmix1617: {
+    algorithmix1617: {
         kurz: "Algorithmix",
         kennung: [IST, SAMT],
         lehrform: ["Vorlesung", "Übung"],
@@ -1575,6 +1575,16 @@ var data = {
         cp: 3,
         dozent: ["Dr. techn. Markus Jobst", "Sebastian Pasewaldt"],
         nameLV: "Schnittstellen der Geoinformation und Geokommunikation"
+    },
+    schulCloudKonzepte: {
+        kurz: "Schul-Cloud",
+        kennung: [ITSE, IST, OSIS],
+        lehrform: ["Seminar"],
+        modul: [IT_SYSTEMS_ENGINEERING, VERTIEFUNG],
+        semester: [ws16_17],
+        cp: 6,
+        dozent: ["Prof. Dr. Christoph Meinel",  "Jan Renz"],
+        nameLV: "Einsatz von cloud- und webbasierten Konzepten im schulischen Kontext"
     },
     searchEngineImplementation: {
         kurz: "Search Engine",
