@@ -12,16 +12,16 @@ var studyRegulations = {
 	modules: ["ITSE", "BPET", "HCT", "IST", "OSIS", "SAMT"],
 };
 var semesterManager = {
-	semesters: ["SS13", "WS13/14", "SS14", "WS14/15", "SS15", "WS15/16", "SS16", "WS16/17", "SS17", "WS17/18", "SS18", "WS18/19", "SS19"],
+	semesters: ["SS13", "WS13/14", "SS14", "WS14/15", "SS15", "WS15/16", "SS16", "WS16/17", "SS17", "WS17/18", "SS18", "WS18/19", "SS19", "WS19/20", "SS20", "WS20/21", "SS21", "WS21/22", "SS22", "WS22/23", "SS23", "WS23/24", "SS24", "WS24/25"],
 	shownSemesters: [
 	/*
 		"SS13"
 		*/
 	],
 	numberDisplayed: 4,
-	current: "WS16/17",
-	lastSummerSemester: "SS16",  /*one of these has to be the current semester*/
-	lastWinterSemester: "WS16/17", /*one of these has to be the current semester*/
+	current: "SS21",
+	lastSummerSemester: "SS24",  /*one of these has to be the current semester*/
+	lastWinterSemester: "WS24/25", /*one of these has to be the current semester*/
 	/* the semester that is the first semester when you first start the application */
 	startswith: "WS16/17",
 	updateSemester: function(semester_number, semester_string) {

@@ -7,13 +7,16 @@ import re
 import codecs
 
 lehrformStrings = {
-    "PS"    : [u"Projekt", u"Seminar"],
+    "PS"    : [u"Projekt", u"Seminar", u"Projektseminar", u"Projekt / Seminar", u"Seminar / Projekt"],
     "V"     : [u"Vorlesung"],
     "S"     : [u"Seminar"],
-    "BS"    : [u"Seminar"],
+    "VS"    : [u"Vorlesung / Seminar"],
+    "BS"    : [u"Seminar", "Blockseminar"],
     "SP"    : [u"Seminar", u"Projekt"],
-    "VU"    : [u"Vorlesung", u"Übung"],
-    "VP"    : [u"Vorlesung", u"Projekt"],
+    "SPB"   : [u"Seminar / P (Block)"],
+    "VU"    : [u"Vorlesung", "Übung", "Vorlesung / Übung", "Lectures and Exercises"],
+    "VP"    : [u"Vorlesung", u"Projekt", "Vorlesung / Projekt"],
+    "VB"    : [u"V (Block)"],
     "MP"    : False
     #more?
 }
@@ -22,12 +25,17 @@ sskStrings = {
     "Kommunikation"         : u"SSKKO",
     "Schlüsselkompetenzen"  : u"SSKSK",
     "Management"            : u"SSKMA",
+    "Management und Leitung" : u"SSKMA",
     "Recht"                 : u"SSKRE",
-    "Design Thinking"       : u"SSKDT"
+    "Recht und Wirtschaft"  : u"SSKRE",
+    "Design Thinking"       : u"SSKDT",
+    "Design Thinking Basic" : u"SSKDT",
+    "Design Thinking Advanced" : u"SSKDT"
 }
 
 vertiefungStrings = {
-    "Internet &amp; Security Technology"                            : u"IST",
+    #"Internet &amp; Security Technology"                            : u"IST",
+    "Internet, Security &amp; Algorithm Engineering"                : u"ISAE",
     "Software Architecture &amp; Modeling Technology"               : u"SAMT",
     "Operating Systems &amp; Information Systems Technology"        : u"OSIS",
     "Business Process &amp; Enterprise Technology"                  : u"BPET",
@@ -35,16 +43,20 @@ vertiefungStrings = {
 }
 
 itseStrings = {
-    "IT-Systems Engineering A" : u"ITSE",
-    "IT-Systems Engineering B" : u"ITSE",
-    "IT-Systems Engineering C" : u"ITSE",
-    "IT-Systems Engineering D" : u"ITSE"
+    #"IT-Systems Engineering A" : u"ITSE",
+    #"IT-Systems Engineering B" : u"ITSE",
+    #"IT-Systems Engineering C" : u"ITSE",
+    #"IT-Systems Engineering D" : u"ITSE"
+    "ITSE-Entwurf" : u"ITSE",
+    "ITSE-Konstruktion" : u"ITSE",
+    "ITSE-Analyse" : u"ITSE",
+    "ITSE-Maintenance" : u"ITSE"
 }
 
 def URLForSemester(semester):
     # returns list of courses for semester
     if semester == "now":
-        url = "http://hpi.de/studium/lehrveranstaltungen/it-systems-engineering.html"
+        url = "http://hpi.de/studium/lehrveranstaltungen/it-systems-engineering-ma.html"
     else:
         year = int(semester.lstrip("wWsS"))
         if year > 99:
@@ -69,7 +81,7 @@ def URLsPerSemester(url):
     for line in site:
         if (line.strip().startswith("<h1>IT-Systems Engineering MA</h1>")):
             break
-    pattern = re.compile(r"studium/lehrveranstaltungen/it\-systems\-engineering/lehrveranstaltung.*?\.html")
+    pattern = re.compile(r"studium/lehrveranstaltungen/it\-systems\-engineering-ma/lehrveranstaltung.*?\.html")
     urls = []
     for line in site:
         if (line.strip().startswith('<a class="courselink" href="')):
@@ -92,7 +104,7 @@ def listOfLVs(urls):
 
 def parseLVPage(url):
     # returns dictionary containing information about the course
-    
+    print(url)
     page = urllib.urlopen(url)
     for line in page:
         if (line.strip().startswith('<div class="tx-ciuniversity-course">')): #kennzeichnet die entsprechenden Informationen
@@ -126,7 +138,7 @@ def parseLVPage(url):
     dozentenPattern = re.compile("""w*.*?\<i\>\<a.*?\>(.*?)\</a\>""")
     dozents = []
     while (line):
-        if (line.strip().startswith("<br />")):
+        if (line.strip().startswith("<p></p>")):
             break
         else:
             dozent = re.search(dozentenPattern, line)
@@ -170,11 +182,12 @@ def parseLVPage(url):
 ##                                                                            ##
 ################################################################################
 
-    lehrformPattern = re.compile("""w*\<li\>Lehrform : (.*?)\</li\>""")
+    lehrformPattern = re.compile("""w*\<li\>Lehrform: (.*?)\</li\>""")
     while (line):
         lehrform = re.search(lehrformPattern, line)
         if (lehrform):
-            lehrform = lehrformStrings[lehrform.group(1)]
+            lehrform_short = lehrform.group(1)
+            lehrform = lehrform_short if any(lehrformString and (lehrform_short in lehrformString) for lehrformString in lehrformStrings.values()) else lehrformStrings[lehrform_short.upper()] if lehrform_short else ''
             break
         line = page.next()
     
@@ -188,11 +201,15 @@ def parseLVPage(url):
 ################################################################################
 
     modulpattern = re.compile("""w*\<li\>(.*?)\</li\>""")
-    begin = False
+    begin = 0
     modules = []
     while (line):
-        if not (begin):
-            begin = line.strip().startswith("<h2>Module</h2>")  # begin
+        if begin == 0:
+            if line.strip().startswith("<h2>Studiengänge & Module</h2>"):
+                begin = 1
+        elif begin == 1:
+            if line.strip().startswith("IT-Systems Engineering MA"):
+                begin = 2
         elif (line.strip()):
             module = re.search(modulpattern, line)
             if (module):
@@ -213,6 +230,14 @@ def parseLVPage(url):
         elif (itseStrings.get(module)):
             kennung.add(itseStrings.get(module))
             modul.add("IT-Systems Engineering")
+        else:
+            for vertiefungString in vertiefungStrings.values():
+                if module.startswith(vertiefungString):
+                    kennung.add(vertiefungString)
+                    modul.add("Vertiefungsgebiet")
+
+    if not modul: import pdb; pdb.set_trace()
+    if not kennung: import pdb; pdb.set_trace()
     modul = list(modul)
     kennung = list(kennung)
 
@@ -258,6 +283,7 @@ place = raw_input("Please input the name of the local file that the JSON dump sh
 dumpfile = codecs.open("./" + place, "w", encoding='utf-8')
 
 lvs = listOfLVs(URLsPerSemester(URLForSemester(semester)))
-dumpfile.write(json.dumps(lvs, ensure_ascii=False, indent=4))
+#dumpfile.write(json.dumps(lvs, ensure_ascii=False, indent=4))
+dumpfile.write(json.dumps(lvs))
 
 dumpfile.close()

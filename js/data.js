@@ -27,7 +27,23 @@
     ss15 = "SS15",
     ws15_16 = "WS15/16",
     ss16 = "SS16",
-    ws16_17 = "WS16/17";
+    ws16_17 = "WS16/17",
+    ss17 = "SS17",
+    ws17_18 = "WS17/18",
+    ss18 = "SS18",
+    ws18_19 = "WS18/19",
+    ss19 = "SS19",
+    ws19_20 = "WS19/20",
+    ss20 = "SS20",
+    ws20_21 = "WS20/21",
+    ss21 = "SS21",
+    ws21_22 = "WS21/22",
+    ss22 = "SS22",
+    ws22_23 = "WS22/23",
+    ss23 = "SS23",
+    ws23_24 = "WS23/24",
+    ss24 = "SS24",
+    ws24_25 = "WS24/25";
 
 var BPET = "BPET",
     SAMT = "SAMT",
@@ -2025,5 +2041,1472 @@ var data = {
         cp: 6,
         dozent: ["Prof. Robert Hirschfeld"],
         nameLV: "Web-based Development Environments"
+    },
+    "Attention in Deep Learning": {
+        "kennung": [
+            "OSIS"
+        ],
+        "lehrform": "Seminar",
+        "modul": [
+            "Vertiefungsgebiet"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Attention Deep <br />Learning ",
+        "cp": 4,
+        "dozent": [
+            "Prof. Dr. Christoph Lippert"
+        ],
+        "nameLV": "Attention in Deep Learning"
+    },
+    "Managing and Researching Healthcare Systems": {
+        "kennung": [
+            "BPET"
+        ],
+        "lehrform": "Vorlesung / Seminar",
+        "modul": [
+            "Vertiefungsgebiet"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Managing Researching <br />Healthcare Systems ",
+        "cp": 6,
+        "dozent": [
+            "Prof. Dr. Reinhard Busse",
+            "Dr. Wilm Quentin"
+        ],
+        "nameLV": "Managing and Researching Healthcare Systems"
+    },
+    "\u00dcberzeugend Pr\u00e4sentieren - Noch besser auftreten (Fortgeschrittene)": {
+        "kennung": [
+            "SSKKO"
+        ],
+        "lehrform": "Blockseminar",
+        "modul": [
+            "Softskills"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "\u00dcberzeugend <br />Pr\u00e4sentieren - Noch ",
+        "cp": 3,
+        "dozent": [
+            "Dr. Werner Dieball"
+        ],
+        "nameLV": "\u00dcberzeugend Pr\u00e4sentieren - Noch besser auftreten (Fortgeschrittene)"
+    },
+    "Live Programming": {
+        "kennung": [
+            "OSIS",
+            "SAMT"
+        ],
+        "lehrform": "Projektseminar",
+        "modul": [
+            "Vertiefungsgebiet"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Live Programming ",
+        "cp": 6,
+        "dozent": [
+            "Prof. Dr. Robert Hirschfeld",
+            " Jens Lincke",
+            " Patrick Rein",
+            " Stefan Ramson",
+            " Tom Beckmann"
+        ],
+        "nameLV": "Live Programming"
+    },
+    "Simulating a million-dollar instrument - with deep learning from molecules to data": {
+        "kennung": [
+            "OSIS",
+            "SAMT"
+        ],
+        "lehrform": "Seminar",
+        "modul": [
+            "Vertiefungsgebiet"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Simulating <br />million-dollar ",
+        "cp": 6,
+        "dozent": [
+            "Prof. Dr. Bernhard Renard",
+            " Tom Altenburg",
+            "Dr. Sven Giese",
+            "https://hpi.de/friedrich/moodle/course/view.php?id=152"
+        ],
+        "nameLV": "Simulating a million-dollar instrument - with deep learning from molecules to data"
+    },
+    "Secure Identity Lab": {
+        "kennung": [
+            "ISAE",
+            "ITSE",
+            "OSIS"
+        ],
+        "lehrform": "Seminar",
+        "modul": [
+            "Vertiefungsgebiet",
+            "IT-Systems Engineering"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Secure Identity ",
+        "cp": 6,
+        "dozent": [
+            "Prof. Dr. Christoph Meinel",
+            "M.Sc. Eric Klieme",
+            "M.Sc. Alexander M\u00fchle"
+        ],
+        "nameLV": "Secure Identity Lab"
+    },
+    "Practical Applications of Deep Learning": {
+        "kennung": [
+            "ISAE",
+            "ITSE",
+            "OSIS"
+        ],
+        "lehrform": "Seminar",
+        "modul": [
+            "Vertiefungsgebiet",
+            "IT-Systems Engineering"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Practical <br />Applications Deep ",
+        "cp": 6,
+        "dozent": [
+            "Dr. Haojin Yang",
+            " Christian Bartz",
+            " Joseph Bethge",
+            " Hendrik R\u00e4tz"
+        ],
+        "nameLV": "Practical Applications of Deep Learning"
+    },
+    "Digital Rail Summer School": {
+        "kennung": [
+            "ITSE",
+            "OSIS",
+            "SAMT"
+        ],
+        "lehrform": "Projektseminar",
+        "modul": [
+            "Vertiefungsgebiet",
+            "IT-Systems Engineering"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Digital Rail Summer <br />School ",
+        "cp": 6,
+        "dozent": [
+            "Prof. Dr. Andreas Polze",
+            "https://osm.hpi.de/drss/2021/"
+        ],
+        "nameLV": "Digital Rail Summer School"
+    },
+    "Dynamic Programming und Reinforcement Learning": {
+        "kennung": [
+            "ITSE",
+            "BPET",
+            "OSIS"
+        ],
+        "lehrform": "Vorlesung / \u00dcbung",
+        "modul": [
+            "Vertiefungsgebiet",
+            "IT-Systems Engineering"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Dynamic Programming <br />Reinforcement ",
+        "cp": 6,
+        "dozent": [
+            "Dr. Rainer Schlosser",
+            " Alexander Kastius",
+            "https://hpi.de/plattner/teaching/summer-term-2021/dynamic-programming-and-reinforcement-learning.html"
+        ],
+        "nameLV": "Dynamic Programming und Reinforcement Learning"
+    },
+    "Trends and Concepts in the Software Industry I": {
+        "kennung": [
+            "ITSE",
+            "BPET",
+            "OSIS"
+        ],
+        "lehrform": "V (Block)",
+        "modul": [
+            "Vertiefungsgebiet",
+            "IT-Systems Engineering"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Trends Concepts <br />Software Industry I ",
+        "cp": 6,
+        "dozent": [
+            "Prof. Dr. Hasso Plattner",
+            "Dr. Michael Perscheid",
+            "https://hpi.de/plattner/teaching/summer-term-2021/trends-and-concepts-in-the-software-industry-i.html"
+        ],
+        "nameLV": "Trends and Concepts in the Software Industry I"
+    },
+    "Natural Language Processing": {
+        "kennung": [
+            "BPET",
+            "OSIS"
+        ],
+        "lehrform": "Vorlesung / \u00dcbung",
+        "modul": [
+            "Vertiefungsgebiet"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Natural Language <br />Processing ",
+        "cp": 6,
+        "dozent": [
+            "Prof. Dr. Gerard de Melo",
+            "https://moodle.hpi.de/course/view.php?id=178"
+        ],
+        "nameLV": "Natural Language Processing"
+    },
+    "Highly Scalable Systems": {
+        "kennung": [
+            "ITSE",
+            "SAMT"
+        ],
+        "lehrform": "Seminar",
+        "modul": [
+            "Vertiefungsgebiet",
+            "IT-Systems Engineering"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Highly Scalable <br />Systems ",
+        "cp": 3,
+        "dozent": [
+            "Prof. Dr. Holger Giese",
+            " Christian Medeiros Adriano",
+            " Matthias Barkowsky",
+            " Iqra Zafar"
+        ],
+        "nameLV": "Highly Scalable Systems"
+    },
+    "Konstruktion von Machine Learning Anwendungen": {
+        "kennung": [
+            "ITSE",
+            "OSIS"
+        ],
+        "lehrform": "Projektseminar",
+        "modul": [
+            "Vertiefungsgebiet",
+            "IT-Systems Engineering"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Konstruktion Machine <br />Learning Anwendungen ",
+        "cp": 6,
+        "dozent": [
+            "Dr. Alexander Albrecht",
+            "https://hpi.de/naumann/teaching/current-courses/ss-21/building-machine-learning-applications.html"
+        ],
+        "nameLV": "Konstruktion von Machine Learning Anwendungen"
+    },
+    "Software Mining and Applications": {
+        "kennung": [
+            "ISAE",
+            "ITSE",
+            "OSIS"
+        ],
+        "lehrform": "Seminar / Projekt",
+        "modul": [
+            "Vertiefungsgebiet",
+            "IT-Systems Engineering"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Software Mining <br />Applications ",
+        "cp": 6,
+        "dozent": [
+            "Prof. Dr. J\u00fcrgen D\u00f6llner",
+            " Willy Scheibel",
+            " Daniel Atzberger",
+            " Daniel Limberger"
+        ],
+        "nameLV": "Software Mining and Applications"
+    },
+    "Parallele Programmierung und Heterogenes Rechnen": {
+        "kennung": [
+            "ITSE",
+            "OSIS",
+            "SAMT"
+        ],
+        "lehrform": "Vorlesung / Projekt",
+        "modul": [
+            "Vertiefungsgebiet",
+            "IT-Systems Engineering"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Parallele <br />Programmierung ",
+        "cp": 6,
+        "dozent": [
+            "Prof. Dr. Andreas Polze",
+            " Sven K\u00f6hler",
+            " Lukas Wenzel",
+            " Max Plauth",
+            "https://osm.hpi.de/parProg/2020/"
+        ],
+        "nameLV": "Parallele Programmierung und Heterogenes Rechnen"
+    },
+    "Future Interactive Technologies": {
+        "kennung": [
+            "ITSE",
+            "SAMT"
+        ],
+        "lehrform": "Vorlesung",
+        "modul": [
+            "Vertiefungsgebiet",
+            "IT-Systems Engineering"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Future Interactive <br />Technologies ",
+        "cp": 6,
+        "dozent": [
+            "Prof. Dr. Patrick Baudisch"
+        ],
+        "nameLV": "Future Interactive Technologies"
+    },
+    "Academic Writing for Science (Fachspezifisches Englisch III)": {
+        "kennung": [
+            "SSKKO"
+        ],
+        "lehrform": "Seminar",
+        "modul": [
+            "Softskills"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Academic Writing <br />Science ",
+        "cp": 3,
+        "dozent": [
+            "Dr. Sharon Therese Nemeth"
+        ],
+        "nameLV": "Academic Writing for Science (Fachspezifisches Englisch III)"
+    },
+    "Machine Learning-based Control of Dynamical Systems": {
+        "kennung": [
+            "ITSE",
+            "OSIS",
+            "SAMT"
+        ],
+        "lehrform": "Projekt / Seminar",
+        "modul": [
+            "Vertiefungsgebiet",
+            "IT-Systems Engineering"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Machine <br />Learning-based ",
+        "cp": 6,
+        "dozent": [
+            "Prof. Dr. Holger Giese",
+            " Christian Medeiros Adriano",
+            " Sona Ghahremani",
+            " He Xu"
+        ],
+        "nameLV": "Machine Learning-based Control of Dynamical Systems"
+    },
+    "Fault Tolerant Algorithms": {
+        "kennung": [
+            "ISAE",
+            "SAMT"
+        ],
+        "lehrform": "Projektseminar",
+        "modul": [
+            "Vertiefungsgebiet"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Fault Tolerant <br />Algorithms ",
+        "cp": 6,
+        "dozent": [
+            "Prof. Dr. Tobias Friedrich",
+            "Dr. Katrin Casel",
+            "Dr. Sarel Cohen",
+            "https://hpi.de/friedrich/teaching/ss21/faulttol.html"
+        ],
+        "nameLV": "Fault Tolerant Algorithms"
+    },
+    "Trends in BPM Research": {
+        "kennung": [
+            "ITSE",
+            "BPET",
+            "OSIS"
+        ],
+        "lehrform": "Vorlesung",
+        "modul": [
+            "Vertiefungsgebiet",
+            "IT-Systems Engineering"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Trends BPM Research ",
+        "cp": 3,
+        "dozent": [
+            "Prof. Dr. Mathias Weske",
+            " Jan Ladleif"
+        ],
+        "nameLV": "Trends in BPM Research"
+    },
+    "Visualization and Analysis of Multidimensional Data": {
+        "kennung": [
+            "ISAE",
+            "ITSE",
+            "OSIS"
+        ],
+        "lehrform": "Seminar / Projekt",
+        "modul": [
+            "Vertiefungsgebiet",
+            "IT-Systems Engineering"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Visualization <br />Analysis ",
+        "cp": 6,
+        "dozent": [
+            "Prof. Dr. J\u00fcrgen D\u00f6llner",
+            "Dr. Benjamin Hagedorn",
+            "Dr. Rico Richter"
+        ],
+        "nameLV": "Visualization and Analysis of Multidimensional Data"
+    },
+    "Develop your own Database": {
+        "kennung": [
+            "ITSE",
+            "BPET",
+            "OSIS"
+        ],
+        "lehrform": "Projekt / Seminar",
+        "modul": [
+            "Vertiefungsgebiet",
+            "IT-Systems Engineering"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Develop your Database ",
+        "cp": 6,
+        "dozent": [
+            "Dr. Michael Perscheid",
+            " Jan Ko\u00dfmann",
+            " Martin Boissier",
+            " Thomas Bodner",
+            "https://hpi.de/plattner/teaching/summer-term-2021/develop-your-own-database.html"
+        ],
+        "nameLV": "Develop your own Database"
+    },
+    "Advanced Competitive Programming": {
+        "kennung": [
+            "ISAE",
+            "ITSE",
+            "SAMT"
+        ],
+        "lehrform": "Projektseminar",
+        "modul": [
+            "Vertiefungsgebiet",
+            "IT-Systems Engineering"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Advanced Competitive <br />Programming ",
+        "cp": 6,
+        "dozent": [
+            "Prof. Dr. Tobias Friedrich",
+            "https://hpi.de/friedrich/teaching/ss21/competitive.html"
+        ],
+        "nameLV": "Advanced Competitive Programming"
+    },
+    "Software-Design": {
+        "kennung": [
+            "OSIS",
+            "SAMT"
+        ],
+        "lehrform": "Projektseminar",
+        "modul": [
+            "Vertiefungsgebiet"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Software-Design ",
+        "cp": 6,
+        "dozent": [
+            "Prof. Dr. Robert Hirschfeld",
+            " Jens Lincke",
+            " Stefan Ramson",
+            " Patrick Rein"
+        ],
+        "nameLV": "Software-Design"
+    },
+    "Konflikt- und Kommunikationsmanagement": {
+        "kennung": [
+            "SSKMA",
+            "SSKKO"
+        ],
+        "lehrform": "Blockseminar",
+        "modul": [
+            "Softskills"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Konflikt- <br />Kommunikationsmanage ",
+        "cp": 3,
+        "dozent": [
+            " Eva Bilstein"
+        ],
+        "nameLV": "Konflikt- und Kommunikationsmanagement"
+    },
+    "Business Process Compliance": {
+        "kennung": [
+            "ITSE",
+            "BPET",
+            "OSIS"
+        ],
+        "lehrform": "Vorlesung",
+        "modul": [
+            "Vertiefungsgebiet",
+            "IT-Systems Engineering"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Business Process <br />Compliance ",
+        "cp": 3,
+        "dozent": [
+            "Prof. Dr. Mathias Weske",
+            " Maximilian V\u00f6lker"
+        ],
+        "nameLV": "Business Process Compliance"
+    },
+    "Business Etikette - HPI-Charm-School": {
+        "kennung": [
+            "SSKKO"
+        ],
+        "lehrform": "Blockseminar",
+        "modul": [
+            "Softskills"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Business Etikette - <br />HPI-Charm-School ",
+        "cp": 3,
+        "dozent": [
+            " Imme Vogelsang",
+            "Dr. Timm Krohn"
+        ],
+        "nameLV": "Business Etikette - HPI-Charm-School"
+    },
+    "Statistical Models": {
+        "kennung": [
+            "OSIS",
+            "SAMT"
+        ],
+        "lehrform": "Seminar",
+        "modul": [
+            "Vertiefungsgebiet"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Statistical Models ",
+        "cp": 3,
+        "dozent": [
+            "Prof. Dr. Bernhard Renard",
+            "Dr. Katharina Baum"
+        ],
+        "nameLV": "Statistical Models"
+    },
+    "Netzwerksicherheit": {
+        "kennung": [
+            "ISAE",
+            "ITSE",
+            "OSIS"
+        ],
+        "lehrform": "Lectures and Exercises",
+        "modul": [
+            "Vertiefungsgebiet",
+            "IT-Systems Engineering"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Netzwerksicherheit ",
+        "cp": 6,
+        "dozent": [
+            "Prof. Dr. Christian D\u00f6rr"
+        ],
+        "nameLV": "Netzwerksicherheit"
+    },
+    "Sonic Thinking Seminar - Methods of Working with Sound": {
+        "kennung": [
+            "SSKDT",
+            "SSKKO"
+        ],
+        "lehrform": "Seminar",
+        "modul": [
+            "Softskills"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Sonic Thinking Seminar <br />- Methods Working with ",
+        "cp": 3,
+        "dozent": [
+            "Dr. Julia von Thienen"
+        ],
+        "nameLV": "Sonic Thinking Seminar - Methods of Working with Sound"
+    },
+    "F\u00fchrungskompetenz": {
+        "kennung": [
+            "SSKMA"
+        ],
+        "lehrform": "Blockseminar",
+        "modul": [
+            "Softskills"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "F\u00fchrungskompetenz ",
+        "cp": 6,
+        "dozent": [
+            " Michael Heidemann",
+            " Eugen Unger"
+        ],
+        "nameLV": "F\u00fchrungskompetenz"
+    },
+    "D-School Advanced Track": {
+        "kennung": [
+            "SSKDT"
+        ],
+        "lehrform": "Projekt / Seminar",
+        "modul": [
+            "Softskills"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "D-School Advanced <br />Track ",
+        "cp": 9,
+        "dozent": [
+            "Dr. Claudia Nicolai",
+            "https://hpi.de/school-of-design-thinking/studium/advanced-track.html"
+        ],
+        "nameLV": "D-School Advanced Track"
+    },
+    "Systems Engineering and Data Processing with C++": {
+        "kennung": [
+            "ITSE",
+            "OSIS",
+            "SAMT"
+        ],
+        "lehrform": "Vorlesung / \u00dcbung",
+        "modul": [
+            "Vertiefungsgebiet",
+            "IT-Systems Engineering"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Systems Engineering <br />Data Processing with ",
+        "cp": 6,
+        "dozent": [
+            "Prof. Dr. J\u00fcrgen D\u00f6llner",
+            " Willy Scheibel",
+            " Jan Ole Vollmer"
+        ],
+        "nameLV": "Systems Engineering and Data Processing with C++"
+    },
+    "Computational Statistics": {
+        "kennung": [
+            "OSIS"
+        ],
+        "lehrform": "Vorlesung / \u00dcbung",
+        "modul": [
+            "Vertiefungsgebiet"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Computational <br />Statistics ",
+        "cp": 6,
+        "dozent": [
+            "Prof. Dr. Bernhard Renard",
+            "Dr. Sven Giese",
+            " Elizabeth Yuu",
+            "https://hpi.de/friedrich/moodle/course/view.php?id=151"
+        ],
+        "nameLV": "Computational Statistics"
+    },
+    "Management Essentials": {
+        "kennung": [
+            "SSKMA"
+        ],
+        "lehrform": "Vorlesung",
+        "modul": [
+            "Softskills"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Management Essentials ",
+        "cp": 3,
+        "dozent": [
+            "Prof. Dr. Eric Kearney"
+        ],
+        "nameLV": "Management Essentials"
+    },
+    "Probability and Computing": {
+        "kennung": [
+            "ISAE",
+            "ITSE"
+        ],
+        "lehrform": "Vorlesung / \u00dcbung",
+        "modul": [
+            "Vertiefungsgebiet",
+            "IT-Systems Engineering"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Probability Computing ",
+        "cp": 6,
+        "dozent": [
+            "Prof. Dr. Tobias Friedrich",
+            "Dr. Andreas G\u00f6bel",
+            "https://hpi.de/friedrich/teaching/ss21/probcomp.html"
+        ],
+        "nameLV": "Probability and Computing"
+    },
+    "Advanced Techniques for Image and Video Analysis": {
+        "kennung": [
+            "ISAE",
+            "ITSE",
+            "OSIS"
+        ],
+        "lehrform": "Seminar / Projekt",
+        "modul": [
+            "Vertiefungsgebiet",
+            "IT-Systems Engineering"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Advanced Techniques <br />Image Video Analysis ",
+        "cp": 6,
+        "dozent": [
+            "Dr. Matthias Trapp",
+            " Daniel-Amadeus Johannes Gl\u00f6ckner",
+            " Max Reimann",
+            " Sumit Shekhar",
+            " Sebastian Pasewaldt"
+        ],
+        "nameLV": "Advanced Techniques for Image and Video Analysis"
+    },
+    "Dealing with Uncertainty": {
+        "kennung": [
+            "SSKMA",
+            "SSKKO"
+        ],
+        "lehrform": "Blockseminar",
+        "modul": [
+            "Softskills"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Dealing with <br />Uncertainty ",
+        "cp": 3,
+        "dozent": [
+            " Christoph Burger"
+        ],
+        "nameLV": "Dealing with Uncertainty"
+    },
+    "Dissecting the complex - efficient computing in large networks": {
+        "kennung": [
+            "ISAE",
+            "OSIS"
+        ],
+        "lehrform": "Seminar",
+        "modul": [
+            "Vertiefungsgebiet"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Dissecting complex - <br />efficient computing ",
+        "cp": 6,
+        "dozent": [
+            "Prof. Dr. Bernhard Renard",
+            "Dr. Katharina Baum",
+            "Dr. Athar Khodabakhsh"
+        ],
+        "nameLV": "Dissecting the complex - efficient computing in large networks"
+    },
+    "Testing Business Ideas": {
+        "kennung": [
+            "SSKMA",
+            "SSKRE"
+        ],
+        "lehrform": "Seminar",
+        "modul": [
+            "Softskills"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Testing Business Ideas ",
+        "cp": 3,
+        "dozent": [
+            "Dr. Frank Pawlitschek",
+            " Annalena Lorson"
+        ],
+        "nameLV": "Testing Business Ideas"
+    },
+    "Methoden der Forschung": {
+        "kennung": [
+            "OSIS"
+        ],
+        "lehrform": "Seminar",
+        "modul": [
+            "Vertiefungsgebiet"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Methoden Forschung ",
+        "cp": 3,
+        "dozent": [
+            "Prof. Dr. Felix Naumann",
+            "https://hpi.de/naumann/teaching/current-courses/ss-21/methoden-der-forschung.html"
+        ],
+        "nameLV": "Methoden der Forschung"
+    },
+    "Knowledge Graphs": {
+        "kennung": [
+            "OSIS"
+        ],
+        "lehrform": "Seminar",
+        "modul": [
+            "Vertiefungsgebiet"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Knowledge Graphs ",
+        "cp": 6,
+        "dozent": [
+            "Prof. Dr. Ralf Krestel",
+            "https://hpi.de/naumann/teaching/current-courses/ss-21/knowledge-graphs.html"
+        ],
+        "nameLV": "Knowledge Graphs"
+    },
+    "Sonic Thinking Lecture - Methods of Working with Sound": {
+        "kennung": [
+            "SSKDT",
+            "SSKKO"
+        ],
+        "lehrform": "Vorlesung",
+        "modul": [
+            "Softskills"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Sonic Thinking Lecture <br />- Methods Working with ",
+        "cp": 3,
+        "dozent": [
+            "Dr. Julia von Thienen"
+        ],
+        "nameLV": "Sonic Thinking Lecture - Methods of Working with Sound"
+    },
+    "Local Hierarchical Classification": {
+        "kennung": [
+            "ISAE",
+            "OSIS"
+        ],
+        "lehrform": "Seminar",
+        "modul": [
+            "Vertiefungsgebiet"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Local Hierarchical <br />Classification ",
+        "cp": 6,
+        "dozent": [
+            "Prof. Dr. Bernhard Renard",
+            " Fabio Malcher Miranda"
+        ],
+        "nameLV": "Local Hierarchical Classification"
+    },
+    "Global Team-Based Innovation II": {
+        "kennung": [
+            "SSKMA",
+            "ITSE",
+            "OSIS",
+            "BPET",
+            "SSKKO"
+        ],
+        "lehrform": "Projekt / Seminar",
+        "modul": [
+            "Vertiefungsgebiet",
+            "Softskills",
+            "IT-Systems Engineering"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Global Team-Based <br />Innovation II ",
+        "cp": 6,
+        "dozent": [
+            "Prof. Dr. Falk Uebernickel",
+            "https://hpi.de/uebernickel/teaching/global-team-based-innovation-gti-design-thinking.html"
+        ],
+        "nameLV": "Global Team-Based Innovation II"
+    },
+    "Quantum Programming": {
+        "kennung": [
+            "ITSE",
+            "OSIS",
+            "SAMT"
+        ],
+        "lehrform": "Projekt / Seminar",
+        "modul": [
+            "Vertiefungsgebiet",
+            "IT-Systems Engineering"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Quantum Programming ",
+        "cp": 6,
+        "dozent": [
+            "Prof. Dr. Holger Giese",
+            " Christian Medeiros Adriano",
+            " Matthias Barkowsky",
+            "Dr. Sven Schneider"
+        ],
+        "nameLV": "Quantum Programming"
+    },
+    "21st Century Health Care Businesses: Regulatory, Legal, and Public Policy Aspects": {
+        "kennung": [
+            "SSKRE"
+        ],
+        "lehrform": "Seminar",
+        "modul": [
+            "Softskills"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "21st Century Health <br />Care Businesses: ",
+        "cp": 3,
+        "dozent": [
+            "Guest Professor Ariel D Stern"
+        ],
+        "nameLV": "21st Century Health Care Businesses: Regulatory, Legal, and Public Policy Aspects"
+    },
+    "Trends in Betriebssystemen und Middleware (Forschungsseminar)": {
+        "kennung": [
+            "ISAE",
+            "OSIS",
+            "SAMT"
+        ],
+        "lehrform": "Vorlesung / \u00dcbung",
+        "modul": [
+            "Vertiefungsgebiet"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Trends <br />Betriebssystemen ",
+        "cp": 3,
+        "dozent": [
+            "Prof. Dr. Andreas Polze",
+            "https://www.dcl.hpi.uni-potsdam.de/teaching/parProg19/"
+        ],
+        "nameLV": "Trends in Betriebssystemen und Middleware (Forschungsseminar)"
+    },
+    "Usable Security and Privacy": {
+        "kennung": [
+            "ISAE",
+            "ITSE"
+        ],
+        "lehrform": "Seminar",
+        "modul": [
+            "Vertiefungsgebiet",
+            "IT-Systems Engineering"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Usable Security <br />Privacy ",
+        "cp": 6,
+        "dozent": [
+            "Prof. Dr. Christoph Meinel",
+            "Dr. Anne Kayem"
+        ],
+        "nameLV": "Usable Security and Privacy"
+    },
+    "Management & Leadership: \u201eMoments of truth\u201c": {
+        "kennung": [
+            "SSKMA"
+        ],
+        "lehrform": "Seminar",
+        "modul": [
+            "Softskills"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Management & <br />Leadership: \u201eMoments ",
+        "cp": 3,
+        "dozent": [
+            "Dr. Jana Leidenfrost",
+            " Bernd Staudinger"
+        ],
+        "nameLV": "Management & Leadership: \u201eMoments of truth\u201c"
+    },
+    "Komplexit\u00e4tstheorie": {
+        "kennung": [
+            "ISAE"
+        ],
+        "lehrform": "Vorlesung / \u00dcbung",
+        "modul": [
+            "Vertiefungsgebiet"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Komplexit\u00e4tstheorie ",
+        "cp": 3,
+        "dozent": [
+            "Prof. Dr. Christoph Meinel",
+            " Joseph Bethge"
+        ],
+        "nameLV": "Komplexit\u00e4tstheorie"
+    },
+    "Introduction to Quantum Computing": {
+        "kennung": [
+            "ISAE"
+        ],
+        "lehrform": "Seminar",
+        "modul": [
+            "Vertiefungsgebiet"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Introduction Quantum <br />Computing ",
+        "cp": 3,
+        "dozent": [
+            "Prof. Dr. Tobias Friedrich",
+            "https://hpi.de/friedrich/teaching/ss21/quantum-comp.html"
+        ],
+        "nameLV": "Introduction to Quantum Computing"
+    },
+    "Challenges in BPM Research": {
+        "kennung": [
+            "ITSE",
+            "BPET",
+            "OSIS"
+        ],
+        "lehrform": [
+            "Seminar"
+        ],
+        "modul": [
+            "Vertiefungsgebiet",
+            "IT-Systems Engineering"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Challenges BPM <br />Research ",
+        "cp": 6,
+        "dozent": [
+            "Prof. Dr. Mathias Weske",
+            " Sven Ihde"
+        ],
+        "nameLV": "Challenges in BPM Research"
+    },
+    "Exact Exponential Algorithms": {
+        "kennung": [
+            "ISAE",
+            "ITSE"
+        ],
+        "lehrform": "Vorlesung / \u00dcbung",
+        "modul": [
+            "Vertiefungsgebiet",
+            "IT-Systems Engineering"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Exact Exponential <br />Algorithms ",
+        "cp": 6,
+        "dozent": [
+            "Prof. Dr. Tobias Friedrich",
+            "Dr. Katrin Casel",
+            "https://hpi.de/friedrich/teaching/ss21/exactexpalg.html"
+        ],
+        "nameLV": "Exact Exponential Algorithms"
+    },
+    "D-School Global Design Thinking Workshop: Human-Centered Design and Strategic Futures": {
+        "kennung": [
+            "SSKDT",
+            "SSKKO"
+        ],
+        "lehrform": "Seminar / P (Block)",
+        "modul": [
+            "Softskills"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "D-School Global Design <br />Thinking Workshop: ",
+        "cp": 3,
+        "dozent": [
+            "Dr. Claudia Nicolai"
+        ],
+        "nameLV": "D-School Global Design Thinking Workshop: Human-Centered Design and Strategic Futures"
+    },
+    "Advanced Cryptography": {
+        "kennung": [
+            "ISAE"
+        ],
+        "lehrform": "Vorlesung / \u00dcbung",
+        "modul": [
+            "Vertiefungsgebiet"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Advanced Cryptography ",
+        "cp": 6,
+        "dozent": [
+            "Prof. Dr. Anja Lehmann"
+        ],
+        "nameLV": "Advanced Cryptography"
+    },
+    "Strategic Technology Foresight": {
+        "kennung": [
+            "SSKMA",
+            "SSKRE"
+        ],
+        "lehrform": "Seminar",
+        "modul": [
+            "Softskills"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Strategic Technology <br />Foresight ",
+        "cp": 6,
+        "dozent": [
+            "Prof. Dr. Katharina H\u00f6lzle"
+        ],
+        "nameLV": "Strategic Technology Foresight"
+    },
+    "Deep Learning for Combinatorial Optimization": {
+        "kennung": [
+            "ISAE",
+            "SAMT"
+        ],
+        "lehrform": "Projektseminar",
+        "modul": [
+            "Vertiefungsgebiet"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Deep Learning <br />Combinatorial ",
+        "cp": 6,
+        "dozent": [
+            "Prof. Dr. Tobias Friedrich",
+            "Dr. Sarel Cohen",
+            "https://hpi.de/friedrich/teaching/ss21/combopt-dl.html"
+        ],
+        "nameLV": "Deep Learning for Combinatorial Optimization"
+    },
+    "HCI Project Seminar: software systems for VR, personal fabrication, and Haptics": {
+        "kennung": [
+            "ITSE",
+            "SAMT"
+        ],
+        "lehrform": "Projekt / Seminar",
+        "modul": [
+            "Vertiefungsgebiet",
+            "IT-Systems Engineering"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "HCI Project Seminar: <br />software systems VR, ",
+        "cp": 6,
+        "dozent": [
+            "Prof. Dr. Patrick Baudisch"
+        ],
+        "nameLV": "HCI Project Seminar: software systems for VR, personal fabrication, and Haptics"
+    },
+    "Identity Management for End Users": {
+        "kennung": [
+            "ISAE"
+        ],
+        "lehrform": "Seminar",
+        "modul": [
+            "Vertiefungsgebiet"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Identity Management <br />Users ",
+        "cp": 3,
+        "dozent": [
+            "Prof. Dr. Anja Lehmann"
+        ],
+        "nameLV": "Identity Management for End Users"
+    },
+    "D-School Basic Track": {
+        "kennung": [
+            "SSKDT"
+        ],
+        "lehrform": "Projekt / Seminar",
+        "modul": [
+            "Softskills"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "D-School Basic Track ",
+        "cp": 9,
+        "dozent": [
+            "Dr. Claudia Nicolai",
+            "https://hpi.de/school-of-design-thinking/studium/basic-track.html"
+        ],
+        "nameLV": "D-School Basic Track"
+    },
+    "Deep Learning": {
+        "kennung": [
+            "OSIS"
+        ],
+        "lehrform": "Vorlesung / Seminar",
+        "modul": [
+            "Vertiefungsgebiet"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Deep Learning ",
+        "cp": 6,
+        "dozent": [
+            "Prof. Dr. Christoph Lippert"
+        ],
+        "nameLV": "Deep Learning"
+    },
+    "Table Recognition": {
+        "kennung": [
+            "OSIS"
+        ],
+        "lehrform": "Seminar",
+        "modul": [
+            "Vertiefungsgebiet"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Table Recognition ",
+        "cp": 6,
+        "dozent": [
+            "Prof. Dr. Felix Naumann",
+            " Gerardo Vitagliano",
+            "https://hpi.de/naumann/teaching/current-courses/ss-21/table-recognition.html"
+        ],
+        "nameLV": "Table Recognition"
+    },
+    "Distributed Data Management": {
+        "kennung": [
+            "ITSE",
+            "OSIS"
+        ],
+        "lehrform": "Vorlesung / \u00dcbung",
+        "modul": [
+            "Vertiefungsgebiet",
+            "IT-Systems Engineering"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Distributed Data <br />Management ",
+        "cp": 6,
+        "dozent": [
+            "Dr. Thorsten Papenbrock",
+            "https://hpi.de/naumann/teaching/current-courses/ss-21/distributed-data-management.html"
+        ],
+        "nameLV": "Distributed Data Management"
+    },
+    "Graph-cut algorithms": {
+        "kennung": [
+            "ISAE"
+        ],
+        "lehrform": "Seminar",
+        "modul": [
+            "Vertiefungsgebiet"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Graph-cut algorithms ",
+        "cp": 3,
+        "dozent": [
+            "Prof. Dr. Tobias Friedrich",
+            "Dr. Davis Issac",
+            "Dr. Nikhil Kumar",
+            "https://hpi.de/friedrich/teaching/ss21/graphcut.html"
+        ],
+        "nameLV": "Graph-cut algorithms"
+    },
+    "Human-centered Design and Requirements Engineering for Software-Engineers": {
+        "kennung": [
+            "ITSE"
+        ],
+        "lehrform": "Vorlesung",
+        "modul": [
+            "IT-Systems Engineering"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Human-centered Design <br />Requirements ",
+        "cp": 3,
+        "dozent": [
+            "Prof. Dr. Falk Uebernickel",
+            "Dr. Danielly De Paula",
+            " Thomas Haskamp"
+        ],
+        "nameLV": "Human-centered Design and Requirements Engineering for Software-Engineers"
+    },
+    "Data-Driven Causal Inference": {
+        "kennung": [
+            "ITSE",
+            "BPET",
+            "OSIS"
+        ],
+        "lehrform": "Projekt / Seminar",
+        "modul": [
+            "Vertiefungsgebiet",
+            "IT-Systems Engineering"
+        ],
+        "benotet": true,
+        "semester": [
+            ss21
+        ],
+        "kurz": "Data-Driven Causal <br />Inference ",
+        "cp": 6,
+        "dozent": [
+            "Dr. Rainer Schlosser",
+            " Johannes H\u00fcgle",
+            " Christopher Hagedorn",
+            "https://hpi.de/plattner/teaching/summer-term-2021/data-driven-causal-inference-research-seminar.html"
+        ],
+        "nameLV": "Data-Driven Causal Inference"
     }
 }
